@@ -12,6 +12,7 @@ namespace apProjeto2
 {
     public partial class Form1 : Form
     {
+        VetorPalavra atual;
 
         VetorPalavra PalavraDica;
         public Form1()
@@ -21,15 +22,17 @@ namespace apProjeto2
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-
+            int aleatorio = new Random().Next(100);
+            atual = vetorPalavra[aleatorio - 1];
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dlgAbrir.Title = "Selecione o arquivo com as palavras e as dicas do jogo.";
+            atual = new VetorPalavra(100);
+            dlgAbrir.Title = "Selecione o arquivo desejado";
             if (dlgAbrir.ShowDialog() == DialogResult.OK)
             {
-                LerVetor(dlgAbrir.FileName)
+                atual.LeituraDoVetor(dlgAbrir.FileName);
             }
         }
     }

@@ -57,6 +57,14 @@ class VetorPalavra
         return resultado;
     }
 
+    public void LeituraDoVetor(string nomeArq)
+    {
+        var arq = new StreamReader(nomeArq);
+        while (!arq.EndOfStream)
+        {
+            string linha = arq.ReadLine();
 
+        }
+    }
 
 }
