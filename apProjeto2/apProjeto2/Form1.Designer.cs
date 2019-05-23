@@ -34,7 +34,7 @@
             this.ptbBandeiraEsquerda = new System.Windows.Forms.PictureBox();
             this.ptbBandeiraDireita = new System.Windows.Forms.PictureBox();
             this.pb3 = new System.Windows.Forms.PictureBox();
-            this.ptbAnjo = new System.Windows.Forms.PictureBox();
+            this.pbAnjo = new System.Windows.Forms.PictureBox();
             this.lbTemporizador = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.chkDica = new System.Windows.Forms.CheckBox();
@@ -121,7 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAnjo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnjo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
@@ -154,7 +154,7 @@
             this.tabPage1.Controls.Add(this.ptbBandeiraEsquerda);
             this.tabPage1.Controls.Add(this.ptbBandeiraDireita);
             this.tabPage1.Controls.Add(this.pb3);
-            this.tabPage1.Controls.Add(this.ptbAnjo);
+            this.tabPage1.Controls.Add(this.pbAnjo);
             this.tabPage1.Controls.Add(this.lbTemporizador);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.chkDica);
@@ -257,15 +257,15 @@
             this.pb3.TabStop = false;
             this.pb3.Visible = false;
             // 
-            // ptbAnjo
+            // pbAnjo
             // 
-            this.ptbAnjo.Image = global::apProjeto2.Properties.Resources.Enforcado1;
-            this.ptbAnjo.Location = new System.Drawing.Point(241, 33);
-            this.ptbAnjo.Name = "ptbAnjo";
-            this.ptbAnjo.Size = new System.Drawing.Size(180, 364);
-            this.ptbAnjo.TabIndex = 96;
-            this.ptbAnjo.TabStop = false;
-            this.ptbAnjo.Visible = false;
+            this.pbAnjo.Image = global::apProjeto2.Properties.Resources.Enforcado1;
+            this.pbAnjo.Location = new System.Drawing.Point(241, 33);
+            this.pbAnjo.Name = "pbAnjo";
+            this.pbAnjo.Size = new System.Drawing.Size(180, 364);
+            this.pbAnjo.TabIndex = 96;
+            this.pbAnjo.TabStop = false;
+            this.pbAnjo.Visible = false;
             // 
             // lbTemporizador
             // 
@@ -1080,7 +1080,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbAnjo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAnjo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
@@ -1183,7 +1183,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.PictureBox ptbAnjo;
+        private System.Windows.Forms.PictureBox pbAnjo;
         private System.Windows.Forms.OpenFileDialog dlgAbrir;
         private System.Windows.Forms.PictureBox pb3;
         private System.Windows.Forms.PictureBox ptbBandeiraDireita;

@@ -19,7 +19,7 @@ namespace apProjeto2
         VetorPalavra asPalavras;
         int tempoPassado;  // Tempo passado em segundos
         Palavra palavraAtual;  // Palavra lido do vetor
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -67,41 +67,42 @@ namespace apProjeto2
             btnEspaco.Enabled = habilitado;
         }
 
-        public void Resetar()
+        public void ResetarJogo()
         {
-            
+            HabilitarBotoes(false);
+            pb1.Visible = false;
+            pb2.Visible = false;
+            pb3.Visible = false;
+            pbNew.Visible = false;
+            pb4.Visible = false;
+            pb5.Visible = false;
+            pb6.Visible = false;
+            pb7.Visible = false;
+            pb8.Visible = false;
+            pbAnjo.Visible = false;
+            tmTemporizador.Stop();
+            tempoPassado = 0;
+            foreach (DataGridViewCell cell in dgvPalavra.Rows[0].Cells) //  Verifica cada posição da palavra
+            {
+                cell.Value = "";
+            }
+            pontos = erro = 0;
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text != "")
             {
-                if (primeiraMatch == 0)
+                ResetarJogo();
+                HabilitarBotoes(true);
+                int aleatorio = new Random().Next(25);
+                palavraAtual = asPalavras[aleatorio];
+                if (chkDica.Checked)
                 {
-                    primeiraMatch++;
-                    HabilitarBotoes(true);
-                    pb1.Visible = false;
-                    pb2.Visible = false;
-                    pb3.Visible = false;
-                    pbNew.Visible = false;
-                    pb4.Visible = false;
-                    pb5.Visible = false;
-                    pb6.Visible = false;
-                    pb7.Visible = false;
-                    pb8.Visible = false;
-                    int aleatorio = new Random().Next(25);
-                    palavraAtual = asPalavras[aleatorio];
-                    if (chkDica.Checked)
-                    {
-                        lbDica.Text = $"Dica: {palavraAtual.Dica}";
-                    }
-                    tmTemporizador.Start();
-                    dgvPalavra.ColumnCount = palavraAtual.PalavraSelec.Length;
+                    lbDica.Text = $"Dica: {palavraAtual.Dica}";
                 }
-                else
-                {
-                    ResetarJogo();
-                }
+                tmTemporizador.Start();
+                dgvPalavra.ColumnCount = palavraAtual.PalavraSelec.Length;
             }
             else
                 MessageBox.Show("Por favor, insira seu nome");
@@ -120,15 +121,16 @@ namespace apProjeto2
         private void TmTemporizador_Tick(object sender, EventArgs e)
         {
             tempoPassado++;
-            
+
             lbTemporizador.Text = $"Tempo restante: {tempoTotal - tempoPassado}s";
         }
 
         private void BtnA_Click(object sender, EventArgs e) // Tratamento de strings
         {
+            (sender as Button).Enabled = false;
             bool achouLetra = false;
             char t = Convert.ToChar((sender as Button).Text); //  Acessa valor interno
-            for (int indice = 0; indice < palavraAtual.PalavraSelec.Length ; indice++)
+            for (int indice = 0; indice < palavraAtual.PalavraSelec.Length; indice++)
             {
                 char letra = palavraAtual.PalavraSelec[indice];
                 if (letra == t) // Verifica se letra digitada existe
@@ -143,10 +145,10 @@ namespace apProjeto2
                 pontos--;
                 if (erro > 8)
                 {
-                    ptbAnjo.Visible = true;
+                    pbAnjo.Visible = true;
                     if (MessageBox.Show("Infelizmente você perdeu!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        // Resetar(); 
+                        ResetarJogo();
                     }
                 }
                 else
@@ -169,17 +171,17 @@ namespace apProjeto2
                 bool terminou = true;
                 foreach (DataGridViewCell cell in dgvPalavra.Rows[0].Cells) //  Verifica cada posição da palavra
                 {
-                    if (cell.Value.ToString() == "")
+                    if (cell.Value == null || cell.Value.ToString() == "")
                     {
-                        terminou = false;
+                       terminou = false;
                     }
                 }
                 if (terminou)
                 {
-                   if (MessageBox.Show("Felizmente você ganhou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                   {
-                        Resetar();
-                   }
+                    if (MessageBox.Show("Felizmente você ganhou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        ResetarJogo();
+                    }
                 }
                 pontos++;
             }
