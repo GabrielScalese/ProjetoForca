@@ -116,6 +116,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
+            this.pbMorto = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
@@ -137,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -151,6 +153,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pbMorto);
             this.tabPage1.Controls.Add(this.ptbBandeiraEsquerda);
             this.tabPage1.Controls.Add(this.ptbBandeiraDireita);
             this.tabPage1.Controls.Add(this.pb3);
@@ -461,6 +464,7 @@
             // 
             this.dgvPalavra.AllowUserToResizeColumns = false;
             this.dgvPalavra.AllowUserToResizeRows = false;
+            this.dgvPalavra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPalavra.BackgroundColor = System.Drawing.Color.White;
             this.dgvPalavra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPalavra.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -1065,6 +1069,15 @@
             this.tmTemporizador.Interval = 1000;
             this.tmTemporizador.Tick += new System.EventHandler(this.TmTemporizador_Tick);
             // 
+            // pbMorto
+            // 
+            this.pbMorto.Image = global::apProjeto2.Properties.Resources.Forca_1_05;
+            this.pbMorto.Location = new System.Drawing.Point(98, 76);
+            this.pbMorto.Name = "pbMorto";
+            this.pbMorto.Size = new System.Drawing.Size(100, 90);
+            this.pbMorto.TabIndex = 100;
+            this.pbMorto.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1096,6 +1109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1189,6 +1203,7 @@
         private System.Windows.Forms.PictureBox ptbBandeiraDireita;
         private System.Windows.Forms.PictureBox ptbBandeiraEsquerda;
         private System.Windows.Forms.Timer tmTemporizador;
+        private System.Windows.Forms.PictureBox pbMorto;
     }
 }
 

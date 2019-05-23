@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace apProjeto2
 {
@@ -17,6 +18,7 @@ namespace apProjeto2
         int pontos = 0; // Armazena quantidade de pontos do usuário
         int erro = 0;
         VetorPalavra asPalavras;
+        string[] nick;
         int tempoPassado;  // Tempo passado em segundos
         Palavra palavraAtual;  // Palavra lido do vetor
 
@@ -163,6 +165,7 @@ namespace apProjeto2
                         case 6: pb6.Visible = true; break;
                         case 7: pb7.Visible = true; break;
                         case 8: pb8.Visible = true; break;
+                        case 9: pbMorto.Visible = true;break;
                     }
                 }
             }
@@ -186,5 +189,34 @@ namespace apProjeto2
                 pontos++;
             }
         }
+
+        public void LerNicks()
+        {
+            int indice = 0;
+            var arq = new StreamReader("Ranking.txt");
+            while (!arq.EndOfStream)
+            {
+                string linha = arq.ReadLine();
+                nick[indice++] = linha;
+
+                //string[indiceNome]nome = linha;
+                //indiceNome++;
+            }
+            arq.Close();
+            var arqSaida = new StreamWriter("c:\temp");
+            while (!arq.EndOfStream)
+            {
+                arqSaida.WriteLine();
+                
+            }
+        }
+
+
+
+        public void SalvarPontuacao()
+        {
+            LerNicks();
+        }
+
     }
 }
