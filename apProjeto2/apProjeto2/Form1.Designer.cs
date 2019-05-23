@@ -33,7 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ptbBandeiraEsquerda = new System.Windows.Forms.PictureBox();
             this.ptbBandeiraDireita = new System.Windows.Forms.PictureBox();
-            this.ptbMaoBandeira = new System.Windows.Forms.PictureBox();
+            this.pb3 = new System.Windows.Forms.PictureBox();
             this.ptbAnjo = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,14 +41,14 @@
             this.btnIniciar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pb8 = new System.Windows.Forms.PictureBox();
+            this.pb1 = new System.Windows.Forms.PictureBox();
+            this.pb4 = new System.Windows.Forms.PictureBox();
+            this.pb2 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pb5 = new System.Windows.Forms.PictureBox();
+            this.pb6 = new System.Windows.Forms.PictureBox();
+            this.pb7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -120,16 +120,16 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMaoBandeira)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnjo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -153,7 +153,7 @@
             // 
             this.tabPage1.Controls.Add(this.ptbBandeiraEsquerda);
             this.tabPage1.Controls.Add(this.ptbBandeiraDireita);
-            this.tabPage1.Controls.Add(this.ptbMaoBandeira);
+            this.tabPage1.Controls.Add(this.pb3);
             this.tabPage1.Controls.Add(this.ptbAnjo);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
@@ -161,14 +161,14 @@
             this.tabPage1.Controls.Add(this.btnIniciar);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.pictureBox18);
-            this.tabPage1.Controls.Add(this.pictureBox15);
-            this.tabPage1.Controls.Add(this.pictureBox13);
-            this.tabPage1.Controls.Add(this.pictureBox12);
+            this.tabPage1.Controls.Add(this.pb8);
+            this.tabPage1.Controls.Add(this.pb1);
+            this.tabPage1.Controls.Add(this.pb4);
+            this.tabPage1.Controls.Add(this.pb2);
             this.tabPage1.Controls.Add(this.pictureBox11);
-            this.tabPage1.Controls.Add(this.pictureBox9);
-            this.tabPage1.Controls.Add(this.pictureBox8);
-            this.tabPage1.Controls.Add(this.pictureBox7);
+            this.tabPage1.Controls.Add(this.pb5);
+            this.tabPage1.Controls.Add(this.pb6);
+            this.tabPage1.Controls.Add(this.pb7);
             this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.Controls.Add(this.pictureBox5);
             this.tabPage1.Controls.Add(this.pictureBox4);
@@ -247,15 +247,15 @@
             this.ptbBandeiraDireita.TabStop = false;
             this.ptbBandeiraDireita.Visible = false;
             // 
-            // ptbMaoBandeira
+            // pb3
             // 
-            this.ptbMaoBandeira.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
-            this.ptbMaoBandeira.Location = new System.Drawing.Point(60, 166);
-            this.ptbMaoBandeira.Name = "ptbMaoBandeira";
-            this.ptbMaoBandeira.Size = new System.Drawing.Size(48, 50);
-            this.ptbMaoBandeira.TabIndex = 97;
-            this.ptbMaoBandeira.TabStop = false;
-            this.ptbMaoBandeira.Visible = false;
+            this.pb3.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
+            this.pb3.Location = new System.Drawing.Point(60, 166);
+            this.pb3.Name = "pb3";
+            this.pb3.Size = new System.Drawing.Size(48, 50);
+            this.pb3.TabIndex = 97;
+            this.pb3.TabStop = false;
+            this.pb3.Visible = false;
             // 
             // ptbAnjo
             // 
@@ -333,41 +333,41 @@
             this.label4.TabIndex = 88;
             this.label4.Text = "Dica:________________";
             // 
-            // pictureBox18
+            // pb8
             // 
-            this.pictureBox18.Image = global::apProjeto2.Properties.Resources.Forca_17;
-            this.pictureBox18.Location = new System.Drawing.Point(132, 275);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(92, 91);
-            this.pictureBox18.TabIndex = 87;
-            this.pictureBox18.TabStop = false;
+            this.pb8.Image = global::apProjeto2.Properties.Resources.Forca_17;
+            this.pb8.Location = new System.Drawing.Point(132, 275);
+            this.pb8.Name = "pb8";
+            this.pb8.Size = new System.Drawing.Size(92, 91);
+            this.pb8.TabIndex = 87;
+            this.pb8.TabStop = false;
             // 
-            // pictureBox15
+            // pb1
             // 
-            this.pictureBox15.Image = global::apProjeto2.Properties.Resources.Forca_05;
-            this.pictureBox15.Location = new System.Drawing.Point(98, 76);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(100, 90);
-            this.pictureBox15.TabIndex = 84;
-            this.pictureBox15.TabStop = false;
+            this.pb1.Image = global::apProjeto2.Properties.Resources.Forca_05;
+            this.pb1.Location = new System.Drawing.Point(98, 76);
+            this.pb1.Name = "pb1";
+            this.pb1.Size = new System.Drawing.Size(100, 90);
+            this.pb1.TabIndex = 84;
+            this.pb1.TabStop = false;
             // 
-            // pictureBox13
+            // pb4
             // 
-            this.pictureBox13.Image = global::apProjeto2.Properties.Resources.Forca_09;
-            this.pictureBox13.Location = new System.Drawing.Point(108, 183);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(64, 54);
-            this.pictureBox13.TabIndex = 82;
-            this.pictureBox13.TabStop = false;
+            this.pb4.Image = global::apProjeto2.Properties.Resources.Forca_09;
+            this.pb4.Location = new System.Drawing.Point(108, 183);
+            this.pb4.Name = "pb4";
+            this.pb4.Size = new System.Drawing.Size(64, 54);
+            this.pb4.TabIndex = 82;
+            this.pb4.TabStop = false;
             // 
-            // pictureBox12
+            // pb2
             // 
-            this.pictureBox12.Image = global::apProjeto2.Properties.Resources.Forca_08;
-            this.pictureBox12.Location = new System.Drawing.Point(108, 166);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(79, 27);
-            this.pictureBox12.TabIndex = 81;
-            this.pictureBox12.TabStop = false;
+            this.pb2.Image = global::apProjeto2.Properties.Resources.Forca_08;
+            this.pb2.Location = new System.Drawing.Point(108, 166);
+            this.pb2.Name = "pb2";
+            this.pb2.Size = new System.Drawing.Size(79, 27);
+            this.pb2.TabIndex = 81;
+            this.pb2.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -378,32 +378,32 @@
             this.pictureBox11.TabIndex = 80;
             this.pictureBox11.TabStop = false;
             // 
-            // pictureBox9
+            // pb5
             // 
-            this.pictureBox9.Image = global::apProjeto2.Properties.Resources.Forca_10;
-            this.pictureBox9.Location = new System.Drawing.Point(167, 183);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(99, 98);
-            this.pictureBox9.TabIndex = 78;
-            this.pictureBox9.TabStop = false;
+            this.pb5.Image = global::apProjeto2.Properties.Resources.Forca_10;
+            this.pb5.Location = new System.Drawing.Point(167, 183);
+            this.pb5.Name = "pb5";
+            this.pb5.Size = new System.Drawing.Size(99, 98);
+            this.pb5.TabIndex = 78;
+            this.pb5.TabStop = false;
             // 
-            // pictureBox8
+            // pb6
             // 
-            this.pictureBox8.Image = global::apProjeto2.Properties.Resources.Forca_14;
-            this.pictureBox8.Location = new System.Drawing.Point(114, 235);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(47, 52);
-            this.pictureBox8.TabIndex = 77;
-            this.pictureBox8.TabStop = false;
+            this.pb6.Image = global::apProjeto2.Properties.Resources.Forca_14;
+            this.pb6.Location = new System.Drawing.Point(114, 235);
+            this.pb6.Name = "pb6";
+            this.pb6.Size = new System.Drawing.Size(47, 52);
+            this.pb6.TabIndex = 77;
+            this.pb6.TabStop = false;
             // 
-            // pictureBox7
+            // pb7
             // 
-            this.pictureBox7.Image = global::apProjeto2.Properties.Resources.Forca_16;
-            this.pictureBox7.Location = new System.Drawing.Point(81, 283);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(62, 83);
-            this.pictureBox7.TabIndex = 76;
-            this.pictureBox7.TabStop = false;
+            this.pb7.Image = global::apProjeto2.Properties.Resources.Forca_16;
+            this.pb7.Location = new System.Drawing.Point(81, 283);
+            this.pb7.Name = "pb7";
+            this.pb7.Size = new System.Drawing.Size(62, 83);
+            this.pb7.TabIndex = 76;
+            this.pb7.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -1039,16 +1039,16 @@
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMaoBandeira)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnjo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1109,14 +1109,14 @@
         private System.Windows.Forms.Button btnR;
         private System.Windows.Forms.Button btnS;
         private System.Windows.Forms.Button btnN;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pb8;
+        private System.Windows.Forms.PictureBox pb1;
+        private System.Windows.Forms.PictureBox pb4;
+        private System.Windows.Forms.PictureBox pb2;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pb5;
+        private System.Windows.Forms.PictureBox pb6;
+        private System.Windows.Forms.PictureBox pb7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -1145,7 +1145,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.PictureBox ptbAnjo;
         private System.Windows.Forms.OpenFileDialog dlgAbrir;
-        private System.Windows.Forms.PictureBox ptbMaoBandeira;
+        private System.Windows.Forms.PictureBox pb3;
         private System.Windows.Forms.PictureBox ptbBandeiraDireita;
         private System.Windows.Forms.PictureBox ptbBandeiraEsquerda;
         private System.Windows.Forms.Timer tmTemporizador;

@@ -12,6 +12,8 @@ namespace apProjeto2
 {
     public partial class Form1 : Form
     {
+        int pontos = 0;
+        int erro = 0;
         VetorPalavra asPalavras;
         int tempoPassado;  // Tempo passado em segundos
         Palavra palavraAtual;  // Palavra lido do vetor
@@ -46,8 +48,38 @@ namespace apProjeto2
 
         private void BtnA_Click(object sender, EventArgs e)
         {
-            string t = (sender as Button).Text; //  Acessa valor interno
+            bool achouLetra = false;
+            char t = Convert.ToChar((sender as Button).Text); //  Acessa valor interno
+            for (int indice = 0; indice < palavraAtual.PalavraString.Length ; indice++)
+            {
+                char letra = palavraAtual.PalavraString[indice];
+                if (letra == t) // Verifica se letra digitada existe
+                {
+                    dgvPalavra.Rows[0].Cells[indice].Value = letra; // Exibe no "dgvPalavra" a palavra que foi escolhida corretamente
+                    achouLetra = true;
+                }
+            }
+            if (!achouLetra)
+            {
+                erro++;
+                if (erro > 8)
+                    ptbAnjo.Visible = true;
+                else
+                {
+                    switch (erro) // A cada erro uma imagem será exibida
+                    {
+                        case 1: pb1.Visible = true; break;
+                        case 2: pb2.Visible = true; break;
+                        case 3: pb3.Visible = true; break;
+                        case 4: pb4.Visible = true; break;
+                        case 5: pb5.Visible = true; break;
+                        case 6: pb6.Visible = true; break;
+                        case 7: pb7.Visible = true; break;
+                        case 8: pb8.Visible = true; break;
+                    }
 
+                }
+            }
         }
     }
 }
