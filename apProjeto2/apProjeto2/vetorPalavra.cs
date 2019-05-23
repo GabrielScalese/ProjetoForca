@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 class VetorPalavra
 {
-    int tamMaxPalavras = 100; //quantidade de palavras que farão parte do vetor
-    int qtsPalavras;
+    int tamMaxPalavras = 100;   // Quantidade de palavras que farão parte do vetor
+    int qtsPalavras;   // Número de palavras
     Palavra[] palavra;
+
+    const int tamanhoPalavra = 15;
+    const int tamanhoDica = 100;
+
+    const int inicioPalavra = 0;
+    const int inicioDica = inicioPalavra + tamanhoPalavra;
 
     public Palavra this[int i]
     {
@@ -27,8 +33,10 @@ class VetorPalavra
         qtsPalavras = 0;
         while (!arq.EndOfStream)
         {
-            string palavraLida = arq.ReadLine();
-            InserirAposFim(palavraLida);
+            string linha = arq.ReadLine();
+            string palavraLida = linha.Substring(inicioPalavra, tamanhoPalavra);
+            string dicaLida = linha.Substring(inicioDica, tamanhoDica);
+            InserirAposFim(new Palavra(palavraLida, dicaLida));
         }
         arq.Close();
     }
