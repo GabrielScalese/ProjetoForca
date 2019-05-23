@@ -12,6 +12,7 @@ namespace apProjeto2
 {
     public partial class Form1 : Form
     {
+        int primeiraMatch = 0;
         const int tempoTotal = 60;
         int pontos = 0; // Armazena quantidade de pontos do usuário
         int erro = 0;
@@ -24,70 +25,78 @@ namespace apProjeto2
             InitializeComponent();
         }
 
-        public void HabilitarBotoes()
+        public void HabilitarBotoes(bool habilitado)
         {
-            btnA.Enabled = true;
-            btnB.Enabled = true;
-            btnC.Enabled = true;
-            btnD.Enabled = true;
-            btnE.Enabled = true;
-            btnF.Enabled = true;
-            btnG.Enabled = true;
-            btnH.Enabled = true;
-            btnI.Enabled = true;
-            btnJ.Enabled = true;
-            btnK.Enabled = true;
-            btnL.Enabled = true;
-            btnM.Enabled = true;
-            btnN.Enabled = true;
-            btnO.Enabled = true;
-            btnP.Enabled = true;
-            btnQ.Enabled = true;
-            btnR.Enabled = true;
-            btnS.Enabled = true;
-            btnT.Enabled = true;
-            btnU.Enabled = true;
-            btnV.Enabled = true;
-            btnW.Enabled = true;
-            btnX.Enabled = true;
-            btnY.Enabled = true;
-            btnZ.Enabled = true;
-            btnCc.Enabled = true;
-            btnAa.Enabled = true;
-            btnAt.Enabled = true;
-            btnAc.Enabled = true;
-            btnEc.Enabled = true;
-            btnIa.Enabled = true;
-            btnOa.Enabled = true;
-            btnOc.Enabled = true;
-            btnOt.Enabled = true;
-            btnUa.Enabled = true;
-            btnHifen.Enabled = true;
-            btnEspaco.Enabled = true;
+            btnA.Enabled = habilitado;
+            btnB.Enabled = habilitado;
+            btnC.Enabled = habilitado;
+            btnD.Enabled = habilitado;
+            btnE.Enabled = habilitado;
+            btnF.Enabled = habilitado;
+            btnG.Enabled = habilitado;
+            btnH.Enabled = habilitado;
+            btnI.Enabled = habilitado;
+            btnJ.Enabled = habilitado;
+            btnK.Enabled = habilitado;
+            btnL.Enabled = habilitado;
+            btnM.Enabled = habilitado;
+            btnN.Enabled = habilitado;
+            btnO.Enabled = habilitado;
+            btnP.Enabled = habilitado;
+            btnQ.Enabled = habilitado;
+            btnR.Enabled = habilitado;
+            btnS.Enabled = habilitado;
+            btnT.Enabled = habilitado;
+            btnU.Enabled = habilitado;
+            btnV.Enabled = habilitado;
+            btnW.Enabled = habilitado;
+            btnX.Enabled = habilitado;
+            btnY.Enabled = habilitado;
+            btnZ.Enabled = habilitado;
+            btnCc.Enabled = habilitado;
+            btnAa.Enabled = habilitado;
+            btnAt.Enabled = habilitado;
+            btnAc.Enabled = habilitado;
+            btnEc.Enabled = habilitado;
+            btnIa.Enabled = habilitado;
+            btnOa.Enabled = habilitado;
+            btnOc.Enabled = habilitado;
+            btnOt.Enabled = habilitado;
+            btnUa.Enabled = habilitado;
+            btnHifen.Enabled = habilitado;
+            btnEspaco.Enabled = habilitado;
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text != "")
             {
-                HabilitarBotoes();
-                pb1.Visible = false;
-                pb2.Visible = false;
-                pb3.Visible = false;
-                pbNew.Visible = false;
-                pb4.Visible = false;
-                pb5.Visible = false;
-                pb6.Visible = false;
-                pb7.Visible = false; 
-                pb8.Visible = false;
-                int aleatorio = new Random().Next(25);
-                palavraAtual = asPalavras[aleatorio];
-                if (chkDica.Checked)
+                if (primeiraMatch == 0)
                 {
-                    lbDica.Text = $"Dica: {palavraAtual.Dica}";
+                    primeiraMatch++;
+                    HabilitarBotoes(true);
+                    pb1.Visible = false;
+                    pb2.Visible = false;
+                    pb3.Visible = false;
+                    pbNew.Visible = false;
+                    pb4.Visible = false;
+                    pb5.Visible = false;
+                    pb6.Visible = false;
+                    pb7.Visible = false;
+                    pb8.Visible = false;
+                    int aleatorio = new Random().Next(25);
+                    palavraAtual = asPalavras[aleatorio];
+                    if (chkDica.Checked)
+                    {
+                        lbDica.Text = $"Dica: {palavraAtual.Dica}";
+                    }
+                    tmTemporizador.Start();
+                    dgvPalavra.ColumnCount = palavraAtual.PalavraSelec.Length;
                 }
-                tmTemporizador.Start();
-                dgvPalavra.ColumnCount = palavraAtual.PalavraSelec.Length;
+                else
+                {
+                    ResetarJogo();
+                }
             }
             else
                 MessageBox.Show("Por favor, insira seu nome");
