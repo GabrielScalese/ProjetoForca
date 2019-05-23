@@ -62,7 +62,7 @@ namespace apProjeto2
                     achouLetra = true;
                 }
             }
-            if (!achouLetra) // E
+            if (!achouLetra) // Erro cometido pelo usuário(por letra)
             {
                 erro++;
                 pontos--;
