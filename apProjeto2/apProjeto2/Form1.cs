@@ -19,6 +19,7 @@ namespace apProjeto2
         int pontos = 0; // Armazena quantidade de pontos do usuário
         int erro = 0;
         VetorPalavra asPalavras;
+        string[] nick;
         int tempoPassado;  // Tempo passado em segundos
         Palavra palavraAtual;  // Palavra lido do vetor
 
@@ -59,6 +60,7 @@ namespace apProjeto2
             btnAa.Enabled = habilitado;
             btnAt.Enabled = habilitado;
             btnAc.Enabled = habilitado;
+            btnEa.Enabled = habilitado;
             btnEc.Enabled = habilitado;
             btnIa.Enabled = habilitado;
             btnOa.Enabled = habilitado;
@@ -74,7 +76,7 @@ namespace apProjeto2
             HabilitarBotoes(false);
             pb1.Visible = false;
             pb2.Visible = false;
-            pb3.Visible = false;
+            pbMaoBandeira.Visible = false;
             pbNew.Visible = false;
             pb4.Visible = false;
             pb5.Visible = false;
@@ -159,12 +161,17 @@ namespace apProjeto2
                     {
                         case 1: pb1.Visible = true; break;
                         case 2: pb2.Visible = true; break;
+
                         case 3: pb4.Visible = true; break;
                         case 4: pb3.Visible = true; break;
+
+                        
+
                         case 5: pb5.Visible = true; break;
                         case 6: pb6.Visible = true; break;
                         case 7: pb7.Visible = true; break;
                         case 8: pb8.Visible = true; break;
+                        case 9: pbMorto.Visible = true;break;
                     }
                 }
             }
@@ -188,6 +195,35 @@ namespace apProjeto2
                 pontos++;
             }
         }
+
+        public void LerNicks()
+        {
+            int indice = 0;
+            var arq = new StreamReader("Ranking.txt");
+            while (!arq.EndOfStream)
+            {
+                string linha = arq.ReadLine();
+                nick[indice++] = linha;
+
+                //string[indiceNome]nome = linha;
+                //indiceNome++;
+            }
+            arq.Close();
+            var arqSaida = new StreamWriter("c:\temp");
+            while (!arq.EndOfStream)
+            {
+                arqSaida.WriteLine();
+                
+            }
+        }
+
+
+
+        public void SalvarPontuacao()
+        {
+            LerNicks();
+        }
+
     }
 
     public void CadastraJogador()
