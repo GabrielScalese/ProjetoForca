@@ -17,7 +17,7 @@ class VetorPalavra
 
     public VetorPalavra(int tamanhoVetor)
     {
-        palavra = new string[tamanhoVetor];
+        palavra = new Palavra[tamanhoVetor];
         qtsPalavras = 0;
         tamMaxPalavras = tamanhoVetor;
     }
@@ -32,10 +32,10 @@ class VetorPalavra
         }
         arq.Close();
     }
-    public void InserirAposFim(string palavraAInserir)
+    public void InserirAposFim(Palavra palavraASerUsada)
     {
-        palavra[qtsPalavras] = palavraAInserir;
-        qtsPalavras++;
+        palavra[qtsPalavras++] = palavraASerUsada;
+
     }
     public void Listar()
     {

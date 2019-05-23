@@ -21,7 +21,15 @@ class Palavra
         var dica = dicaSelec;
     }*/
 
-    public string PalavraSelec
+    public  Palavra()
+    {
+
+    }
+
+
+
+
+    /*public string PalavraSelec()
     {
         get => palavra;
         set
@@ -30,8 +38,9 @@ class Palavra
                 value = value.Substring(0, tamanhoPalavra);
             palavra = value.PadRight(tamanhoPalavra, ' ');
         }
-    }
-    public double Salario
+    }*/
+   
+    /* public double
     {
         get => salario;
         set
@@ -63,4 +72,4 @@ class Palavra
     {
         return Matricula.ToString().PadLeft(5, ' ') + Nome + Math.Round(Salario, 2).ToString().PadLeft(10, ' ');
     }
-}
+}*/
