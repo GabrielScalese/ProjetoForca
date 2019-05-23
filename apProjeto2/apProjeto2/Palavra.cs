@@ -15,10 +15,7 @@ class Palavra
     const int inicioPalavra = 0;
     const int inicioDica = inicioPalavra + tamanhoPalavra;
 
-    public string PalavraString
-    {
-        get => palavra; // Retorna string da palavra
-    }
+    
     public string Dica
     {
         get => dica;  // Retorna string da dica

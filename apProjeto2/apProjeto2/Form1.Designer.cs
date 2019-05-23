@@ -37,15 +37,15 @@
             this.ptbAnjo = new System.Windows.Forms.PictureBox();
             this.lbTemporizador = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkDica = new System.Windows.Forms.CheckBox();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbDica = new System.Windows.Forms.Label();
             this.pb8 = new System.Windows.Forms.PictureBox();
             this.pb1 = new System.Windows.Forms.PictureBox();
             this.pb4 = new System.Windows.Forms.PictureBox();
             this.pb2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pbNew = new System.Windows.Forms.PictureBox();
             this.pb5 = new System.Windows.Forms.PictureBox();
             this.pb6 = new System.Windows.Forms.PictureBox();
             this.pb7 = new System.Windows.Forms.PictureBox();
@@ -126,7 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).BeginInit();
@@ -157,15 +157,15 @@
             this.tabPage1.Controls.Add(this.ptbAnjo);
             this.tabPage1.Controls.Add(this.lbTemporizador);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.chkDica);
             this.tabPage1.Controls.Add(this.btnIniciar);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.lbDica);
             this.tabPage1.Controls.Add(this.pb8);
             this.tabPage1.Controls.Add(this.pb1);
             this.tabPage1.Controls.Add(this.pb4);
             this.tabPage1.Controls.Add(this.pb2);
-            this.tabPage1.Controls.Add(this.pictureBox11);
+            this.tabPage1.Controls.Add(this.pbNew);
             this.tabPage1.Controls.Add(this.pb5);
             this.tabPage1.Controls.Add(this.pb6);
             this.tabPage1.Controls.Add(this.pb7);
@@ -289,17 +289,17 @@
             this.label6.TabIndex = 94;
             this.label6.Text = "Erros:___";
             // 
-            // checkBox1
+            // chkDica
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(813, 436);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(94, 24);
-            this.checkBox1.TabIndex = 93;
-            this.checkBox1.Text = "Com dica";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkDica.AutoSize = true;
+            this.chkDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDica.ForeColor = System.Drawing.Color.Black;
+            this.chkDica.Location = new System.Drawing.Point(813, 436);
+            this.chkDica.Name = "chkDica";
+            this.chkDica.Size = new System.Drawing.Size(94, 24);
+            this.chkDica.TabIndex = 93;
+            this.chkDica.Text = "Com dica";
+            this.chkDica.UseVisualStyleBackColor = true;
             // 
             // btnIniciar
             // 
@@ -322,16 +322,16 @@
             this.label5.TabIndex = 89;
             this.label5.Text = "Pontos:____";
             // 
-            // label4
+            // lbDica
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(469, 354);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 25);
-            this.label4.TabIndex = 88;
-            this.label4.Text = "Dica:________________";
+            this.lbDica.AutoSize = true;
+            this.lbDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDica.ForeColor = System.Drawing.Color.Indigo;
+            this.lbDica.Location = new System.Drawing.Point(469, 354);
+            this.lbDica.Name = "lbDica";
+            this.lbDica.Size = new System.Drawing.Size(253, 25);
+            this.lbDica.TabIndex = 88;
+            this.lbDica.Text = "Dica:________________";
             // 
             // pb8
             // 
@@ -369,14 +369,14 @@
             this.pb2.TabIndex = 81;
             this.pb2.TabStop = false;
             // 
-            // pictureBox11
+            // pbNew
             // 
-            this.pictureBox11.Image = global::apProjeto2.Properties.Resources.Forca_07;
-            this.pictureBox11.Location = new System.Drawing.Point(60, 166);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(48, 65);
-            this.pictureBox11.TabIndex = 80;
-            this.pictureBox11.TabStop = false;
+            this.pbNew.Image = global::apProjeto2.Properties.Resources.Forca_07;
+            this.pbNew.Location = new System.Drawing.Point(60, 166);
+            this.pbNew.Name = "pbNew";
+            this.pbNew.Size = new System.Drawing.Size(48, 65);
+            this.pbNew.TabIndex = 80;
+            this.pbNew.TabStop = false;
             // 
             // pb5
             // 
@@ -1085,7 +1085,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).EndInit();
@@ -1153,7 +1153,7 @@
         private System.Windows.Forms.PictureBox pb1;
         private System.Windows.Forms.PictureBox pb4;
         private System.Windows.Forms.PictureBox pb2;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pbNew;
         private System.Windows.Forms.PictureBox pb5;
         private System.Windows.Forms.PictureBox pb6;
         private System.Windows.Forms.PictureBox pb7;
@@ -1164,11 +1164,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbDica;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label lbTemporizador;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkDica;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

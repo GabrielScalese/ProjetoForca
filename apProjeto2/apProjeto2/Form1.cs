@@ -71,10 +71,23 @@ namespace apProjeto2
             if (txtUsuario.Text != "")
             {
                 HabilitarBotoes();
-                int aleatorio = new Random().Next(100);
+                pb1.Visible = false;
+                pb2.Visible = false;
+                pb3.Visible = false;
+                pbNew.Visible = false;
+                pb4.Visible = false;
+                pb5.Visible = false;
+                pb6.Visible = false;
+                pb7.Visible = false; 
+                pb8.Visible = false;
+                int aleatorio = new Random().Next(25);
                 palavraAtual = asPalavras[aleatorio];
+                if (chkDica.Checked)
+                {
+                    lbDica.Text = $"Dica: {palavraAtual.Dica}";
+                }
                 tmTemporizador.Start();
-                dgvPalavra.ColumnCount = palavraAtual.PalavraString.Length;
+                dgvPalavra.ColumnCount = palavraAtual.PalavraSelec.Length;
             }
             else
                 MessageBox.Show("Por favor, insira seu nome");
@@ -101,9 +114,9 @@ namespace apProjeto2
         {
             bool achouLetra = false;
             char t = Convert.ToChar((sender as Button).Text); //  Acessa valor interno
-            for (int indice = 0; indice < palavraAtual.PalavraString.Length ; indice++)
+            for (int indice = 0; indice < palavraAtual.PalavraSelec.Length ; indice++)
             {
-                char letra = palavraAtual.PalavraString[indice];
+                char letra = palavraAtual.PalavraSelec[indice];
                 if (letra == t) // Verifica se letra digitada existe
                 {
                     dgvPalavra.Rows[0].Cells[indice].Value = letra; // Exibe no "dgvPalavra" a palavra que foi escolhida corretamente
@@ -121,7 +134,6 @@ namespace apProjeto2
                     {
                         // Resetar(); 
                     }
-                   
                 }
                 else
                 {
