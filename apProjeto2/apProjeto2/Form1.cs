@@ -76,7 +76,6 @@ namespace apProjeto2
             HabilitarBotoes(false);
             pb1.Visible = false;
             pb2.Visible = false;
-            pbMaoBandeira.Visible = false;
             pbNew.Visible = false;
             pb4.Visible = false;
             pb5.Visible = false;
@@ -84,6 +83,8 @@ namespace apProjeto2
             pb7.Visible = false;
             pb8.Visible = false;
             pbAnjo.Visible = false;
+            pbMaoBandeira.Visible = false;
+            pbMorto.Visible = false;
             tmTemporizador.Stop();
             tempoPassado = 0;
             foreach (DataGridViewCell cell in dgvPalavra.Rows[0].Cells) //  Verifica cada posição da palavra
@@ -127,6 +128,7 @@ namespace apProjeto2
             tempoPassado++;
 
             lbTemporizador.Text = $"Tempo restante: {tempoTotal - tempoPassado}s";
+            lbPontos.Text = $"Pontos:{pontos}";
         }
 
         private void BtnA_Click(object sender, EventArgs e) // Tratamento de strings
@@ -161,17 +163,13 @@ namespace apProjeto2
                     {
                         case 1: pb1.Visible = true; break;
                         case 2: pb2.Visible = true; break;
-
                         case 3: pb4.Visible = true; break;
-                        case 4: pb3.Visible = true; break;
-
-                        
-
+                        case 4: pbMaoBandeira.Visible = true; break;
                         case 5: pb5.Visible = true; break;
                         case 6: pb6.Visible = true; break;
                         case 7: pb7.Visible = true; break;
                         case 8: pb8.Visible = true; break;
-                        case 9: pbMorto.Visible = true;break;
+                        case 9: pbMorto.Visible = true; break;
                     }
                 }
             }
@@ -182,7 +180,7 @@ namespace apProjeto2
                 {
                     if (cell.Value == null || cell.Value.ToString() == "")
                     {
-                       terminou = false;
+                        terminou = false;
                     }
                 }
                 if (terminou)
@@ -191,56 +189,27 @@ namespace apProjeto2
                     {
                         ResetarJogo();
                     }
+                    else
+                        Close();
                 }
                 pontos++;
             }
         }
 
-        public void LerNicks()
+        public void CadastraJogador()
         {
-            int indice = 0;
-            var arq = new StreamReader("Ranking.txt");
-            while (!arq.EndOfStream)
+            string local = dlgAbrir.FileName.Substring(0, dlgAbrir.FileName.IndexOf("PALAVRASEDICAS.txt")) + "Ranking.txt";
+            StreamReader leitura = new StreamReader(local);
+            var vetJogador = new Jogador();
+            vetJogador.LerArquivo(leitura);
+            if (!vetJogador.Existe(nomeUsuario))
             {
-                string linha = arq.ReadLine();
-                nick[indice++] = linha;
-
-                //string[indiceNome]nome = linha;
-                //indiceNome++;
+                Jogador novo = new Jogador();
+                vetJogador.Incluir(novo);
             }
-            arq.Close();
-            var arqSaida = new StreamWriter("c:\temp");
-            while (!arq.EndOfStream)
-            {
-                arqSaida.WriteLine();
-                
-            }
+            StreamWriter escrita = new StreamWriter(local);
+            vetJogador.GravarDados(escrita);
+            leitura.Close();
         }
-
-
-
-        public void SalvarPontuacao()
-        {
-            LerNicks();
-        }
-
     }
-
-    public void CadastraJogador()
-    {
-        string local = dlgAbrir.FileName.Substring(0, dlgAbrir.FileName.IndexOf("PALAVRASEDICAS.txt")) + "Ranking.txt";
-        //string do lugar do arquivo, que pega a mesma pasta do projeto, retira "palavras.txt" e adiciona "ranking.txt"
-        StreamReader leitura = new StreamReader(local); //arquivo a ser lido
-        var vetJogador = new Jogador(); //instanciação de vetor de jogadores
-        vetJogador.LerArquivo(leitura); //ler arquivo e armazenar jogadores no vetor
-        else //se o nome do jogador não existe
-        {
-            Jogador novo = new Jogador(nomeUsuario, pontos); //instanciar novo jogador com nome e pontos já definidos
-            vetJogador.Incluir(novo); //incluir novo jogaor no vetor
-        }
-        StreamWriter escrita = new StreamWriter(local); //arquivo a ser escrito
-        vetJogador.GravarDados(escrita); //gravar vetor no arquivo de escrita, por cima do que estava no arquivo de leitura 
-    }
-
-
 }

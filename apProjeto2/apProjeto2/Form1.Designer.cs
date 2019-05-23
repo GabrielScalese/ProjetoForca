@@ -31,28 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pbMorto = new System.Windows.Forms.PictureBox();
             this.ptbBandeiraEsquerda = new System.Windows.Forms.PictureBox();
-            this.ptbBandeiraDireita = new System.Windows.Forms.PictureBox();
-            this.pbMaoBandeira = new System.Windows.Forms.PictureBox();
             this.pbAnjo = new System.Windows.Forms.PictureBox();
             this.lbTemporizador = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.chkDica = new System.Windows.Forms.CheckBox();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbPontos = new System.Windows.Forms.Label();
             this.lbDica = new System.Windows.Forms.Label();
             this.pb8 = new System.Windows.Forms.PictureBox();
-            this.pb1 = new System.Windows.Forms.PictureBox();
             this.pb4 = new System.Windows.Forms.PictureBox();
-            this.pb2 = new System.Windows.Forms.PictureBox();
             this.pbNew = new System.Windows.Forms.PictureBox();
             this.pb5 = new System.Windows.Forms.PictureBox();
-            this.pb6 = new System.Windows.Forms.PictureBox();
             this.pb7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvPalavra = new System.Windows.Forms.DataGridView();
@@ -113,53 +106,63 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pb1 = new System.Windows.Forms.PictureBox();
+            this.ptbBandeiraDireita = new System.Windows.Forms.PictureBox();
+            this.pbOld = new System.Windows.Forms.PictureBox();
+            this.pb6 = new System.Windows.Forms.PictureBox();
+            this.pb2 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
+            this.pbMaoBandeira = new System.Windows.Forms.PictureBox();
+            this.pbMorto = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnjo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, -28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1030, 594);
+            this.tabControl1.Size = new System.Drawing.Size(1082, 622);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.ptbBandeiraEsquerda);
             this.tabPage1.Controls.Add(this.pbMorto);
             this.tabPage1.Controls.Add(this.pbMaoBandeira);
+            this.tabPage1.Controls.Add(this.ptbBandeiraEsquerda);
             this.tabPage1.Controls.Add(this.pbAnjo);
             this.tabPage1.Controls.Add(this.lbTemporizador);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.chkDica);
             this.tabPage1.Controls.Add(this.btnIniciar);
-            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.lbPontos);
             this.tabPage1.Controls.Add(this.lbDica);
             this.tabPage1.Controls.Add(this.pb8);
             this.tabPage1.Controls.Add(this.pb4);
@@ -216,59 +219,26 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.pb1);
             this.tabPage1.Controls.Add(this.ptbBandeiraDireita);
-            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.pbOld);
             this.tabPage1.Controls.Add(this.pb6);
             this.tabPage1.Controls.Add(this.pb2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1022, 568);
+            this.tabPage1.Size = new System.Drawing.Size(1074, 596);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Forca";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // pbMorto
-            // 
-            this.pbMorto.Image = global::apProjeto2.Properties.Resources.Forca_1_05;
-            this.pbMorto.Location = new System.Drawing.Point(99, 76);
-            this.pbMorto.Name = "pbMorto";
-            this.pbMorto.Size = new System.Drawing.Size(100, 90);
-            this.pbMorto.TabIndex = 100;
-            this.pbMorto.TabStop = false;
-            this.pbMorto.Visible = false;
-            // 
             // ptbBandeiraEsquerda
             // 
             this.ptbBandeiraEsquerda.Image = global::apProjeto2.Properties.Resources.Forca_2_03;
-            this.ptbBandeiraEsquerda.Location = new System.Drawing.Point(-4, 76);
+            this.ptbBandeiraEsquerda.Location = new System.Drawing.Point(-4, 91);
             this.ptbBandeiraEsquerda.Name = "ptbBandeiraEsquerda";
             this.ptbBandeiraEsquerda.Size = new System.Drawing.Size(69, 90);
             this.ptbBandeiraEsquerda.TabIndex = 99;
             this.ptbBandeiraEsquerda.TabStop = false;
             this.ptbBandeiraEsquerda.Visible = false;
-            // 
-            // ptbBandeiraDireita
-            // 
-            this.ptbBandeiraDireita.Image = global::apProjeto2.Properties.Resources.Forca_2_04;
-            this.ptbBandeiraDireita.Location = new System.Drawing.Point(60, 76);
-            this.ptbBandeiraDireita.Name = "ptbBandeiraDireita";
-            this.ptbBandeiraDireita.Size = new System.Drawing.Size(49, 90);
-            this.ptbBandeiraDireita.TabIndex = 98;
-            this.ptbBandeiraDireita.TabStop = false;
-            this.ptbBandeiraDireita.Visible = false;
-            // 
-            // pbMaoBandeira
-            // 
-
-            this.pb3.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
-            this.pb3.Location = new System.Drawing.Point(60, 161);
-            this.pb3.Name = "pb3";
-            this.pb3.Size = new System.Drawing.Size(48, 50);
-            this.pb3.TabIndex = 97;
-            this.pb3.TabStop = false;
-            this.pb3.Visible = false;
-
-            
             // 
             // pbAnjo
             // 
@@ -283,31 +253,31 @@
             // lbTemporizador
             // 
             this.lbTemporizador.AutoSize = true;
-            this.lbTemporizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTemporizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTemporizador.ForeColor = System.Drawing.Color.Red;
-            this.lbTemporizador.Location = new System.Drawing.Point(729, 497);
+            this.lbTemporizador.Location = new System.Drawing.Point(729, 495);
             this.lbTemporizador.Name = "lbTemporizador";
-            this.lbTemporizador.Size = new System.Drawing.Size(263, 25);
+            this.lbTemporizador.Size = new System.Drawing.Size(196, 20);
             this.lbTemporizador.TabIndex = 95;
             this.lbTemporizador.Text = "Tempo restante:_______s";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(469, 497);
+            this.label6.Location = new System.Drawing.Point(441, 421);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 25);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 94;
-            this.label6.Text = "Erros:___";
+            this.label6.Text = "Erros:";
             // 
             // chkDica
             // 
             this.chkDica.AutoSize = true;
             this.chkDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDica.ForeColor = System.Drawing.Color.Black;
-            this.chkDica.Location = new System.Drawing.Point(868, 432);
+            this.chkDica.Location = new System.Drawing.Point(874, 423);
             this.chkDica.Name = "chkDica";
             this.chkDica.Size = new System.Drawing.Size(94, 24);
             this.chkDica.TabIndex = 93;
@@ -316,7 +286,7 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(734, 426);
+            this.btnIniciar.Location = new System.Drawing.Point(734, 421);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(103, 37);
             this.btnIniciar.TabIndex = 92;
@@ -324,27 +294,27 @@
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // label5
+            // lbPontos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label5.Location = new System.Drawing.Point(469, 429);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 25);
-            this.label5.TabIndex = 89;
-            this.label5.Text = "Pontos:____";
+            this.lbPontos.AutoSize = true;
+            this.lbPontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPontos.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbPontos.Location = new System.Drawing.Point(441, 390);
+            this.lbPontos.Name = "lbPontos";
+            this.lbPontos.Size = new System.Drawing.Size(53, 16);
+            this.lbPontos.TabIndex = 89;
+            this.lbPontos.Text = "Pontos:";
             // 
             // lbDica
             // 
             this.lbDica.AutoSize = true;
-            this.lbDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDica.ForeColor = System.Drawing.Color.Indigo;
-            this.lbDica.Location = new System.Drawing.Point(469, 354);
+            this.lbDica.Location = new System.Drawing.Point(441, 358);
             this.lbDica.Name = "lbDica";
-            this.lbDica.Size = new System.Drawing.Size(253, 25);
+            this.lbDica.Size = new System.Drawing.Size(39, 16);
             this.lbDica.TabIndex = 88;
-            this.lbDica.Text = "Dica:________________";
+            this.lbDica.Text = "Dica:";
             // 
             // pb8
             // 
@@ -355,35 +325,14 @@
             this.pb8.TabIndex = 87;
             this.pb8.TabStop = false;
             // 
-            // pb1
-            // 
-            this.pb1.Image = global::apProjeto2.Properties.Resources.Forca_05;
-            this.pb1.Location = new System.Drawing.Point(98, 76);
-            this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(100, 90);
-            this.pb1.TabIndex = 84;
-            this.pb1.TabStop = false;
-            // 
             // pb4
             // 
             this.pb4.Image = global::apProjeto2.Properties.Resources.Forca_09;
-
-            
             this.pb4.Location = new System.Drawing.Point(108, 182);
-
             this.pb4.Name = "pb4";
             this.pb4.Size = new System.Drawing.Size(64, 41);
             this.pb4.TabIndex = 82;
             this.pb4.TabStop = false;
-            // 
-            // pb2
-            // 
-            this.pb2.Image = global::apProjeto2.Properties.Resources.Forca_08;
-            this.pb2.Location = new System.Drawing.Point(109, 166);
-            this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(79, 18);
-            this.pb2.TabIndex = 81;
-            this.pb2.TabStop = false;
             // 
             // pbNew
             // 
@@ -397,23 +346,11 @@
             // pb5
             // 
             this.pb5.Image = global::apProjeto2.Properties.Resources.Forca_10;
-
-            
             this.pb5.Location = new System.Drawing.Point(171, 182);
-
             this.pb5.Name = "pb5";
             this.pb5.Size = new System.Drawing.Size(81, 57);
             this.pb5.TabIndex = 78;
             this.pb5.TabStop = false;
-            // 
-            // pb6
-            // 
-            this.pb6.Image = global::apProjeto2.Properties.Resources.Forca_14;
-            this.pb6.Location = new System.Drawing.Point(115, 222);
-            this.pb6.Name = "pb6";
-            this.pb6.Size = new System.Drawing.Size(57, 52);
-            this.pb6.TabIndex = 77;
-            this.pb6.TabStop = false;
             // 
             // pb7
             // 
@@ -435,20 +372,11 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::apProjeto2.Properties.Resources.Forca__13;
-            this.pictureBox4.Location = new System.Drawing.Point(9, 265);
+            this.pictureBox4.Location = new System.Drawing.Point(9, 253);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(41, 153);
             this.pictureBox4.TabIndex = 73;
             this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::apProjeto2.Properties.Resources.Forca__03;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 83);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 182);
-            this.pictureBox3.TabIndex = 72;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -1058,6 +986,52 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Forca";
             // 
+            // pb1
+            // 
+            this.pb1.Image = global::apProjeto2.Properties.Resources.Forca_05;
+            this.pb1.Location = new System.Drawing.Point(98, 76);
+            this.pb1.Name = "pb1";
+            this.pb1.Size = new System.Drawing.Size(100, 90);
+            this.pb1.TabIndex = 84;
+            this.pb1.TabStop = false;
+            // 
+            // ptbBandeiraDireita
+            // 
+            this.ptbBandeiraDireita.Image = global::apProjeto2.Properties.Resources.Forca_2_04;
+            this.ptbBandeiraDireita.Location = new System.Drawing.Point(63, 92);
+            this.ptbBandeiraDireita.Name = "ptbBandeiraDireita";
+            this.ptbBandeiraDireita.Size = new System.Drawing.Size(49, 90);
+            this.ptbBandeiraDireita.TabIndex = 98;
+            this.ptbBandeiraDireita.TabStop = false;
+            this.ptbBandeiraDireita.Visible = false;
+            // 
+            // pbOld
+            // 
+            this.pbOld.Image = global::apProjeto2.Properties.Resources.Forca__03;
+            this.pbOld.Location = new System.Drawing.Point(9, 76);
+            this.pbOld.Name = "pbOld";
+            this.pbOld.Size = new System.Drawing.Size(100, 182);
+            this.pbOld.TabIndex = 72;
+            this.pbOld.TabStop = false;
+            // 
+            // pb6
+            // 
+            this.pb6.Image = global::apProjeto2.Properties.Resources.Forca_14;
+            this.pb6.Location = new System.Drawing.Point(115, 222);
+            this.pb6.Name = "pb6";
+            this.pb6.Size = new System.Drawing.Size(57, 52);
+            this.pb6.TabIndex = 77;
+            this.pb6.TabStop = false;
+            // 
+            // pb2
+            // 
+            this.pb2.Image = global::apProjeto2.Properties.Resources.Forca_08;
+            this.pb2.Location = new System.Drawing.Point(109, 166);
+            this.pb2.Name = "pb2";
+            this.pb2.Size = new System.Drawing.Size(79, 18);
+            this.pb2.TabIndex = 81;
+            this.pb2.TabStop = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -1070,18 +1044,36 @@
             // 
             // dlgAbrir
             // 
-            this.dlgAbrir.FileName = "openFileDialog1";
+            this.dlgAbrir.FileName = "dlgAbrir";
             // 
             // tmTemporizador
             // 
             this.tmTemporizador.Interval = 1000;
             this.tmTemporizador.Tick += new System.EventHandler(this.TmTemporizador_Tick);
             // 
+            // pbMaoBandeira
+            // 
+            this.pbMaoBandeira.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
+            this.pbMaoBandeira.Location = new System.Drawing.Point(60, 164);
+            this.pbMaoBandeira.Name = "pbMaoBandeira";
+            this.pbMaoBandeira.Size = new System.Drawing.Size(49, 50);
+            this.pbMaoBandeira.TabIndex = 100;
+            this.pbMaoBandeira.TabStop = false;
+            // 
+            // pbMorto
+            // 
+            this.pbMorto.Image = global::apProjeto2.Properties.Resources.Forca_1_05;
+            this.pbMorto.Location = new System.Drawing.Point(98, 83);
+            this.pbMorto.Name = "pbMorto";
+            this.pbMorto.Size = new System.Drawing.Size(100, 83);
+            this.pbMorto.TabIndex = 101;
+            this.pbMorto.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 594);
+            this.ClientSize = new System.Drawing.Size(1079, 594);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1089,25 +1081,25 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnjo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1171,11 +1163,10 @@
         private System.Windows.Forms.PictureBox pb7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbOld;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lbDica;
+        private System.Windows.Forms.Label lbPontos;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label lbTemporizador;
         private System.Windows.Forms.Label label6;
@@ -1201,9 +1192,9 @@
         private System.Windows.Forms.PictureBox ptbBandeiraEsquerda;
         private System.Windows.Forms.Timer tmTemporizador;
         private System.Windows.Forms.PictureBox pb3;
-
-        
-
+        private System.Windows.Forms.PictureBox pbMaoBandeira;
+        private System.Windows.Forms.PictureBox pbMorto;
+        private System.Windows.Forms.Label lbDica;
     }
 }
 
