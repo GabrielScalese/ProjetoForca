@@ -15,6 +15,9 @@ class Palavra
     const int inicioPalavra = 0;
     const int inicioDica = inicioPalavra + tamanhoPalavra;
 
+    
+    
+    
     /*public Palavra(string palavraSelec, string dicaSelec)
     {
         var palavra = palavraSelec;
