@@ -59,6 +59,7 @@ namespace apProjeto2
             btnAa.Enabled = habilitado;
             btnAt.Enabled = habilitado;
             btnAc.Enabled = habilitado;
+            btnEa.Enabled = habilitado;
             btnEc.Enabled = habilitado;
             btnIa.Enabled = habilitado;
             btnOa.Enabled = habilitado;
@@ -74,7 +75,7 @@ namespace apProjeto2
             HabilitarBotoes(false);
             pb1.Visible = false;
             pb2.Visible = false;
-            pb3.Visible = false;
+            pbMaoBandeira.Visible = false;
             pbNew.Visible = false;
             pb4.Visible = false;
             pb5.Visible = false;
@@ -159,7 +160,7 @@ namespace apProjeto2
                     {
                         case 1: pb1.Visible = true; break;
                         case 2: pb2.Visible = true; break;
-                        case 3: pb3.Visible = true; break;
+                        case 3: pbMaoBandeira.Visible = true; break;
                         case 4: pb4.Visible = true; break;
                         case 5: pb5.Visible = true; break;
                         case 6: pb6.Visible = true; break;
