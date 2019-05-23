@@ -21,9 +21,10 @@ class Palavra
         var dica = dicaSelec;
     }*/
 
-    public  Palavra()
+    public  Palavra(string umaPalavra, string umaDica)
     {
-
+        this.palavra = umaPalavra;
+        this.dica = umaDica;
     }
 
 
@@ -71,5 +72,5 @@ class Palavra
     public String ParaArquivo()
     {
         return Matricula.ToString().PadLeft(5, ' ') + Nome + Math.Round(Salario, 2).ToString().PadLeft(10, ' ');
-    }
-}*/
+    }*/
+}
