@@ -66,6 +66,11 @@ namespace apProjeto2
             btnEspaco.Enabled = true;
         }
 
+        public void Resetar()
+        {
+            
+        }
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text != "")
@@ -130,7 +135,7 @@ namespace apProjeto2
                 if (erro > 8)
                 {
                     ptbAnjo.Visible = true;
-                    if (MessageBox.Show("Infelizmente você perdeu!\nDeseja jogar novamente?", "Fim de jogo!" ,MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Infelizmente você perdeu!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         // Resetar(); 
                     }
@@ -151,7 +156,24 @@ namespace apProjeto2
                 }
             }
             else
+            {
+                bool terminou = true;
+                foreach (DataGridViewCell cell in dgvPalavra.Rows[0].Cells) //  Verifica cada posição da palavra
+                {
+                    if (cell.Value.ToString() == "")
+                    {
+                        terminou = false;
+                    }
+                }
+                if (terminou)
+                {
+                   if (MessageBox.Show("Felizmente você ganhou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                   {
+                        Resetar();
+                   }
+                }
                 pontos++;
+            }
         }
     }
 }
