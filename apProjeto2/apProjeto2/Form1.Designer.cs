@@ -35,7 +35,7 @@
             this.ptbBandeiraDireita = new System.Windows.Forms.PictureBox();
             this.pb3 = new System.Windows.Forms.PictureBox();
             this.ptbAnjo = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbTemporizador = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnIniciar = new System.Windows.Forms.Button();
@@ -155,7 +155,7 @@
             this.tabPage1.Controls.Add(this.ptbBandeiraDireita);
             this.tabPage1.Controls.Add(this.pb3);
             this.tabPage1.Controls.Add(this.ptbAnjo);
-            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.lbTemporizador);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.btnIniciar);
@@ -267,16 +267,16 @@
             this.ptbAnjo.TabStop = false;
             this.ptbAnjo.Visible = false;
             // 
-            // label7
+            // lbTemporizador
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(667, 494);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(263, 25);
-            this.label7.TabIndex = 95;
-            this.label7.Text = "Tempo restante:_______s";
+            this.lbTemporizador.AutoSize = true;
+            this.lbTemporizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTemporizador.ForeColor = System.Drawing.Color.Red;
+            this.lbTemporizador.Location = new System.Drawing.Point(667, 494);
+            this.lbTemporizador.Name = "lbTemporizador";
+            this.lbTemporizador.Size = new System.Drawing.Size(263, 25);
+            this.lbTemporizador.TabIndex = 95;
+            this.lbTemporizador.Text = "Tempo restante:_______s";
             // 
             // label6
             // 
@@ -1126,7 +1126,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbTemporizador;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

@@ -12,7 +12,8 @@ namespace apProjeto2
 {
     public partial class Form1 : Form
     {
-        int pontos = 0;
+        const int tempoTotal = 60;
+        int pontos = 0; // Armazena quantidade de pontos do usuário
         int erro = 0;
         VetorPalavra asPalavras;
         int tempoPassado;  // Tempo passado em segundos
@@ -44,9 +45,11 @@ namespace apProjeto2
         private void TmTemporizador_Tick(object sender, EventArgs e)
         {
             tempoPassado++;
+            
+            lbTemporizador.Text = $"Tempo restante: {tempoTotal - tempoPassado}s";
         }
 
-        private void BtnA_Click(object sender, EventArgs e)
+        private void BtnA_Click(object sender, EventArgs e) // Tratamento de strings
         {
             bool achouLetra = false;
             char t = Convert.ToChar((sender as Button).Text); //  Acessa valor interno
@@ -59,11 +62,19 @@ namespace apProjeto2
                     achouLetra = true;
                 }
             }
-            if (!achouLetra)
+            if (!achouLetra) // E
             {
                 erro++;
+                pontos--;
                 if (erro > 8)
+                {
                     ptbAnjo.Visible = true;
+                    if (MessageBox.Show("Infelizmente você perdeu!\nDeseja jogar novamente?", "Fim de jogo!" ,MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        // Resetar(); 
+                    }
+                   
+                }
                 else
                 {
                     switch (erro) // A cada erro uma imagem será exibida
@@ -77,9 +88,10 @@ namespace apProjeto2
                         case 7: pb7.Visible = true; break;
                         case 8: pb8.Visible = true; break;
                     }
-
                 }
             }
+            else
+                pontos++;
         }
     }
 }
