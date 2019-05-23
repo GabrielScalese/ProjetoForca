@@ -160,7 +160,7 @@
     <value>True</value>
   </metadata>
   <metadata name="dlgAbrir.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>28, 21</value>
+    <value>35, 21</value>
   </metadata>
   <metadata name="tmTemporizador.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>124, 21</value>

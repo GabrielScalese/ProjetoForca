@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace apProjeto2
 {
     public partial class Form1 : Form
     {
+        string nomeUsuario = "";
         int primeiraMatch = 0;
         const int tempoTotal = 60;
         int pontos = 0; // Armazena quantidade de pontos do usuário
@@ -157,8 +159,8 @@ namespace apProjeto2
                     {
                         case 1: pb1.Visible = true; break;
                         case 2: pb2.Visible = true; break;
-                        case 3: pb3.Visible = true; break;
-                        case 4: pb4.Visible = true; break;
+                        case 3: pb4.Visible = true; break;
+                        case 4: pb3.Visible = true; break;
                         case 5: pb5.Visible = true; break;
                         case 6: pb6.Visible = true; break;
                         case 7: pb7.Visible = true; break;
@@ -178,7 +180,7 @@ namespace apProjeto2
                 }
                 if (terminou)
                 {
-                    if (MessageBox.Show("Felizmente você ganhou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Parabéns, você ganhou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         ResetarJogo();
                     }
@@ -187,4 +189,22 @@ namespace apProjeto2
             }
         }
     }
+
+    public void CadastraJogador()
+    {
+        string local = dlgAbrir.FileName.Substring(0, dlgAbrir.FileName.IndexOf("PALAVRASEDICAS.txt")) + "Ranking.txt";
+        //string do lugar do arquivo, que pega a mesma pasta do projeto, retira "palavras.txt" e adiciona "ranking.txt"
+        StreamReader leitura = new StreamReader(local); //arquivo a ser lido
+        var vetJogador = new Jogador(); //instanciação de vetor de jogadores
+        vetJogador.LerArquivo(leitura); //ler arquivo e armazenar jogadores no vetor
+        else //se o nome do jogador não existe
+        {
+            Jogador novo = new Jogador(nomeUsuario, pontos); //instanciar novo jogador com nome e pontos já definidos
+            vetJogador.Incluir(novo); //incluir novo jogaor no vetor
+        }
+        StreamWriter escrita = new StreamWriter(local); //arquivo a ser escrito
+        vetJogador.GravarDados(escrita); //gravar vetor no arquivo de escrita, por cima do que estava no arquivo de leitura 
+    }
+
+
 }
