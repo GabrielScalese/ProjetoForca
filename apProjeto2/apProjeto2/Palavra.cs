@@ -24,25 +24,13 @@ class Palavra
         get => dica;  // Retorna string da dica
     }
 
-
-
-
-    /*public Palavra(string palavraSelec, string dicaSelec)
-    {
-        var palavra = palavraSelec;
-        var dica = dicaSelec;
-    }*/
-
-    public  Palavra(string umaPalavra, string umaDica)
+    public Palavra(string umaPalavra, string umaDica)
     {
         this.palavra = umaPalavra;
         this.dica = umaDica;
     }
 
-
-
-
-    /*public string PalavraSelec()
+    public string PalavraSelec
     {
         get => palavra;
         set
@@ -51,38 +39,5 @@ class Palavra
                 value = value.Substring(0, tamanhoPalavra);
             palavra = value.PadRight(tamanhoPalavra, ' ');
         }
-    }*/
-   
-    /* public double
-    {
-        get => salario;
-        set
-        {
-            if (value < 0)
-                throw new InvalidDataException("Salário inválido!");
-            salario = value;
-        }
     }
-
-    public Funcionario(int mat, string nom, double sal)
-    {
-        Matricula = mat;
-        Nome = nom;
-        Salario = sal;
-    }
-    public Funcionario(string linha)
-    {
-        Matricula = int.Parse(linha.Substring(inicioMatricula, tamanhoMatricula));
-        Nome = linha.Substring(inicioNome, tamanhoNome);
-        Salario = double.Parse(linha.Substring(inicioSalario, tamanhoSalario));
-    }
-    public override String ToString()
-    {
-        return Matricula.ToString().PadLeft(5, ' ') + "   " + Nome + Math.Round(Salario, 2).ToString().PadLeft(13, ' ');
-    }
-
-    public String ParaArquivo()
-    {
-        return Matricula.ToString().PadLeft(5, ' ') + Nome + Math.Round(Salario, 2).ToString().PadLeft(10, ' ');
-    }*/
 }

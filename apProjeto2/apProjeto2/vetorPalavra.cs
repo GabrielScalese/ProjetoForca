@@ -71,21 +71,10 @@ class VetorPalavra
         while (!arq.EndOfStream)
         {
             string linha = arq.ReadLine();
-
-        }
-    }
-
-    public string aPalavra //propriedade string que retorna a palavra
-    {
-        get => palavra;
-    }
-    public string Dica //propriedade string que retorna a dica
-    {
-        get => dica;
-        set
-        {
-            if (value.Length > tamanhoDica)  //se a dica for maior que o tamanho máximo
-                dica = value.Substring(0, tamanhoDica); //o programa pega 200 caracteres da dica
+            string palavraLida = linha.Substring(inicioPalavra, tamanhoPalavra).Trim();
+            string dicaLida = linha.Substring(inicioDica).Trim();
+            var palavraAtual = new Palavra(palavraLida, dicaLida);
+            InserirAposFim(palavraAtual); // Insere a palavra no vetor
         }
     }
 }

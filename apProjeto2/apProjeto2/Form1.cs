@@ -24,12 +24,60 @@ namespace apProjeto2
             InitializeComponent();
         }
 
+        public void HabilitarBotoes()
+        {
+            btnA.Enabled = true;
+            btnB.Enabled = true;
+            btnC.Enabled = true;
+            btnD.Enabled = true;
+            btnE.Enabled = true;
+            btnF.Enabled = true;
+            btnG.Enabled = true;
+            btnH.Enabled = true;
+            btnI.Enabled = true;
+            btnJ.Enabled = true;
+            btnK.Enabled = true;
+            btnL.Enabled = true;
+            btnM.Enabled = true;
+            btnN.Enabled = true;
+            btnO.Enabled = true;
+            btnP.Enabled = true;
+            btnQ.Enabled = true;
+            btnR.Enabled = true;
+            btnS.Enabled = true;
+            btnT.Enabled = true;
+            btnU.Enabled = true;
+            btnV.Enabled = true;
+            btnW.Enabled = true;
+            btnX.Enabled = true;
+            btnY.Enabled = true;
+            btnZ.Enabled = true;
+            btnCc.Enabled = true;
+            btnAa.Enabled = true;
+            btnAt.Enabled = true;
+            btnAc.Enabled = true;
+            btnEc.Enabled = true;
+            btnIa.Enabled = true;
+            btnOa.Enabled = true;
+            btnOc.Enabled = true;
+            btnOt.Enabled = true;
+            btnUa.Enabled = true;
+            btnHifen.Enabled = true;
+            btnEspaco.Enabled = true;
+        }
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            int aleatorio = new Random().Next(100);
-            palavraAtual = asPalavras[aleatorio];
-            tmTemporizador.Start();
-            dgvPalavra.ColumnCount = palavraAtual.PalavraString.Length;
+            if (txtUsuario.Text != "")
+            {
+                HabilitarBotoes();
+                int aleatorio = new Random().Next(100);
+                palavraAtual = asPalavras[aleatorio];
+                tmTemporizador.Start();
+                dgvPalavra.ColumnCount = palavraAtual.PalavraString.Length;
+            }
+            else
+                MessageBox.Show("Por favor, insira seu nome");
         }
 
         private void Form1_Load(object sender, EventArgs e)
