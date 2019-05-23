@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ptbBandeiraEsquerda = new System.Windows.Forms.PictureBox();
+            this.ptbBandeiraDireita = new System.Windows.Forms.PictureBox();
+            this.ptbMaoBandeira = new System.Windows.Forms.PictureBox();
             this.ptbAnjo = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -111,11 +115,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
-            this.ptbMaoBandeira = new System.Windows.Forms.PictureBox();
-            this.ptbBandeiraDireita = new System.Windows.Forms.PictureBox();
-            this.ptbBandeiraEsquerda = new System.Windows.Forms.PictureBox();
+            this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMaoBandeira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnjo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -132,9 +137,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMaoBandeira)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -224,6 +226,36 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Forca";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ptbBandeiraEsquerda
+            // 
+            this.ptbBandeiraEsquerda.Image = global::apProjeto2.Properties.Resources.Forca_2_03;
+            this.ptbBandeiraEsquerda.Location = new System.Drawing.Point(-4, 76);
+            this.ptbBandeiraEsquerda.Name = "ptbBandeiraEsquerda";
+            this.ptbBandeiraEsquerda.Size = new System.Drawing.Size(69, 90);
+            this.ptbBandeiraEsquerda.TabIndex = 99;
+            this.ptbBandeiraEsquerda.TabStop = false;
+            this.ptbBandeiraEsquerda.Visible = false;
+            // 
+            // ptbBandeiraDireita
+            // 
+            this.ptbBandeiraDireita.Image = global::apProjeto2.Properties.Resources.Forca_2_04;
+            this.ptbBandeiraDireita.Location = new System.Drawing.Point(60, 76);
+            this.ptbBandeiraDireita.Name = "ptbBandeiraDireita";
+            this.ptbBandeiraDireita.Size = new System.Drawing.Size(49, 90);
+            this.ptbBandeiraDireita.TabIndex = 98;
+            this.ptbBandeiraDireita.TabStop = false;
+            this.ptbBandeiraDireita.Visible = false;
+            // 
+            // ptbMaoBandeira
+            // 
+            this.ptbMaoBandeira.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
+            this.ptbMaoBandeira.Location = new System.Drawing.Point(60, 166);
+            this.ptbMaoBandeira.Name = "ptbMaoBandeira";
+            this.ptbMaoBandeira.Size = new System.Drawing.Size(48, 50);
+            this.ptbMaoBandeira.TabIndex = 97;
+            this.ptbMaoBandeira.TabStop = false;
+            this.ptbMaoBandeira.Visible = false;
             // 
             // ptbAnjo
             // 
@@ -552,6 +584,7 @@
             this.btnEspaco.TabIndex = 68;
             this.btnEspaco.Text = " ";
             this.btnEspaco.UseVisualStyleBackColor = true;
+            this.btnEspaco.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnHifen
             // 
@@ -561,6 +594,7 @@
             this.btnHifen.TabIndex = 67;
             this.btnHifen.Text = "-";
             this.btnHifen.UseVisualStyleBackColor = true;
+            this.btnHifen.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnOa
             // 
@@ -570,6 +604,7 @@
             this.btnOa.TabIndex = 66;
             this.btnOa.Text = "Ó";
             this.btnOa.UseVisualStyleBackColor = true;
+            this.btnOa.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnIa
             // 
@@ -579,6 +614,7 @@
             this.btnIa.TabIndex = 65;
             this.btnIa.Text = "Í";
             this.btnIa.UseVisualStyleBackColor = true;
+            this.btnIa.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnOc
             // 
@@ -588,6 +624,7 @@
             this.btnOc.TabIndex = 64;
             this.btnOc.Text = "Ô";
             this.btnOc.UseVisualStyleBackColor = true;
+            this.btnOc.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnOt
             // 
@@ -597,6 +634,7 @@
             this.btnOt.TabIndex = 63;
             this.btnOt.Text = "Õ";
             this.btnOt.UseVisualStyleBackColor = true;
+            this.btnOt.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // buttonbtnUa23
             // 
@@ -606,6 +644,7 @@
             this.buttonbtnUa23.TabIndex = 62;
             this.buttonbtnUa23.Text = "Ú";
             this.buttonbtnUa23.UseVisualStyleBackColor = true;
+            this.buttonbtnUa23.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnAa
             // 
@@ -615,6 +654,7 @@
             this.btnAa.TabIndex = 61;
             this.btnAa.Text = "Á";
             this.btnAa.UseVisualStyleBackColor = true;
+            this.btnAa.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnAt
             // 
@@ -624,6 +664,7 @@
             this.btnAt.TabIndex = 60;
             this.btnAt.Text = "Ã";
             this.btnAt.UseVisualStyleBackColor = true;
+            this.btnAt.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnAc
             // 
@@ -633,6 +674,7 @@
             this.btnAc.TabIndex = 59;
             this.btnAc.Text = "Â";
             this.btnAc.UseVisualStyleBackColor = true;
+            this.btnAc.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnEa
             // 
@@ -642,6 +684,7 @@
             this.btnEa.TabIndex = 58;
             this.btnEa.Text = "É";
             this.btnEa.UseVisualStyleBackColor = true;
+            this.btnEa.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnEc
             // 
@@ -651,6 +694,7 @@
             this.btnEc.TabIndex = 57;
             this.btnEc.Text = "Ê";
             this.btnEc.UseVisualStyleBackColor = true;
+            this.btnEc.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnCc
             // 
@@ -660,6 +704,7 @@
             this.btnCc.TabIndex = 56;
             this.btnCc.Text = "Ç";
             this.btnCc.UseVisualStyleBackColor = true;
+            this.btnCc.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnZ
             // 
@@ -669,6 +714,7 @@
             this.btnZ.TabIndex = 55;
             this.btnZ.Text = "Z";
             this.btnZ.UseVisualStyleBackColor = true;
+            this.btnZ.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnY
             // 
@@ -678,6 +724,7 @@
             this.btnY.TabIndex = 54;
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = true;
+            this.btnY.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnU
             // 
@@ -687,6 +734,7 @@
             this.btnU.TabIndex = 53;
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = true;
+            this.btnU.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnT
             // 
@@ -696,6 +744,7 @@
             this.btnT.TabIndex = 52;
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = true;
+            this.btnT.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnV
             // 
@@ -705,6 +754,7 @@
             this.btnV.TabIndex = 51;
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = true;
+            this.btnV.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnW
             // 
@@ -714,6 +764,7 @@
             this.btnW.TabIndex = 50;
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = true;
+            this.btnW.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnX
             // 
@@ -723,6 +774,7 @@
             this.btnX.TabIndex = 49;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = true;
+            this.btnX.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnO
             // 
@@ -732,6 +784,7 @@
             this.btnO.TabIndex = 48;
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = true;
+            this.btnO.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnP
             // 
@@ -741,6 +794,7 @@
             this.btnP.TabIndex = 47;
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = true;
+            this.btnP.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnQ
             // 
@@ -750,6 +804,7 @@
             this.btnQ.TabIndex = 46;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = true;
+            this.btnQ.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnR
             // 
@@ -759,6 +814,7 @@
             this.btnR.TabIndex = 45;
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = true;
+            this.btnR.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnS
             // 
@@ -768,6 +824,7 @@
             this.btnS.TabIndex = 44;
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = true;
+            this.btnS.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnN
             // 
@@ -777,6 +834,7 @@
             this.btnN.TabIndex = 43;
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = true;
+            this.btnN.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnM
             // 
@@ -786,6 +844,7 @@
             this.btnM.TabIndex = 16;
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = true;
+            this.btnM.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnL
             // 
@@ -795,6 +854,7 @@
             this.btnL.TabIndex = 15;
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = true;
+            this.btnL.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnH
             // 
@@ -804,6 +864,7 @@
             this.btnH.TabIndex = 14;
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = true;
+            this.btnH.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnG
             // 
@@ -813,6 +874,7 @@
             this.btnG.TabIndex = 13;
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = true;
+            this.btnG.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnI
             // 
@@ -822,6 +884,7 @@
             this.btnI.TabIndex = 12;
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = true;
+            this.btnI.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnJ
             // 
@@ -831,6 +894,7 @@
             this.btnJ.TabIndex = 11;
             this.btnJ.Text = "J";
             this.btnJ.UseVisualStyleBackColor = true;
+            this.btnJ.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnK
             // 
@@ -840,6 +904,7 @@
             this.btnK.TabIndex = 10;
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = true;
+            this.btnK.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnB
             // 
@@ -849,6 +914,7 @@
             this.btnB.TabIndex = 9;
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = true;
+            this.btnB.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnC
             // 
@@ -858,6 +924,7 @@
             this.btnC.TabIndex = 8;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnD
             // 
@@ -867,6 +934,7 @@
             this.btnD.TabIndex = 7;
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = true;
+            this.btnD.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnE
             // 
@@ -876,6 +944,7 @@
             this.btnE.TabIndex = 6;
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnF
             // 
@@ -885,6 +954,7 @@
             this.btnF.TabIndex = 5;
             this.btnF.Text = "F";
             this.btnF.UseVisualStyleBackColor = true;
+            this.btnF.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // btnA
             // 
@@ -894,6 +964,7 @@
             this.btnA.TabIndex = 4;
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = true;
+            this.btnA.Click += new System.EventHandler(this.BtnA_Click);
             // 
             // textBox1
             // 
@@ -949,35 +1020,10 @@
             // 
             this.dlgAbrir.FileName = "openFileDialog1";
             // 
-            // ptbMaoBandeira
+            // tmTemporizador
             // 
-            this.ptbMaoBandeira.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
-            this.ptbMaoBandeira.Location = new System.Drawing.Point(60, 166);
-            this.ptbMaoBandeira.Name = "ptbMaoBandeira";
-            this.ptbMaoBandeira.Size = new System.Drawing.Size(48, 50);
-            this.ptbMaoBandeira.TabIndex = 97;
-            this.ptbMaoBandeira.TabStop = false;
-            this.ptbMaoBandeira.Visible = false;
-            // 
-            // ptbBandeiraDireita
-            // 
-            this.ptbBandeiraDireita.Image = global::apProjeto2.Properties.Resources.Forca_2_04;
-            this.ptbBandeiraDireita.Location = new System.Drawing.Point(60, 76);
-            this.ptbBandeiraDireita.Name = "ptbBandeiraDireita";
-            this.ptbBandeiraDireita.Size = new System.Drawing.Size(49, 90);
-            this.ptbBandeiraDireita.TabIndex = 98;
-            this.ptbBandeiraDireita.TabStop = false;
-            this.ptbBandeiraDireita.Visible = false;
-            // 
-            // ptbBandeiraEsquerda
-            // 
-            this.ptbBandeiraEsquerda.Image = global::apProjeto2.Properties.Resources.Forca_2_03;
-            this.ptbBandeiraEsquerda.Location = new System.Drawing.Point(-4, 76);
-            this.ptbBandeiraEsquerda.Name = "ptbBandeiraEsquerda";
-            this.ptbBandeiraEsquerda.Size = new System.Drawing.Size(69, 90);
-            this.ptbBandeiraEsquerda.TabIndex = 99;
-            this.ptbBandeiraEsquerda.TabStop = false;
-            this.ptbBandeiraEsquerda.Visible = false;
+            this.tmTemporizador.Interval = 1000;
+            this.tmTemporizador.Tick += new System.EventHandler(this.TmTemporizador_Tick);
             // 
             // Form1
             // 
@@ -991,6 +1037,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMaoBandeira)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnjo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -1007,9 +1056,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPalavra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMaoBandeira)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraDireita)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1102,6 +1148,7 @@
         private System.Windows.Forms.PictureBox ptbMaoBandeira;
         private System.Windows.Forms.PictureBox ptbBandeiraDireita;
         private System.Windows.Forms.PictureBox ptbBandeiraEsquerda;
+        private System.Windows.Forms.Timer tmTemporizador;
     }
 }
 

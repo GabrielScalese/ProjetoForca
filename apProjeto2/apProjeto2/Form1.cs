@@ -12,9 +12,10 @@ namespace apProjeto2
 {
     public partial class Form1 : Form
     {
-        VetorPalavra atual;
-
-        VetorPalavra PalavraDica;
+        VetorPalavra asPalavras;
+        int tempoPassado;  // Tempo passado em segundos
+        Palavra palavraAtual;  // Palavra lido do vetor
+       
         public Form1()
         {
             InitializeComponent();
@@ -23,18 +24,30 @@ namespace apProjeto2
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             int aleatorio = new Random().Next(100);
-            atual = vetorPalavra[aleatorio - 1];
-
+            palavraAtual = asPalavras[aleatorio];
+            tmTemporizador.Start();
+            dgvPalavra.ColumnCount = palavraAtual.PalavraString.Length;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            atual = new VetorPalavra(100);
+            asPalavras = new VetorPalavra(100);
             dlgAbrir.Title = "Selecione o arquivo desejado";
             if (dlgAbrir.ShowDialog() == DialogResult.OK)
             {
-                atual.LeituraDoVetor(dlgAbrir.FileName);
+                asPalavras.LeituraDoVetor(dlgAbrir.FileName);
             }
+        }
+
+        private void TmTemporizador_Tick(object sender, EventArgs e)
+        {
+            tempoPassado++;
+        }
+
+        private void BtnA_Click(object sender, EventArgs e)
+        {
+            string t = (sender as Button).Text; //  Acessa valor interno
+
         }
     }
 }

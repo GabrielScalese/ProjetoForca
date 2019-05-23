@@ -75,4 +75,17 @@ class VetorPalavra
         }
     }
 
+    public string aPalavra //propriedade string que retorna a palavra
+    {
+        get => palavra;
+    }
+    public string Dica //propriedade string que retorna a dica
+    {
+        get => dica;
+        set
+        {
+            if (value.Length > tamanhoDica)  //se a dica for maior que o tamanho máximo
+                dica = value.Substring(0, tamanhoDica); //o programa pega 200 caracteres da dica
+        }
+    }
 }
