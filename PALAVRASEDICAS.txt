@@ -1,0 +1,100 @@
+RAPOSA         Personagem de "O Pequeno Príncipe" que ensina o significado da palavra "cativar"
+ROSA           Companheira do Pequeno Príncipe no asteroide B612 na obra "O Pequeno Príncipe"
+CHAPÉU         Imagem vista pelos adultos quando o narrador mostrava seu desenho na obra "O Pequeno Príncipe"
+BAOBÁ          Árvores que dominaram o B612 na obra "O Pequeno Príncipe"
+PILOTO         Profissão do narrador da obra "O Pequeno Príncipe"
+ESPADA         Arma utilizada pelo Gato de Botas
+LARANJA        Cor dos pelos do Gato de Botas
+AMARELO        Cor da pena no chapéu do Gato de Botas
+HUMPTY DUMPTY  Nome do melhor amigo do Gato de Botas no filme "Gato de Botas"
+SHREK          Filme pelo qual o Gato de Botas ficou reconhecido
+BRAHMA         Nome do deus hindu criador do universo
+AFRODITE       Deusa grega da beleza e do amor
+LOKI           Deus nórdico que é parte gigante e parte deus, conhecido como "Pai das Mentiras"
+ANÚBIS         Deus egípcio dos ritos funerários, protetor, guardião e guia dos mortos, tem cabeça de chacal
+EPONA          Deusa celta da terra, aparece quase sempre junta a um cavalo
+TETRIS         Jogo sem fim baseado em encaixar peças com a intenção de completar linhas para marcar pontos
+SPACE INVADERS Jogo clássico onde uma nave deve atirar em aliens enquanto eles atiram em você
+PAC-MAN        Jogo onde uma esfera amarela foge de quatro fantasmas enquanto pega pontos
+DONKEY KONG    Jogo clássico onde "Mário" deve resgatar a princesa "Peach" que foi raptada por um gorila
+FROGGER        Jogo clássico da SEGA onde um sapo tem que atravessar a rua enquanto carros passam por ela
+XADREZ         Jogo de tabuleiro com peças que tem diferentes funções e tem a missão de comer o rei oponente
+DAMAS          Jogo de tabuleiro com peças que tem a mesma função e tem a missão de comer todas as peças do rival
+UNO            Jogo de cartas com números e cartas com efeitos diferentes com o objetivo de esvaziar a mão
+BLACK STORIES  Jogo de cartas com enigmas onde um mestre da dicas e os jogadores tentam acertar as respostas
+WAR            Jogo de tabuleiro que simula uma guerra entre diferentes nações, baseado em estratégia
+GAME OF THRONESSérie popular medieval com três dragões chamados Drogon, Viserion e Rhaegal
+FLASH          Série popular onde um acelerador de partículas explode e concede super-velocidade a uma pessoa
+SUPERGIRLS     Série popular sobre uma alienígena com super-poderes que cai na terra após seu planeta explodir
+RICK AND MORTY Série popular onde um garoto que passa por situações estranhas com um cientista maluco
+STRANGER THINGSSérie popular onde quatro garotos encontram uma garota que tem poderes sobrenaturais
+GUERREIRO      Classe de personagem de roleplay-games clássicos que é marcada pela força e agressividade
+ARQUEIRO       Classe de personagem de roleplay-games clássicos que é marcada pela presença de um arco e a precisão
+MAGO           Classe de personagem de roleplay-games clássicos que é marcada pelo uso de magias, feitiços e poções
+TANQUE         Classe de personagem de roleplay-games clássicos que é marcada pela resistência e da armaduras
+ASSASSINO      Classe de personagem de roleplay-games clássicos que é marcada pela furtividade e pelos saques
+PAINT          Aplicativo básico do Windows para produção e edição de arquivos foto
+BLOCO DE NOTAS Aplicativo básico do Windows para produção e armazenamento de arquivos texto
+WINRAR         Aplicativo de compressão de arquivos que pode ser utilizado mesmo após o tempo de avaliação
+PNG            Extensão básica de arquivos foto com a capacidade de deter background transparente
+MOVIE MAKER    Aplicativo básico do Windows para produção e edição de videos
+BANANA         Fruta macia de casca amarela com um formato comprido e curvo
+LARANJA        Fruta que tem seu nome correspondente à cor de sua própria casca
+LIMÃO          Fruta conhecida por ser azeda, é cítrica e tem casca verde
+PÊSSEGO        Fruta conhecida por ser doce e ter cores bonitas e é considerada uma das frutas mais bonitas do mundo
+KIWI           Fruta que tem seu nome correspondente a uma espécie de pássaro, tem a casca marrom e o interior verde
+FOGO           Considerado um dos 4 elementos da natureza, é quente e traz a ideia de destruição
+ÁGUA           Considerado um dos 4 elementos da natureza, é líquido e traz um sentimento de paz
+TERRA          Considerado um dos 4 elementos da natureza, é sólido e traz a ideia de resistência
+AR             Considerado um dos 4 elementos da natureza, está presente em toda a nossa atmosfera
+ELETRICIDADE   Há pessoas que o consideram um dos 4 elementos da natureza, é energia e traz a ideia de velocidade
+THOMAS EDISON  Inventor da lâmpada elétrica incandescente, o fonógrafo e o cinematógrafo
+SANTOS DUMONT  Brasileiro a quem é creditada a invenção do avião
+MICHAEL JACKSONFamoso cantor e compositor, é considerado rei do pop
+ELVIS PRESLEY  Famoso cantor, é considerado o rei do rock
+ÁLEX PINA      Nome do criador da famosa série "La Casa de Papel"
+MOUSE          Aparelho utilizado para mover o cursor de um computador
+TECLADO        Aparelho utilizado para digitar caractéres e realizar outras funções com os mesmos em um computador
+MONITOR        Aparelho que reproduz a imagem gerada na CPU de um computador
+PLACA DE VIDEO Objeto que processa os gráficos dos aplicativos carregados em uma CPU
+PROCESSADOR    Objeto que faz o processamento dos arquivos, dados e aplicativos abertos em uma CPU
+NETSCAPE       O mais famoso dos primeiros browsers a serem inventados
+GOOGLE CHROME  Um dos browsers mais utilizado atualmente, foi criado pela Google
+FIREFOX        Browser facilmente personalizável, tem como ícone e mascote uma raposa de fogo
+CHROMIUM       Versão de desenvolvedor do Google Chrome que é aberta ao público
+MICROSOFT EDGE Versão melhorada do Internet Explorer para o Windows 10
+DESENHO        Forma de produção artística baseada em figuras que causem emoções ao visualizador
+MÚSICA         Forma de produção artística baseada em sons que causem emoções ao ouvinte
+DANÇA          Forma de produção artística baseada em movimentos corporais que causem emoções ao espectador
+HISTÓRIA       Forma de produção artística baseada em palavras organizadas para elaborar um romance literal
+TEATRO         Forma de produção artística baseada em ações e falas que causem emoções a platéia
+CACHORRO       Animal doméstico conhecido como "o melhor amigo do homem"
+GATO           Animal doméstico conhecido por sua vida noturna, tão famoso quanto os cães
+CALOPSITA      Passaro doméstico mais adotado pelas pessoas
+HAMSTER        Um dos roedores mais adotados como animal doméstico
+RATO           Embora muitas pessoas o temam, é um roedor muito adotado pelas pessoas
+CADERNO        Material escolar utilizado para anotar a matéria
+LÁPIS          Material escolar utilizado para escrever de forma que seja possível arrumar erros
+BORRACHA       Material escolar utilizado para apagar coisas escritas pelo lápis
+CANETA         Material escolar utilizado para escrever, porém sem a possibilidade de ser apagado
+RÉGUA          Material de medida utilizado para fazer a medição de planos e objetos na metragem milimétrica
+VERDE          Cor fortemente relacionada à natureza e a vida
+VERMELHO       Cor fortemente relacionada ao alerta e ao perigo
+AZUL           Cor fortemente relacionada à paz e a tranquilidade
+PRETO          Cor formada pela ausência de espectros de cores
+BRANCO         Cor formada pela junção de todos os espectros de cores
+MESA           Objeto utilizado como apoio de objetos que estão sendo utilizados
+CADEIRA        Assento mais comumente encontrado e utilizado
+ARMÁRIO        Móvel utilizado para armazenar vestimentas
+CÔMODA         Móvel utilizado para armazenar roupas e outros utenssílios
+CABIDEIRO      Móvel utilizado para segurar cabides e roupas
+DEATH NOTE     Anime onde um caderno que tem a capacidade de matar pessoas é usado para matar bandidos
+DRAGON BALL    Anime sobre alienigenas com super-poderes com a capacidade de mudar de forma para "sayajins"
+NARUTO         Anime sobre ninjas de diferentes aldeias que podem soltar poderes através de artes chamadas "jutsus"
+ONE PIECE      Anime onde piratas vão atrás de um famoso tesouro escondido pelo rei dos piratas
+ATTACK ON TITANAnime onde titãs, criaturas gigantes, tentam invadir as nações humanas para se alimentar de humanos
+MATEMÁTICA     Matéria escolar que ensina os conceitos de cálculos e imagens
+PORTUGUÊS      Matéria escolar que ensina regras e usos do idioma utilizado no Brasil
+HISTÓRIA       Matéria escolar que mostra os avanços da humanidade ao longo do tempo
+GEOGRAFIA      Matéria escolar que ensina sobre o planeta Terra e seus atributos, além de políticas diversas
+CIÊNCIAS       Matéria escolar que ensina as áreas de Física, Química e Biologia
