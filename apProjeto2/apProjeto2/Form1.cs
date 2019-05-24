@@ -209,9 +209,9 @@ namespace apProjeto2
             StreamReader leitura = new StreamReader(local);
             var vetJogador = new Jogador();
             vetJogador.LerArquivo(leitura);
-            if (vetJogador.Existe(nomeUsuario)) //se o nome do jogador já existe
-                vetJogador.MudarPontuacao(nomeUsuario, pontos); //atualizar pontuação
-            else //se o nome do jogador não existe
+            if (vetJogador.Existe(nomeUsuario)) 
+                vetJogador.MudarPontuacao(nomeUsuario, pontos); 
+            else 
             {
                 Jogador novo = new Jogador(); //instanciar novo jogador com nome e pontos já definidos
                 vetJogador.Incluir(novo); //incluir novo jogaor no vetor
