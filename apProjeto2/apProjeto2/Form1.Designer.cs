@@ -34,7 +34,7 @@
             this.ptbBandeiraEsquerda = new System.Windows.Forms.PictureBox();
             this.pbAnjo = new System.Windows.Forms.PictureBox();
             this.lbTemporizador = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbErros = new System.Windows.Forms.Label();
             this.chkDica = new System.Windows.Forms.CheckBox();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lbPontos = new System.Windows.Forms.Label();
@@ -116,6 +116,10 @@
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
             this.pbMaoBandeira = new System.Windows.Forms.PictureBox();
             this.pbMorto = new System.Windows.Forms.PictureBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
@@ -137,6 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -149,7 +154,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, -28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1082, 622);
+            this.tabControl1.Size = new System.Drawing.Size(1082, 612);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -159,7 +164,7 @@
             this.tabPage1.Controls.Add(this.ptbBandeiraEsquerda);
             this.tabPage1.Controls.Add(this.pbAnjo);
             this.tabPage1.Controls.Add(this.lbTemporizador);
-            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.lbErros);
             this.tabPage1.Controls.Add(this.chkDica);
             this.tabPage1.Controls.Add(this.btnIniciar);
             this.tabPage1.Controls.Add(this.lbPontos);
@@ -225,7 +230,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1074, 596);
+            this.tabPage1.Size = new System.Drawing.Size(1074, 586);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Forca";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -233,7 +238,7 @@
             // ptbBandeiraEsquerda
             // 
             this.ptbBandeiraEsquerda.Image = global::apProjeto2.Properties.Resources.Forca_2_03;
-            this.ptbBandeiraEsquerda.Location = new System.Drawing.Point(-4, 91);
+            this.ptbBandeiraEsquerda.Location = new System.Drawing.Point(-4, 85);
             this.ptbBandeiraEsquerda.Name = "ptbBandeiraEsquerda";
             this.ptbBandeiraEsquerda.Size = new System.Drawing.Size(69, 90);
             this.ptbBandeiraEsquerda.TabIndex = 99;
@@ -255,29 +260,29 @@
             this.lbTemporizador.AutoSize = true;
             this.lbTemporizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTemporizador.ForeColor = System.Drawing.Color.Red;
-            this.lbTemporizador.Location = new System.Drawing.Point(729, 495);
+            this.lbTemporizador.Location = new System.Drawing.Point(745, 470);
             this.lbTemporizador.Name = "lbTemporizador";
             this.lbTemporizador.Size = new System.Drawing.Size(196, 20);
             this.lbTemporizador.TabIndex = 95;
             this.lbTemporizador.Text = "Tempo restante:_______s";
             // 
-            // label6
+            // lbErros
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(441, 421);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 16);
-            this.label6.TabIndex = 94;
-            this.label6.Text = "Erros:";
+            this.lbErros.AutoSize = true;
+            this.lbErros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErros.ForeColor = System.Drawing.Color.Red;
+            this.lbErros.Location = new System.Drawing.Point(441, 421);
+            this.lbErros.Name = "lbErros";
+            this.lbErros.Size = new System.Drawing.Size(51, 20);
+            this.lbErros.TabIndex = 94;
+            this.lbErros.Text = "Erros:";
             // 
             // chkDica
             // 
             this.chkDica.AutoSize = true;
             this.chkDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDica.ForeColor = System.Drawing.Color.Black;
-            this.chkDica.Location = new System.Drawing.Point(874, 423);
+            this.chkDica.Location = new System.Drawing.Point(882, 399);
             this.chkDica.Name = "chkDica";
             this.chkDica.Size = new System.Drawing.Size(94, 24);
             this.chkDica.TabIndex = 93;
@@ -286,7 +291,7 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(734, 421);
+            this.btnIniciar.Location = new System.Drawing.Point(749, 386);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(103, 37);
             this.btnIniciar.TabIndex = 92;
@@ -297,29 +302,29 @@
             // lbPontos
             // 
             this.lbPontos.AutoSize = true;
-            this.lbPontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPontos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPontos.ForeColor = System.Drawing.Color.ForestGreen;
             this.lbPontos.Location = new System.Drawing.Point(441, 390);
             this.lbPontos.Name = "lbPontos";
-            this.lbPontos.Size = new System.Drawing.Size(53, 16);
+            this.lbPontos.Size = new System.Drawing.Size(63, 20);
             this.lbPontos.TabIndex = 89;
             this.lbPontos.Text = "Pontos:";
             // 
             // lbDica
             // 
             this.lbDica.AutoSize = true;
-            this.lbDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDica.ForeColor = System.Drawing.Color.Indigo;
             this.lbDica.Location = new System.Drawing.Point(441, 358);
             this.lbDica.Name = "lbDica";
-            this.lbDica.Size = new System.Drawing.Size(39, 16);
+            this.lbDica.Size = new System.Drawing.Size(45, 20);
             this.lbDica.TabIndex = 88;
             this.lbDica.Text = "Dica:";
             // 
             // pb8
             // 
             this.pb8.Image = global::apProjeto2.Properties.Resources.Forca_17;
-            this.pb8.Location = new System.Drawing.Point(150, 273);
+            this.pb8.Location = new System.Drawing.Point(139, 263);
             this.pb8.Name = "pb8";
             this.pb8.Size = new System.Drawing.Size(92, 91);
             this.pb8.TabIndex = 87;
@@ -346,7 +351,7 @@
             // pb5
             // 
             this.pb5.Image = global::apProjeto2.Properties.Resources.Forca_10;
-            this.pb5.Location = new System.Drawing.Point(171, 182);
+            this.pb5.Location = new System.Drawing.Point(169, 182);
             this.pb5.Name = "pb5";
             this.pb5.Size = new System.Drawing.Size(81, 57);
             this.pb5.TabIndex = 78;
@@ -355,7 +360,7 @@
             // pb7
             // 
             this.pb7.Image = global::apProjeto2.Properties.Resources.Forca_16;
-            this.pb7.Location = new System.Drawing.Point(81, 268);
+            this.pb7.Location = new System.Drawing.Point(81, 264);
             this.pb7.Name = "pb7";
             this.pb7.Size = new System.Drawing.Size(62, 83);
             this.pb7.TabIndex = 76;
@@ -967,11 +972,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(525, 124);
+            this.label2.Location = new System.Drawing.Point(481, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 37);
+            this.label2.Size = new System.Drawing.Size(356, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "Adivinhe a palavra!";
             // 
@@ -998,7 +1003,7 @@
             // ptbBandeiraDireita
             // 
             this.ptbBandeiraDireita.Image = global::apProjeto2.Properties.Resources.Forca_2_04;
-            this.ptbBandeiraDireita.Location = new System.Drawing.Point(63, 92);
+            this.ptbBandeiraDireita.Location = new System.Drawing.Point(62, 85);
             this.ptbBandeiraDireita.Name = "ptbBandeiraDireita";
             this.ptbBandeiraDireita.Size = new System.Drawing.Size(49, 90);
             this.ptbBandeiraDireita.TabIndex = 98;
@@ -1010,7 +1015,7 @@
             this.pbOld.Image = global::apProjeto2.Properties.Resources.Forca__03;
             this.pbOld.Location = new System.Drawing.Point(9, 76);
             this.pbOld.Name = "pbOld";
-            this.pbOld.Size = new System.Drawing.Size(100, 182);
+            this.pbOld.Size = new System.Drawing.Size(94, 184);
             this.pbOld.TabIndex = 72;
             this.pbOld.TabStop = false;
             // 
@@ -1019,7 +1024,7 @@
             this.pb6.Image = global::apProjeto2.Properties.Resources.Forca_14;
             this.pb6.Location = new System.Drawing.Point(115, 222);
             this.pb6.Name = "pb6";
-            this.pb6.Size = new System.Drawing.Size(57, 52);
+            this.pb6.Size = new System.Drawing.Size(50, 52);
             this.pb6.TabIndex = 77;
             this.pb6.TabStop = false;
             // 
@@ -1037,7 +1042,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1022, 568);
+            this.tabPage2.Size = new System.Drawing.Size(1074, 586);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cadastro";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1054,7 +1059,7 @@
             // pbMaoBandeira
             // 
             this.pbMaoBandeira.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
-            this.pbMaoBandeira.Location = new System.Drawing.Point(60, 164);
+            this.pbMaoBandeira.Location = new System.Drawing.Point(60, 166);
             this.pbMaoBandeira.Name = "pbMaoBandeira";
             this.pbMaoBandeira.Size = new System.Drawing.Size(49, 50);
             this.pbMaoBandeira.TabIndex = 100;
@@ -1069,11 +1074,42 @@
             this.pbMorto.TabIndex = 101;
             this.pbMorto.TabStop = false;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 574);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1079, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(34, 17);
+            this.toolStripStatusLabel1.Text = "Data:";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(36, 17);
+            this.toolStripStatusLabel2.Text = "Hora:";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(369, 17);
+            this.toolStripStatusLabel3.Text = "Inspirado em: http://classico.velhosamigos.com.br/Jogos/Forca.htm";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 594);
+            this.ClientSize = new System.Drawing.Size(1079, 596);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1100,7 +1136,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1169,7 +1208,7 @@
         private System.Windows.Forms.Label lbPontos;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label lbTemporizador;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbErros;
         private System.Windows.Forms.CheckBox chkDica;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -1195,6 +1234,10 @@
         private System.Windows.Forms.PictureBox pbMaoBandeira;
         private System.Windows.Forms.PictureBox pbMorto;
         private System.Windows.Forms.Label lbDica;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }
 

@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+// Illy Bordini da Silva   RA: 19180    
+// Gabriel Villar Scalese  RA: 19171
+
+
 namespace apProjeto2
 {
     public partial class Form1 : Form
@@ -129,6 +133,9 @@ namespace apProjeto2
 
             lbTemporizador.Text = $"Tempo restante: {tempoTotal - tempoPassado}s";
             lbPontos.Text = $"Pontos:{pontos}";
+            lbErros.Text = $"Erros: {erro}";
+
+            
         }
 
         private void BtnA_Click(object sender, EventArgs e) // Tratamento de strings
@@ -190,7 +197,7 @@ namespace apProjeto2
                         ResetarJogo();
                     }
                     else
-                        Close();
+                         Close();
                 }
                 pontos++;
             }
@@ -202,14 +209,16 @@ namespace apProjeto2
             StreamReader leitura = new StreamReader(local);
             var vetJogador = new Jogador();
             vetJogador.LerArquivo(leitura);
-            if (!vetJogador.Existe(nomeUsuario))
+            if (vetJogador.Existe(nomeUsuario)) //se o nome do jogador já existe
+                vetJogador.MudarPontuacao(nomeUsuario, pontos); //atualizar pontuação
+            else //se o nome do jogador não existe
             {
-                Jogador novo = new Jogador();
-                vetJogador.Incluir(novo);
+                Jogador novo = new Jogador(); //instanciar novo jogador com nome e pontos já definidos
+                vetJogador.Incluir(novo); //incluir novo jogaor no vetor
             }
-            StreamWriter escrita = new StreamWriter(local);
-            vetJogador.GravarDados(escrita);
-            leitura.Close();
+            vetJogador.OrdenarVetor(); //ordenar vetor
+            StreamWriter escrita = new StreamWriter(local); //arquivo a ser escrito
+            vetJogador.GravarDados(escrita); //gravar vetor no arquivo de escrita, por cima do que estava no arquivo de leitura 
         }
     }
 }

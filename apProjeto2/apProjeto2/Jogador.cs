@@ -68,7 +68,38 @@ class Jogador
         saida.Close(); //fechar arquivo
     }
 
-    
+    public void MudarPontuacao(string nomeDoJogador, int novosPontos)
+    {
+        if (this.Existe(nomeDoJogador)) //se esse jogador existe
+        {
+            for (int ind = 0; ind < qtosDados; ind++) //percorrer todo o vetor
+                if (dados[ind].Nome == nomeDoJogador) //se for o jogador procurado
+                    dados[ind].AtualizarPontos(novosPontos); //atualizar pontuação
+        }
+    }
+
+    public void AtualizarPontos(int pontosAdiquiridos)
+    {
+        pontuacao += pontosAdiquiridos; //soma dos pontos antigos com os novos pontos
+    }
+
+    public void OrdenarVetor()
+    {
+        for (int lento = 0; lento < qtosDados; lento++) //índice lento percorre todo o vetor
+        {
+            int indiceMaisPontos = lento; //indiceMaisPontos começa com o valor do índice lento
+            for (int rapido = lento + 1; rapido < qtosDados; rapido++) //índice rápido percorre todo o vetor
+                if (dados[rapido].Pontuacao > dados[indiceMaisPontos].Pontuacao) //se os pontos do jogador com índice rápido for maior que os pontos do jogador de índice indiceMaisPontos
+                    indiceMaisPontos = rapido; //índice do jogador com mais pontos recebe índice rápido
+            if (lento != indiceMaisPontos) //apenas se lento for diferente de indiceMaisPontos, altera-se o vetor
+            {
+                Jogador aux = dados[indiceMaisPontos]; //auxiliar recebe dados de índice com mais pontos
+                dados[indiceMaisPontos] = dados[lento]; //dados de indiceMaisPontos recebe dados de lento
+                dados[lento] = aux; //dados de lento recebe auxiliar
+                                    //Com isso, o jogador com mais pontos é posicionado no começo
+            }
+        }
+    }
 }
 
 
