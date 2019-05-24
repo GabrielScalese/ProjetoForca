@@ -17,8 +17,9 @@ namespace apProjeto2
 {
     public partial class Form1 : Form
     {
-        int posicaoAIncluir = 0;
-        Jogador[] Vet = new Jogador[1000];
+        
+        int posicaoAIncluir = 0; // Índice do vetor da classe Jogador
+        Jogador[] vet = new Jogador[1000]; // instância de um vetor da classe Jogador
         string nomeUsuario = "";
         int primeiraMatch = 0;
         const int tempoTotal = 60;
@@ -34,7 +35,7 @@ namespace apProjeto2
             InitializeComponent();
         }
 
-        public void HabilitarBotoes(bool habilitado)
+        public void HabilitarBotoes(bool habilitado) // Habilitação dos botões no início da execeução
         {
             btnA.Enabled = habilitado;
             btnB.Enabled = habilitado;
@@ -136,8 +137,14 @@ namespace apProjeto2
             lbTemporizador.Text = $"Tempo restante: {tempoTotal - tempoPassado}s";
             lbPontos.Text = $"Pontos:{pontos}";
             lbErros.Text = $"Erros: {erro}";
-
-
+            if (tempoPassado == 60)
+            {
+                tmTemporizador.Stop();
+                if (MessageBox.Show("Infelizmente o tempo esgotou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ResetarJogo();
+                }
+            }
         }
 
         private void BtnA_Click(object sender, EventArgs e) // Tratamento de strings
@@ -161,6 +168,7 @@ namespace apProjeto2
                 if (erro > 8)
                 {
                     pbAnjo.Visible = true;
+                    CadastraJogador("Ranking.txt");
                     if (MessageBox.Show("Infelizmente você perdeu!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         ResetarJogo();
@@ -177,8 +185,7 @@ namespace apProjeto2
                         case 5: pb5.Visible = true; break;
                         case 6: pb6.Visible = true; break;
                         case 7: pb7.Visible = true; break;
-                        case 8: pb8.Visible = true; break;
-                        case 9: pbMorto.Visible = true; break;
+                        case 8: pb8.Visible = true; pbMorto.Visible = true;break;
                     }
                 }
             }
@@ -194,6 +201,7 @@ namespace apProjeto2
                 }
                 if (terminou)
                 {
+                    CadastraJogador("Ranking.txt");
                     if (MessageBox.Show("Parabéns, você ganhou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         ResetarJogo();
@@ -207,31 +215,40 @@ namespace apProjeto2
 
         public void CadastraJogador(string nomeArq) // Grava num arquivo texto o ranking dos usuários
         {
+            if (!File.Exists(nomeArq)) // Verifica existência do arquivo
+            {
+                File.CreateText(nomeArq);
+            }
             var arqLido = new StreamReader(nomeArq);
+            bool achouNome = false;
 
             while (!arqLido.EndOfStream)
             {
                 string linha = arqLido.ReadLine();
-                Vet[posicaoAIncluir] = new Jogador(linha);
-                if (Vet[posicaoAIncluir].Nome == txtUsuario.Text)
+                vet[posicaoAIncluir] = new Jogador(linha);
+                if (vet[posicaoAIncluir].Nome.Trim() == txtUsuario.Text)
                 {
-                    Vet[posicaoAIncluir].Somar(pontos);
+                    vet[posicaoAIncluir].Somar(pontos);
+                    achouNome = true;
                 }
                 posicaoAIncluir++;
             }
             arqLido.Close();
-            var escritor = new StreamWriter("c:\temp\Ranking.txt");
+            var escritor = new StreamWriter(nomeArq);
             for (int i = 0; i < posicaoAIncluir; i++)
-                escritor.WriteLine(Vet[i].PadRight(30, ' ') + Vet[i].Pontuacao;
-
+                escritor.WriteLine(vet[i].Nome.PadRight(30, ' ') + vet[i].Pontuacao);
+            if (!achouNome)
+            {
+                escritor.WriteLine($"{txtUsuario.Text.PadRight(30, ' ')}{pontos}"); // Gravação dos dados
+            }
             escritor.Close();
         }
 
         public bool Existe(string nomeProcurado) // Verifica a existência do usuário
         {
             bool achou = false;
-            for (int ind = 0; ind < qtosDados; ind++) // Percorre todo o vetor
-                if (dados[ind].Nome == nomeProcurado) // Caso o nome do jogador atual for igual ao nome procurado
+            for (int ind = 0; ind < vet.Length; ind++) // Percorre todo o vetor
+                if (vet[ind].Nome == nomeProcurado) // Caso o nome do jogador atual for igual ao nome procurado
                     achou = true; // O jogador foi achado
             return achou; // Retorna se o jogador foi achado ou não
         }

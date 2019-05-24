@@ -12,8 +12,8 @@ class Jogador
     Jogador[] dados; //vetor dados de jogadores
     int qtosDados;   //variável de quantos jogadores foram lidos
 
-    const int tamanhoNome = 15;
-    const int tamanhoPontuacao = 1;
+    const int tamanhoNome = 30;
+   
 
     const int inicioNome = 0;
     const int inicioPontuacao = inicioNome + tamanhoNome;
@@ -39,12 +39,15 @@ class Jogador
 
     public Jogador(string linha) // Construtor da classe
     {
-        Nome = linha.Substring(inicioNome, tamanhoNome);
+        if (linha != "")
+        {
+            Nome = linha.Substring(inicioNome, tamanhoNome);
 
-        Pontuacao = int.Parse(linha.Substring(inicioPontuacao, tamanhoPontuacao));
+            Pontuacao = int.Parse(linha.Substring(inicioPontuacao));
+        }
     }
 
-    public void Somar(int pontuacao)
+    public void Somar(int pontuacao) // Soma da pontuação do usuário
     {
         Pontuacao += pontuacao;
     }
