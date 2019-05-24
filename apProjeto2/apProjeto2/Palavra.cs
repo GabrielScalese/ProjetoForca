@@ -27,7 +27,7 @@ class Palavra
         this.dica = umaDica;
     }
 
-    public string PalavraSelec
+    public string PalavraSelec // Retorna e alteração do valor da string palavra (componente do vetor)
     {
         get => palavra;
         set

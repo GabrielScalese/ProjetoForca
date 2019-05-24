@@ -24,82 +24,32 @@ class Jogador
     public string Nome { get => nome; set => nome = value; }
     public int Pontuacao { get => pontuacao; set => pontuacao = value; }
 
-    public Jogador() //construtor da classe, que delimita o tamanho máximo do vetor e zera qtosDados
+    public Jogador() // Construtor da classe, que zera as variáveis
     {
-        dados = new Jogador[100];
-        qtosDados = 0;
-    }
-    public void LerArquivo(StreamReader arq)
-    {
-        while (!arq.EndOfStream && qtosDados < 100) //enquanto o arquivo não acabou e o número de jogadores não for maior que 100
-        {
-            dados[qtosDados] = new Jogador(); //instanciação do jogador de índice qtosDados
-            dados[qtosDados].LerArquivo(arq);   //ler dados do jogador
-            qtosDados++;                      //aumentar um jogador
-        }
-        arq.Close(); //fechar arquivo
-    }
-    public bool Existe(string nomeProcurado)
-    {
-        bool achou = false;
-        for (int ind = 0; ind < qtosDados; ind++) //percorrer todo o vetor
-            if (dados[ind].Nome == nomeProcurado) //se o nome do jogador atual for igual ao nome procurado
-                achou = true; //o jogador foi achado
-        return achou; //retornar se o jogador foi achado ou não
+        nome = "";
+        pontuacao = 0;
     }
 
-    public void Incluir(Jogador novoJogador) //método incluir com parâmetro novoJogador da classe Jogador
+    public Jogador(string nomeDoNovoJogador, int pontosDesseJogador) //construtor de um jogador com parâmetros nome e pontos já definidos,
+                                                                     //para o caso de inclusão de um novo jogador, que não estava presente no arquivo texto
     {
-        if (qtosDados > 99) //se o número de jogadores for maior que 99, não será possível adiconar mais jogadores ao vetor
-            throw new ArgumentOutOfRangeException("Não há espaço para mais jogaores!");
-        else
-        {
-            dados[qtosDados] = novoJogador; //dados de qtosDados recebe o jogador
-            qtosDados++; //aumenta-se o número de jogadores do vetor
-        }
+        nome = nomeDoNovoJogador;
+        pontuacao = pontosDesseJogador;
     }
 
-    public void GravarDados(StreamWriter saida)
+    public Jogador(string linha) // Construtor da classe
     {
-        for (int ind = 0; ind < qtosDados; ind++) //para cada jogador do vetor
-        {
-            saida.WriteLine(dados[ind].ToString()); //escrever dados no arquivo texto
-        }
-        saida.Close(); //fechar arquivo
+        Nome = linha.Substring(inicioNome, tamanhoNome);
+
+        Pontuacao = int.Parse(linha.Substring(inicioPontuacao, tamanhoPontuacao));
     }
 
-    public void MudarPontuacao(string nomeDoJogador, int novosPontos)
+    public void Somar(int pontuacao)
     {
-        if (this.Existe(nomeDoJogador)) //se esse jogador existe
-        {
-            for (int ind = 0; ind < qtosDados; ind++) //percorrer todo o vetor
-                if (dados[ind].Nome == nomeDoJogador) //se for o jogador procurado
-                    dados[ind].AtualizarPontos(novosPontos); //atualizar pontuação
-        }
+        Pontuacao += pontuacao;
     }
 
-    public void AtualizarPontos(int pontosAdiquiridos)
-    {
-        pontuacao += pontosAdiquiridos; //soma dos pontos antigos com os novos pontos
-    }
 
-    public void OrdenarVetor()
-    {
-        for (int lento = 0; lento < qtosDados; lento++) //índice lento percorre todo o vetor
-        {
-            int indiceMaisPontos = lento; //indiceMaisPontos começa com o valor do índice lento
-            for (int rapido = lento + 1; rapido < qtosDados; rapido++) //índice rápido percorre todo o vetor
-                if (dados[rapido].Pontuacao > dados[indiceMaisPontos].Pontuacao) //se os pontos do jogador com índice rápido for maior que os pontos do jogador de índice indiceMaisPontos
-                    indiceMaisPontos = rapido; //índice do jogador com mais pontos recebe índice rápido
-            if (lento != indiceMaisPontos) //apenas se lento for diferente de indiceMaisPontos, altera-se o vetor
-            {
-                Jogador aux = dados[indiceMaisPontos]; //auxiliar recebe dados de índice com mais pontos
-                dados[indiceMaisPontos] = dados[lento]; //dados de indiceMaisPontos recebe dados de lento
-                dados[lento] = aux; //dados de lento recebe auxiliar
-                                    //Com isso, o jogador com mais pontos é posicionado no começo
-            }
-        }
-    }
 }
 
 

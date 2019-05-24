@@ -17,6 +17,8 @@ namespace apProjeto2
 {
     public partial class Form1 : Form
     {
+        int posicaoAIncluir = 0;
+        Jogador[] Vet = new Jogador[1000];
         string nomeUsuario = "";
         int primeiraMatch = 0;
         const int tempoTotal = 60;
@@ -75,7 +77,7 @@ namespace apProjeto2
             btnEspaco.Enabled = habilitado;
         }
 
-        public void ResetarJogo()
+        public void ResetarJogo() // Atualização da interface
         {
             HabilitarBotoes(false);
             pb1.Visible = false;
@@ -102,7 +104,7 @@ namespace apProjeto2
         {
             if (txtUsuario.Text != "")
             {
-                ResetarJogo();
+                ResetarJogo(); // Atualização da interface
                 HabilitarBotoes(true);
                 int aleatorio = new Random().Next(25);
                 palavraAtual = asPalavras[aleatorio];
@@ -135,7 +137,7 @@ namespace apProjeto2
             lbPontos.Text = $"Pontos:{pontos}";
             lbErros.Text = $"Erros: {erro}";
 
-            
+
         }
 
         private void BtnA_Click(object sender, EventArgs e) // Tratamento de strings
@@ -197,28 +199,41 @@ namespace apProjeto2
                         ResetarJogo();
                     }
                     else
-                         Close();
+                        Close();
                 }
                 pontos++;
             }
         }
 
-        public void CadastraJogador()
+        public void CadastraJogador(string nomeArq) // Grava num arquivo texto o ranking dos usuários
         {
-            string local = dlgAbrir.FileName.Substring(0, dlgAbrir.FileName.IndexOf("PALAVRASEDICAS.txt")) + "Ranking.txt";
-            StreamReader leitura = new StreamReader(local);
-            var vetJogador = new Jogador();
-            vetJogador.LerArquivo(leitura);
-            if (vetJogador.Existe(nomeUsuario)) 
-                vetJogador.MudarPontuacao(nomeUsuario, pontos); 
-            else 
+            var arqLido = new StreamReader(nomeArq);
+
+            while (!arqLido.EndOfStream)
             {
-                Jogador novo = new Jogador(); //instanciar novo jogador com nome e pontos já definidos
-                vetJogador.Incluir(novo); //incluir novo jogaor no vetor
+                string linha = arqLido.ReadLine();
+                Vet[posicaoAIncluir] = new Jogador(linha);
+                if (Vet[posicaoAIncluir].Nome == txtUsuario.Text)
+                {
+                    Vet[posicaoAIncluir].Somar(pontos);
+                }
+                posicaoAIncluir++;
             }
-            vetJogador.OrdenarVetor(); //ordenar vetor
-            StreamWriter escrita = new StreamWriter(local); //arquivo a ser escrito
-            vetJogador.GravarDados(escrita); //gravar vetor no arquivo de escrita, por cima do que estava no arquivo de leitura 
+            arqLido.Close();
+            var escritor = new StreamWriter("c:\temp\Ranking.txt");
+            for (int i = 0; i < posicaoAIncluir; i++)
+                escritor.WriteLine(Vet[i].PadRight(30, ' ') + Vet[i].Pontuacao;
+
+            escritor.Close();
+        }
+
+        public bool Existe(string nomeProcurado) // Verifica a existência do usuário
+        {
+            bool achou = false;
+            for (int ind = 0; ind < qtosDados; ind++) // Percorre todo o vetor
+                if (dados[ind].Nome == nomeProcurado) // Caso o nome do jogador atual for igual ao nome procurado
+                    achou = true; // O jogador foi achado
+            return achou; // Retorna se o jogador foi achado ou não
         }
     }
 }
