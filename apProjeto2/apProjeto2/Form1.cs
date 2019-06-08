@@ -181,11 +181,11 @@ namespace apProjeto2
                         case 1: pb1.Visible = true; break;
                         case 2: pb2.Visible = true; break;
                         case 3: pb4.Visible = true; break;
-                        case 4: pbMaoBandeira.Visible = true; break;
+                        case 4: pbNew.Visible = true; break;
                         case 5: pb5.Visible = true; break;
                         case 6: pb6.Visible = true; break;
                         case 7: pb7.Visible = true; break;
-                        case 8: pb8.Visible = true; pbMorto.Visible = true;break;
+                        case 8: pb8.Visible = true; pbMorto.Visible = true; pbMaoBandeira.Visible = true; ptbBandeiraEsquerda.Visible = true; ptbBandeiraDireita.Visible = true; pbMaoBandeira.Visible = true; break;
                     }
                 }
             }

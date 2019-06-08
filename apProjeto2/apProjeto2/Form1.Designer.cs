@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pbMorto = new System.Windows.Forms.PictureBox();
+            this.pbMaoBandeira = new System.Windows.Forms.PictureBox();
             this.ptbBandeiraEsquerda = new System.Windows.Forms.PictureBox();
             this.pbAnjo = new System.Windows.Forms.PictureBox();
             this.lbTemporizador = new System.Windows.Forms.Label();
@@ -44,7 +47,6 @@
             this.pbNew = new System.Windows.Forms.PictureBox();
             this.pb5 = new System.Windows.Forms.PictureBox();
             this.pb7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -114,10 +116,25 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
-            this.pbMaoBandeira = new System.Windows.Forms.PictureBox();
-            this.pbMorto = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnjo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb8)).BeginInit();
@@ -125,7 +142,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -135,8 +151,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -146,10 +163,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, -28);
+            this.tabControl1.Location = new System.Drawing.Point(0, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1082, 612);
+            this.tabControl1.Size = new System.Drawing.Size(1205, 628);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -165,11 +182,9 @@
             this.tabPage1.Controls.Add(this.lbPontos);
             this.tabPage1.Controls.Add(this.lbDica);
             this.tabPage1.Controls.Add(this.pb8);
-            this.tabPage1.Controls.Add(this.pb4);
             this.tabPage1.Controls.Add(this.pbNew);
             this.tabPage1.Controls.Add(this.pb5);
             this.tabPage1.Controls.Add(this.pb7);
-            this.tabPage1.Controls.Add(this.pictureBox6);
             this.tabPage1.Controls.Add(this.pictureBox4);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.pictureBox1);
@@ -221,14 +236,35 @@
             this.tabPage1.Controls.Add(this.ptbBandeiraDireita);
             this.tabPage1.Controls.Add(this.pbOld);
             this.tabPage1.Controls.Add(this.pb6);
+            this.tabPage1.Controls.Add(this.pb4);
             this.tabPage1.Controls.Add(this.pb2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1074, 586);
+            this.tabPage1.Size = new System.Drawing.Size(1197, 602);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Forca";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pbMorto
+            // 
+            this.pbMorto.Image = global::apProjeto2.Properties.Resources.Forca_1_05;
+            this.pbMorto.Location = new System.Drawing.Point(98, 78);
+            this.pbMorto.Name = "pbMorto";
+            this.pbMorto.Size = new System.Drawing.Size(100, 90);
+            this.pbMorto.TabIndex = 101;
+            this.pbMorto.TabStop = false;
+            this.pbMorto.Visible = false;
+            // 
+            // pbMaoBandeira
+            // 
+            this.pbMaoBandeira.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
+            this.pbMaoBandeira.Location = new System.Drawing.Point(61, 165);
+            this.pbMaoBandeira.Name = "pbMaoBandeira";
+            this.pbMaoBandeira.Size = new System.Drawing.Size(49, 50);
+            this.pbMaoBandeira.TabIndex = 100;
+            this.pbMaoBandeira.TabStop = false;
+            this.pbMaoBandeira.Visible = false;
             // 
             // ptbBandeiraEsquerda
             // 
@@ -243,7 +279,7 @@
             // pbAnjo
             // 
             this.pbAnjo.Image = global::apProjeto2.Properties.Resources.Enforcado1;
-            this.pbAnjo.Location = new System.Drawing.Point(241, 33);
+            this.pbAnjo.Location = new System.Drawing.Point(256, 14);
             this.pbAnjo.Name = "pbAnjo";
             this.pbAnjo.Size = new System.Drawing.Size(180, 364);
             this.pbAnjo.TabIndex = 96;
@@ -319,7 +355,7 @@
             // pb8
             // 
             this.pb8.Image = global::apProjeto2.Properties.Resources.Forca_17;
-            this.pb8.Location = new System.Drawing.Point(139, 263);
+            this.pb8.Location = new System.Drawing.Point(142, 310);
             this.pb8.Name = "pb8";
             this.pb8.Size = new System.Drawing.Size(92, 91);
             this.pb8.TabIndex = 87;
@@ -330,7 +366,7 @@
             this.pb4.Image = global::apProjeto2.Properties.Resources.Forca_09;
             this.pb4.Location = new System.Drawing.Point(108, 182);
             this.pb4.Name = "pb4";
-            this.pb4.Size = new System.Drawing.Size(64, 41);
+            this.pb4.Size = new System.Drawing.Size(64, 87);
             this.pb4.TabIndex = 82;
             this.pb4.TabStop = false;
             // 
@@ -355,24 +391,16 @@
             // pb7
             // 
             this.pb7.Image = global::apProjeto2.Properties.Resources.Forca_16;
-            this.pb7.Location = new System.Drawing.Point(81, 264);
+            this.pb7.Location = new System.Drawing.Point(74, 310);
             this.pb7.Name = "pb7";
             this.pb7.Size = new System.Drawing.Size(62, 83);
             this.pb7.TabIndex = 76;
             this.pb7.TabStop = false;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(128, 320);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(8, 8);
-            this.pictureBox6.TabIndex = 75;
-            this.pictureBox6.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::apProjeto2.Properties.Resources.Forca__13;
-            this.pictureBox4.Location = new System.Drawing.Point(9, 253);
+            this.pictureBox4.Location = new System.Drawing.Point(9, 257);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(41, 153);
             this.pictureBox4.TabIndex = 73;
@@ -423,7 +451,7 @@
             this.Column13,
             this.Column14});
             this.dgvPalavra.Enabled = false;
-            this.dgvPalavra.Location = new System.Drawing.Point(486, 302);
+            this.dgvPalavra.Location = new System.Drawing.Point(486, 310);
             this.dgvPalavra.Name = "dgvPalavra";
             this.dgvPalavra.ReadOnly = true;
             this.dgvPalavra.RowHeadersVisible = false;
@@ -989,7 +1017,7 @@
             // pb1
             // 
             this.pb1.Image = global::apProjeto2.Properties.Resources.Forca_05;
-            this.pb1.Location = new System.Drawing.Point(98, 76);
+            this.pb1.Location = new System.Drawing.Point(98, 78);
             this.pb1.Name = "pb1";
             this.pb1.Size = new System.Drawing.Size(100, 90);
             this.pb1.TabIndex = 84;
@@ -1017,27 +1045,29 @@
             // pb6
             // 
             this.pb6.Image = global::apProjeto2.Properties.Resources.Forca_14;
-            this.pb6.Location = new System.Drawing.Point(115, 222);
+            this.pb6.Location = new System.Drawing.Point(109, 262);
             this.pb6.Name = "pb6";
-            this.pb6.Size = new System.Drawing.Size(50, 52);
+            this.pb6.Size = new System.Drawing.Size(73, 51);
             this.pb6.TabIndex = 77;
             this.pb6.TabStop = false;
             // 
             // pb2
             // 
             this.pb2.Image = global::apProjeto2.Properties.Resources.Forca_08;
-            this.pb2.Location = new System.Drawing.Point(109, 166);
+            this.pb2.Location = new System.Drawing.Point(108, 168);
             this.pb2.Name = "pb2";
-            this.pb2.Size = new System.Drawing.Size(79, 18);
+            this.pb2.Size = new System.Drawing.Size(79, 25);
             this.pb2.TabIndex = 81;
             this.pb2.TabStop = false;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.toolStrip1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1074, 586);
+            this.tabPage2.Size = new System.Drawing.Size(1197, 602);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cadastro";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1051,31 +1081,147 @@
             this.tmTemporizador.Interval = 1000;
             this.tmTemporizador.Tick += new System.EventHandler(this.TmTemporizador_Tick);
             // 
-            // pbMaoBandeira
+            // dateTimePicker1
             // 
-            this.pbMaoBandeira.Image = global::apProjeto2.Properties.Resources.Forca_2_07;
-            this.pbMaoBandeira.Location = new System.Drawing.Point(61, 165);
-            this.pbMaoBandeira.Name = "pbMaoBandeira";
-            this.pbMaoBandeira.Size = new System.Drawing.Size(49, 50);
-            this.pbMaoBandeira.TabIndex = 100;
-            this.pbMaoBandeira.TabStop = false;
-            this.pbMaoBandeira.Visible = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 635);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(209, 20);
+            this.dateTimePicker1.TabIndex = 1;
             // 
-            // pbMorto
+            // toolStrip1
             // 
-            this.pbMorto.Image = global::apProjeto2.Properties.Resources.Forca_1_05;
-            this.pbMorto.Location = new System.Drawing.Point(98, 83);
-            this.pbMorto.Name = "pbMorto";
-            this.pbMorto.Size = new System.Drawing.Size(100, 83);
-            this.pbMorto.TabIndex = 101;
-            this.pbMorto.TabStop = false;
-            this.pbMorto.Visible = false;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripButton7,
+            this.toolStripButton8,
+            this.toolStripButton9});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1191, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "toolStripButton4";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "toolStripButton5";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton6.Text = "toolStripButton6";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton7.Text = "toolStripButton7";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "toolStripButton8";
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "toolStripButton9";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colPosicao,
+            this.colPalavra,
+            this.colDica});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1191, 571);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // colPosicao
+            // 
+            this.colPosicao.HeaderText = "Posição";
+            this.colPosicao.Name = "colPosicao";
+            this.colPosicao.ReadOnly = true;
+            // 
+            // colPalavra
+            // 
+            this.colPalavra.HeaderText = "Palavra";
+            this.colPalavra.Name = "colPalavra";
+            // 
+            // colDica
+            // 
+            this.colDica.HeaderText = "Dica";
+            this.colDica.Name = "colDica";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 596);
+            this.ClientSize = new System.Drawing.Size(1202, 656);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1083,6 +1229,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBandeiraEsquerda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnjo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb8)).EndInit();
@@ -1090,7 +1238,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1100,8 +1247,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMaoBandeira)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1163,7 +1313,6 @@
         private System.Windows.Forms.PictureBox pb5;
         private System.Windows.Forms.PictureBox pb6;
         private System.Windows.Forms.PictureBox pb7;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pbOld;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1197,6 +1346,21 @@
         private System.Windows.Forms.PictureBox pbMaoBandeira;
         private System.Windows.Forms.PictureBox pbMorto;
         private System.Windows.Forms.Label lbDica;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPosicao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPalavra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDica;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
     }
 }
 
