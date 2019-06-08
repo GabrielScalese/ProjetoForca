@@ -17,8 +17,6 @@ namespace apProjeto2
 {
     public partial class FrmForca : Form
     {
-
-        
         int posicaoAIncluir = 0; // Índice do vetor da classe Jogador
         Jogador[] vet = new Jogador[1000]; // instância de um vetor da classe Jogador
         string nomeUsuario = "";
@@ -136,7 +134,7 @@ namespace apProjeto2
             barraDeItens.ImageList = imlBotoes;
             foreach (ToolStripItem item in barraDeItens.Items)
                 if (item is ToolStripButton) // "Condição de existência"
-                    (item as ToolStripButton).ImageIndex = indice;
+                    (item as ToolStripButton).ImageIndex = indice++;
         }
 
         private void TmTemporizador_Tick(object sender, EventArgs e)
@@ -270,9 +268,14 @@ namespace apProjeto2
                 edPalavra.Text = asPalavras[indice].PalavraSelec;
                 edDica.Text = asPalavras[indice].Dica;
                 TestarBotoes();
-                dgvManutencao.Text =
-                "Registro " + (asPalavras.PosicaoAtual + 1) +
-                   "/" + asPalavras.Tamanho;
+                dgvManutencao.RowCount = asPalavras.Tamanho;
+                for (int indiceA = 0; indiceA < asPalavras.Tamanho; indiceA++)
+                {
+                    Palavra palavra = asPalavras[indiceA];
+                    dgvManutencao.Rows[indiceA].Cells[0].Value = indiceA;
+                    dgvManutencao.Rows[indiceA].Cells[1].Value = palavra.PalavraSelec; // Exibe no "dgvPalavra" a palavra que foi escolhida corretamente
+                    dgvManutencao.Rows[indiceA].Cells[2].Value = palavra.Dica;
+                }
             }
         }
 
@@ -297,26 +300,49 @@ namespace apProjeto2
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
+            if (asPalavras.PosicaoAtual != 100)
+                dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
             asPalavras.PosicionarNoPrimeiro();
             AtualizarTela();
+            dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
+            if (asPalavras.PosicaoAtual != 100)
+               dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
             asPalavras.RetrocederPosicao();
             AtualizarTela();
+            dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
         }
 
         private void BtnAvancar_Click(object sender, EventArgs e)
         {
+            if (asPalavras.PosicaoAtual != -1)
+               dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
             asPalavras.AvancarPosicao();
             AtualizarTela();
+            dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
         }
 
         private void BtnUltimo_Click(object sender, EventArgs e)
         {
+            if (asPalavras.PosicaoAtual != -1)
+               dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
             asPalavras.PosicionarNoUltimo();
             AtualizarTela();
+            dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
+        }
+
+        private void DgvManutencao_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            asPalavras.PosicaoAtual = e.RowIndex;
+            AtualizarTela();
+        }
+
+        private void BtnIncluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

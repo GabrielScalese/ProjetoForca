@@ -116,8 +116,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.edDica = new System.Windows.Forms.TextBox();
             this.edPalavra = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelDica = new System.Windows.Forms.Label();
+            this.labelPalavra = new System.Windows.Forms.Label();
             this.dgvManutencao = new System.Windows.Forms.DataGridView();
             this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1069,8 +1069,8 @@
             // 
             this.tabPage2.Controls.Add(this.edDica);
             this.tabPage2.Controls.Add(this.edPalavra);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.labelDica);
+            this.tabPage2.Controls.Add(this.labelPalavra);
             this.tabPage2.Controls.Add(this.dgvManutencao);
             this.tabPage2.Controls.Add(this.barraDeItens);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -1095,23 +1095,23 @@
             this.edPalavra.Size = new System.Drawing.Size(100, 20);
             this.edPalavra.TabIndex = 4;
             // 
-            // label5
+            // labelDica
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.labelDica.AutoSize = true;
+            this.labelDica.Location = new System.Drawing.Point(53, 79);
+            this.labelDica.Name = "labelDica";
+            this.labelDica.Size = new System.Drawing.Size(32, 13);
+            this.labelDica.TabIndex = 3;
+            this.labelDica.Text = "Dica:";
             // 
-            // label4
+            // labelPalavra
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.labelPalavra.AutoSize = true;
+            this.labelPalavra.Location = new System.Drawing.Point(53, 46);
+            this.labelPalavra.Name = "labelPalavra";
+            this.labelPalavra.Size = new System.Drawing.Size(46, 13);
+            this.labelPalavra.TabIndex = 2;
+            this.labelPalavra.Text = "Palavra:";
             // 
             // dgvManutencao
             // 
@@ -1124,6 +1124,7 @@
             this.dgvManutencao.Name = "dgvManutencao";
             this.dgvManutencao.Size = new System.Drawing.Size(1191, 481);
             this.dgvManutencao.TabIndex = 1;
+            this.dgvManutencao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvManutencao_CellClick);
             // 
             // colPosicao
             // 
@@ -1166,7 +1167,7 @@
             this.btnInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(23, 22);
-            this.btnInicio.Text = "toolStripButton1";
+            this.btnInicio.Text = "Início";
             this.btnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
             // 
             // btnVoltar
@@ -1176,7 +1177,7 @@
             this.btnVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(23, 22);
-            this.btnVoltar.Text = "toolStripButton2";
+            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // btnAvancar
@@ -1186,7 +1187,7 @@
             this.btnAvancar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAvancar.Name = "btnAvancar";
             this.btnAvancar.Size = new System.Drawing.Size(23, 22);
-            this.btnAvancar.Text = "toolStripButton3";
+            this.btnAvancar.Text = "Avançar";
             this.btnAvancar.Click += new System.EventHandler(this.BtnAvancar_Click);
             // 
             // btnUltimo
@@ -1196,7 +1197,7 @@
             this.btnUltimo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUltimo.Name = "btnUltimo";
             this.btnUltimo.Size = new System.Drawing.Size(23, 22);
-            this.btnUltimo.Text = "toolStripButton4";
+            this.btnUltimo.Text = "Último";
             this.btnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
             // btnIncluir
@@ -1206,7 +1207,8 @@
             this.btnIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(23, 22);
-            this.btnIncluir.Text = "toolStripButton5";
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
             // 
             // btnAlterar
             // 
@@ -1215,7 +1217,7 @@
             this.btnAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(23, 22);
-            this.btnAlterar.Text = "toolStripButton6";
+            this.btnAlterar.Text = "Alterar";
             // 
             // btnSalvar
             // 
@@ -1224,7 +1226,7 @@
             this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(23, 22);
-            this.btnSalvar.Text = "toolStripButton7";
+            this.btnSalvar.Text = "Salvar";
             // 
             // btnExcluir
             // 
@@ -1233,7 +1235,7 @@
             this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(23, 22);
-            this.btnExcluir.Text = "toolStripButton8";
+            this.btnExcluir.Text = "Excluir";
             // 
             // btnJuntar
             // 
@@ -1242,7 +1244,7 @@
             this.btnJuntar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnJuntar.Name = "btnJuntar";
             this.btnJuntar.Size = new System.Drawing.Size(23, 22);
-            this.btnJuntar.Text = "toolStripButton9";
+            this.btnJuntar.Text = "Juntar";
             // 
             // dlgAbrir
             // 
@@ -1412,8 +1414,8 @@
         private System.Windows.Forms.ToolStripButton btnJuntar;
         private System.Windows.Forms.TextBox edDica;
         private System.Windows.Forms.TextBox edPalavra;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelDica;
+        private System.Windows.Forms.Label labelPalavra;
         private System.Windows.Forms.Timer tmrTempo;
         private System.Windows.Forms.ImageList imlBotoes;
     }

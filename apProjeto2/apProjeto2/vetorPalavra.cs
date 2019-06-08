@@ -87,6 +87,7 @@ class VetorPalavra
             string dicaLida = linha.Substring(inicioDica).Trim();
             var palavraAtual = new Palavra(palavraLida, dicaLida);
             InserirAposFim(palavraAtual); // Insere a palavra no vetor
+            
         }
     }
 
@@ -110,6 +111,8 @@ class VetorPalavra
     public int Tamanho  // permite à aplicação consultar o número de registros armazenados
     {
         get => qtsPalavras;
+        set => qtsPalavras = value;
+        
     }
     public Situacao SituacaoAtual
     {
