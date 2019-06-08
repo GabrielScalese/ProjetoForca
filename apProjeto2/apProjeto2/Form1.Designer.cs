@@ -1,6 +1,6 @@
 ﻿namespace apProjeto2
 {
-    partial class Form1
+    partial class FrmForca
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmForca));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pbMorto = new System.Windows.Forms.PictureBox();
@@ -122,9 +122,9 @@
             this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tlsBotoes = new System.Windows.Forms.ToolStrip();
+            this.barraDeItens = new System.Windows.Forms.ToolStrip();
             this.btnInicio = new System.Windows.Forms.ToolStripButton();
-            this.bntVoltar = new System.Windows.Forms.ToolStripButton();
+            this.btnVoltar = new System.Windows.Forms.ToolStripButton();
             this.btnAvancar = new System.Windows.Forms.ToolStripButton();
             this.btnUltimo = new System.Windows.Forms.ToolStripButton();
             this.btnIncluir = new System.Windows.Forms.ToolStripButton();
@@ -158,7 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManutencao)).BeginInit();
-            this.tlsBotoes.SuspendLayout();
+            this.barraDeItens.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1072,7 +1072,7 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.dgvManutencao);
-            this.tabPage2.Controls.Add(this.tlsBotoes);
+            this.tabPage2.Controls.Add(this.barraDeItens);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1120,7 +1120,7 @@
             this.colPosicao,
             this.colPalavra,
             this.colDica});
-            this.dgvManutencao.Location = new System.Drawing.Point(3, 118);
+            this.dgvManutencao.Location = new System.Drawing.Point(-5, 102);
             this.dgvManutencao.Name = "dgvManutencao";
             this.dgvManutencao.Size = new System.Drawing.Size(1191, 481);
             this.dgvManutencao.TabIndex = 1;
@@ -1141,11 +1141,11 @@
             this.colDica.HeaderText = "Dica";
             this.colDica.Name = "colDica";
             // 
-            // tlsBotoes
+            // barraDeItens
             // 
-            this.tlsBotoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.barraDeItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnInicio,
-            this.bntVoltar,
+            this.btnVoltar,
             this.btnAvancar,
             this.btnUltimo,
             this.btnIncluir,
@@ -1153,11 +1153,11 @@
             this.btnSalvar,
             this.btnExcluir,
             this.btnJuntar});
-            this.tlsBotoes.Location = new System.Drawing.Point(3, 3);
-            this.tlsBotoes.Name = "tlsBotoes";
-            this.tlsBotoes.Size = new System.Drawing.Size(1191, 25);
-            this.tlsBotoes.TabIndex = 0;
-            this.tlsBotoes.Text = "toolStrip1";
+            this.barraDeItens.Location = new System.Drawing.Point(3, 3);
+            this.barraDeItens.Name = "barraDeItens";
+            this.barraDeItens.Size = new System.Drawing.Size(1191, 25);
+            this.barraDeItens.TabIndex = 0;
+            this.barraDeItens.Text = "toolStrip1";
             // 
             // btnInicio
             // 
@@ -1167,15 +1167,17 @@
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(23, 22);
             this.btnInicio.Text = "toolStripButton1";
+            this.btnInicio.Click += new System.EventHandler(this.BtnInicio_Click);
             // 
-            // bntVoltar
+            // btnVoltar
             // 
-            this.bntVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bntVoltar.Image = ((System.Drawing.Image)(resources.GetObject("bntVoltar.Image")));
-            this.bntVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.bntVoltar.Name = "bntVoltar";
-            this.bntVoltar.Size = new System.Drawing.Size(23, 22);
-            this.bntVoltar.Text = "toolStripButton2";
+            this.btnVoltar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(23, 22);
+            this.btnVoltar.Text = "toolStripButton2";
+            this.btnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);
             // 
             // btnAvancar
             // 
@@ -1185,6 +1187,7 @@
             this.btnAvancar.Name = "btnAvancar";
             this.btnAvancar.Size = new System.Drawing.Size(23, 22);
             this.btnAvancar.Text = "toolStripButton3";
+            this.btnAvancar.Click += new System.EventHandler(this.BtnAvancar_Click);
             // 
             // btnUltimo
             // 
@@ -1194,6 +1197,7 @@
             this.btnUltimo.Name = "btnUltimo";
             this.btnUltimo.Size = new System.Drawing.Size(23, 22);
             this.btnUltimo.Text = "toolStripButton4";
+            this.btnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
             // btnIncluir
             // 
@@ -1263,13 +1267,13 @@
             this.imlBotoes.Images.SetKeyName(7, "Minus.bmp");
             this.imlBotoes.Images.SetKeyName(8, "COPY.BMP");
             // 
-            // Form1
+            // FrmForca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 656);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "FrmForca";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
@@ -1296,8 +1300,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManutencao)).EndInit();
-            this.tlsBotoes.ResumeLayout(false);
-            this.tlsBotoes.PerformLayout();
+            this.barraDeItens.ResumeLayout(false);
+            this.barraDeItens.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1396,9 +1400,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPosicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPalavra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDica;
-        private System.Windows.Forms.ToolStrip tlsBotoes;
+        private System.Windows.Forms.ToolStrip barraDeItens;
         private System.Windows.Forms.ToolStripButton btnInicio;
-        private System.Windows.Forms.ToolStripButton bntVoltar;
+        private System.Windows.Forms.ToolStripButton btnVoltar;
         private System.Windows.Forms.ToolStripButton btnAvancar;
         private System.Windows.Forms.ToolStripButton btnUltimo;
         private System.Windows.Forms.ToolStripButton btnIncluir;

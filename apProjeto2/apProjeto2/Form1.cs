@@ -15,9 +15,10 @@ using System.IO;
 
 namespace apProjeto2
 {
-    public partial class Form1 : Form
+    public partial class FrmForca : Form
     {
-        
+
+        VetorFuncionario aPalavra; // Variável que chamará métodos da classe
         int posicaoAIncluir = 0; // Índice do vetor da classe Jogador
         Jogador[] vet = new Jogador[1000]; // instância de um vetor da classe Jogador
         string nomeUsuario = "";
@@ -30,7 +31,7 @@ namespace apProjeto2
         int tempoPassado;  // Tempo passado em segundos
         Palavra palavraAtual;  // Palavra lido do vetor
 
-        public Form1()
+        public FrmForca()
         {
             InitializeComponent();
         }
@@ -128,6 +129,14 @@ namespace apProjeto2
             {
                 asPalavras.LeituraDoVetor(dlgAbrir.FileName);
             }
+
+            // Componente da parte 2 do projeto
+
+            int indice = 0; // Índice resposável por percorrer os botões do "imlBotoes"
+            barraDeItens.ImageList = imlBotoes;
+            foreach (ToolStripItem item in barraDeItens.Items)
+                if (item is ToolStripButton) // "Condição de existência"
+                    (item as ToolStripButton).ImageIndex = indice;
         }
 
         private void TmTemporizador_Tick(object sender, EventArgs e)
@@ -251,6 +260,63 @@ namespace apProjeto2
                 if (vet[ind].Nome == nomeProcurado) // Caso o nome do jogador atual for igual ao nome procurado
                     achou = true; // O jogador foi achado
             return achou; // Retorna se o jogador foi achado ou não
+        }
+
+        private void AtualizarTela()
+        {
+            if (!aPalavra.EstaVazio)
+            {
+                int indice = aPalavra.PosicaoAtual;
+                edPalavra.Text = asPalavras[indice].PalavraSelec;
+                edDica.Text = asPalavras[indice].Dica;
+                TestarBotoes();
+                dgvManutencao.Text =
+                "Registro " + (aPalavra.PosicaoAtual + 1) +
+                   "/" + aPalavra.Tamanho;
+            }
+        }
+
+        private void TestarBotoes()
+        {
+            btnInicio.Enabled = true;
+            btnVoltar.Enabled = true;
+            btnAvancar.Enabled = true;
+            btnUltimo.Enabled = true;
+            if (aPalavra.EstaNoInicio)
+            {
+                btnInicio.Enabled = false;
+                btnVoltar.Enabled = false;
+            }
+            if (aPalavra.EstaNoFim)
+            {
+                btnAvancar.Enabled = false;
+                btnUltimo.Enabled = false;
+            }
+        }
+
+
+        private void BtnInicio_Click(object sender, EventArgs e)
+        {
+            aPalavra.PosicionarNoPrimeiro();
+            AtualizarTela();
+        }
+
+        private void BtnVoltar_Click(object sender, EventArgs e)
+        {
+            aPalavra.RetrocederPosicao();
+            AtualizarTela();
+        }
+
+        private void BtnAvancar_Click(object sender, EventArgs e)
+        {
+            aPalavra.AvancarPosicao();
+            AtualizarTela();
+        }
+
+        private void BtnUltimo_Click(object sender, EventArgs e)
+        {
+            aPalavra.PosicionarNoUltimo();
+            AtualizarTela();
         }
     }
 }
