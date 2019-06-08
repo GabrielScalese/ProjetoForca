@@ -114,11 +114,15 @@
             this.pb4 = new System.Windows.Forms.PictureBox();
             this.pb2 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.edDica = new System.Windows.Forms.TextBox();
+            this.edPalavra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.dgvManutencao = new System.Windows.Forms.DataGridView();
             this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tlsBotoes = new System.Windows.Forms.ToolStrip();
             this.btnInicio = new System.Windows.Forms.ToolStripButton();
             this.bntVoltar = new System.Windows.Forms.ToolStripButton();
             this.btnAvancar = new System.Windows.Forms.ToolStripButton();
@@ -130,12 +134,8 @@
             this.btnJuntar = new System.Windows.Forms.ToolStripButton();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.edPalavra = new System.Windows.Forms.TextBox();
-            this.edDica = new System.Windows.Forms.TextBox();
+            this.tmrTempo = new System.Windows.Forms.Timer(this.components);
+            this.imlBotoes = new System.Windows.Forms.ImageList(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
@@ -158,7 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManutencao)).BeginInit();
-            this.toolStrip1.SuspendLayout();
+            this.tlsBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -246,7 +246,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1197, 602);
+            this.tabPage1.Size = new System.Drawing.Size(1197, 628);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Forca";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1072,7 +1072,7 @@
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.dgvManutencao);
-            this.tabPage2.Controls.Add(this.toolStrip1);
+            this.tabPage2.Controls.Add(this.tlsBotoes);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1080,6 +1080,38 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cadastro";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // edDica
+            // 
+            this.edDica.Location = new System.Drawing.Point(126, 76);
+            this.edDica.Name = "edDica";
+            this.edDica.Size = new System.Drawing.Size(100, 20);
+            this.edDica.TabIndex = 5;
+            // 
+            // edPalavra
+            // 
+            this.edPalavra.Location = new System.Drawing.Point(126, 43);
+            this.edPalavra.Name = "edPalavra";
+            this.edPalavra.Size = new System.Drawing.Size(100, 20);
+            this.edPalavra.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "label5";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "label4";
             // 
             // dgvManutencao
             // 
@@ -1109,9 +1141,9 @@
             this.colDica.HeaderText = "Dica";
             this.colDica.Name = "colDica";
             // 
-            // toolStrip1
+            // tlsBotoes
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsBotoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnInicio,
             this.bntVoltar,
             this.btnAvancar,
@@ -1121,11 +1153,11 @@
             this.btnSalvar,
             this.btnExcluir,
             this.btnJuntar});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1191, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tlsBotoes.Location = new System.Drawing.Point(3, 3);
+            this.tlsBotoes.Name = "tlsBotoes";
+            this.tlsBotoes.Size = new System.Drawing.Size(1191, 25);
+            this.tlsBotoes.TabIndex = 0;
+            this.tlsBotoes.Text = "toolStrip1";
             // 
             // btnInicio
             // 
@@ -1217,43 +1249,19 @@
             this.tmTemporizador.Interval = 1000;
             this.tmTemporizador.Tick += new System.EventHandler(this.TmTemporizador_Tick);
             // 
-            // imageList1
+            // imlBotoes
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
-            // 
-            // edPalavra
-            // 
-            this.edPalavra.Location = new System.Drawing.Point(126, 43);
-            this.edPalavra.Name = "edPalavra";
-            this.edPalavra.Size = new System.Drawing.Size(100, 20);
-            this.edPalavra.TabIndex = 4;
-            // 
-            // edDica
-            // 
-            this.edDica.Location = new System.Drawing.Point(126, 76);
-            this.edDica.Name = "edDica";
-            this.edDica.Size = new System.Drawing.Size(100, 20);
-            this.edDica.TabIndex = 5;
+            this.imlBotoes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlBotoes.ImageStream")));
+            this.imlBotoes.TransparentColor = System.Drawing.Color.Transparent;
+            this.imlBotoes.Images.SetKeyName(0, "first.bmp");
+            this.imlBotoes.Images.SetKeyName(1, "prior.bmp");
+            this.imlBotoes.Images.SetKeyName(2, "next.bmp");
+            this.imlBotoes.Images.SetKeyName(3, "last.bmp");
+            this.imlBotoes.Images.SetKeyName(4, "Add.bmp");
+            this.imlBotoes.Images.SetKeyName(5, "WINNEXT.BMP");
+            this.imlBotoes.Images.SetKeyName(6, "Save.bmp");
+            this.imlBotoes.Images.SetKeyName(7, "Minus.bmp");
+            this.imlBotoes.Images.SetKeyName(8, "COPY.BMP");
             // 
             // Form1
             // 
@@ -1288,8 +1296,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManutencao)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.tlsBotoes.ResumeLayout(false);
+            this.tlsBotoes.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1388,7 +1396,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPosicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPalavra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDica;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip tlsBotoes;
         private System.Windows.Forms.ToolStripButton btnInicio;
         private System.Windows.Forms.ToolStripButton bntVoltar;
         private System.Windows.Forms.ToolStripButton btnAvancar;
@@ -1402,8 +1410,8 @@
         private System.Windows.Forms.TextBox edPalavra;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Timer tmrTempo;
+        private System.Windows.Forms.ImageList imlBotoes;
     }
 }
 
