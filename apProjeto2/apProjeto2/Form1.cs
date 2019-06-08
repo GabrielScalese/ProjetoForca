@@ -18,7 +18,7 @@ namespace apProjeto2
     public partial class FrmForca : Form
     {
 
-        VetorFuncionario aPalavra; // Variável que chamará métodos da classe
+        
         int posicaoAIncluir = 0; // Índice do vetor da classe Jogador
         Jogador[] vet = new Jogador[1000]; // instância de um vetor da classe Jogador
         string nomeUsuario = "";
@@ -26,7 +26,7 @@ namespace apProjeto2
         const int tempoTotal = 60;
         int pontos = 0; // Armazena quantidade de pontos do usuário
         int erro = 0;
-        VetorPalavra asPalavras;
+        VetorPalavra asPalavras; // Variável que chamará métodos da classe
         string[] nick;
         int tempoPassado;  // Tempo passado em segundos
         Palavra palavraAtual;  // Palavra lido do vetor
@@ -264,15 +264,15 @@ namespace apProjeto2
 
         private void AtualizarTela()
         {
-            if (!aPalavra.EstaVazio)
+            if (!asPalavras.EstaVazio)
             {
-                int indice = aPalavra.PosicaoAtual;
+                int indice = asPalavras.PosicaoAtual;
                 edPalavra.Text = asPalavras[indice].PalavraSelec;
                 edDica.Text = asPalavras[indice].Dica;
                 TestarBotoes();
                 dgvManutencao.Text =
-                "Registro " + (aPalavra.PosicaoAtual + 1) +
-                   "/" + aPalavra.Tamanho;
+                "Registro " + (asPalavras.PosicaoAtual + 1) +
+                   "/" + asPalavras.Tamanho;
             }
         }
 
@@ -282,12 +282,12 @@ namespace apProjeto2
             btnVoltar.Enabled = true;
             btnAvancar.Enabled = true;
             btnUltimo.Enabled = true;
-            if (aPalavra.EstaNoInicio)
+            if (asPalavras.EstaNoInicio)
             {
                 btnInicio.Enabled = false;
                 btnVoltar.Enabled = false;
             }
-            if (aPalavra.EstaNoFim)
+            if (asPalavras.EstaNoFim)
             {
                 btnAvancar.Enabled = false;
                 btnUltimo.Enabled = false;
@@ -297,25 +297,25 @@ namespace apProjeto2
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
-            aPalavra.PosicionarNoPrimeiro();
+            asPalavras.PosicionarNoPrimeiro();
             AtualizarTela();
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
-            aPalavra.RetrocederPosicao();
+            asPalavras.RetrocederPosicao();
             AtualizarTela();
         }
 
         private void BtnAvancar_Click(object sender, EventArgs e)
         {
-            aPalavra.AvancarPosicao();
+            asPalavras.AvancarPosicao();
             AtualizarTela();
         }
 
         private void BtnUltimo_Click(object sender, EventArgs e)
         {
-            aPalavra.PosicionarNoUltimo();
+            asPalavras.PosicionarNoUltimo();
             AtualizarTela();
         }
     }

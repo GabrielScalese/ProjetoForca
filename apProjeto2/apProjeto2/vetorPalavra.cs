@@ -26,6 +26,9 @@ class VetorPalavra
         palavra = new Palavra[tamanhoVetor];
         qtsPalavras = 0;
         tamMaxPalavras = tamanhoVetor;
+        qtosDados = 0;
+        posicaoAtual = -1;  // não está posicionado ainda
+        situacaoAtual = Situacao.navegando;
     }
     public void LerDados(string nomeArquivo)
     {
@@ -45,11 +48,7 @@ class VetorPalavra
         palavra[qtsPalavras++] = palavraASerUsada;
 
     }
-    public void Listar()
-    {
-        for (int indice = 0; indice < qtsPalavras; indice++)
-            Write($"{palavra[indice],5} ");
-    }
+
     public void Listar(ListBox lista)
     {
         lista.Items.Clear();
@@ -87,10 +86,10 @@ class VetorPalavra
 
     public enum Situacao
     {
-  navegando, pesquisando, incluindo, editando, excluindo
+        navegando, pesquisando, incluindo, editando, excluindo
     }
-class VetorFuncionario
-{
+
+
     int tamanhoMaximo;     // tamanho físico
     Funcionario[] dados;   // vetor interno à classe, armazena os registros
     int qtosDados;         // tamanho lógico
@@ -120,31 +119,8 @@ class VetorFuncionario
         }
     }
 
-    public VetorFuncionario(int tamanhoDesejado)
-    {
-        tamanhoMaximo = tamanhoDesejado;
-        dados = new Funcionario[tamanhoMaximo];
-        qtosDados = 0;
-        posicaoAtual = -1;  // não está posicionado ainda
-        situacaoAtual = Situacao.navegando;
-    }
-    public void LeituraDoVetor(string nomeArq)
-    {
-        if (!File.Exists(nomeArq))   // se o arquivo não existe
-        {
-            var arqNovo = File.CreateText(nomeArq);  // criamos o arquivo vazio
-            arqNovo.Close();
-        }
-        var arq = new StreamReader(nomeArq);
-        qtosDados = 0;
-        while (!arq.EndOfStream)
-        {
-            string linha = arq.ReadLine();
-            var func = new Funcionario(linha);
-            Inserir(func);
-        }
-        arq.Close();
-    }
+    
+
 
     public void Inserir(Funcionario valorAInserir) // insere após o final do vetor e o expande se necessário
     {
@@ -312,21 +288,21 @@ class VetorFuncionario
             throw new Exception("Índice fora dos limites do vetor!");
     }
 
-    public Funcionario this[int indice]
+    public VetorPalavra this[int i]
     {
         get
         {
-            if (indice < 0 || indice >= qtosDados)  // inválido
+            if (i < 0 || i >= qtosDados)  // inválido
                 throw new Exception("Índice inválido!");
 
-            return dados[indice];
+            return qtsPalavras[i];
         }
         set
         {
-            if (indice < 0 || indice >= qtosDados)
+            if (i < 0 || i >= qtosDados)
                 throw new Exception("Índice fora dos limites do vetor!");
 
-            dados[indice] = value;
+            dados[i] = value;
         }
     }
 
