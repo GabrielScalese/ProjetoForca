@@ -18,15 +18,28 @@ class VetorPalavra
 
     public Palavra this[int i]
     {
-        get => palavra[i];
-    }
+        get
+        {
+            if (i < 0 || i >= qtsPalavras)  // inválido
+                throw new Exception("Índice inválido!");
+
+            return palavra[i];
+        }
+        set
+        {
+            if (i < 0 || i >= qtsPalavras)
+                throw new Exception("Índice fora dos limites do vetor!");
+
+            palavra[i] = value;
+        }
+}
 
     public VetorPalavra(int tamanhoVetor)
     {
         palavra = new Palavra[tamanhoVetor];
         qtsPalavras = 0;
         tamMaxPalavras = tamanhoVetor;
-        qtosDados = 0;
+        qtsPalavras = 0;
         posicaoAtual = -1;  // não está posicionado ainda
         situacaoAtual = Situacao.navegando;
     }
@@ -92,12 +105,11 @@ class VetorPalavra
 
     int tamanhoMaximo;     // tamanho físico
     Funcionario[] dados;   // vetor interno à classe, armazena os registros
-    int qtosDados;         // tamanho lógico
     Situacao situacaoAtual;
     int posicaoAtual;      // índice o registro exibido na tela
     public int Tamanho  // permite à aplicação consultar o número de registros armazenados
     {
-        get => qtosDados;
+        get => qtsPalavras;
     }
     public Situacao SituacaoAtual
     {
@@ -107,14 +119,14 @@ class VetorPalavra
 
     public bool EstaVazio // permite à aplicação saber se o vetor dados está vazio
     {
-        get => qtosDados <= 0; // se qtosDados <= 0, retorna true
+        get => qtsPalavras <= 0; // se qtosDados <= 0, retorna true
     }
     public int PosicaoAtual
     {
         get => posicaoAtual;
         set
         {
-            if (value >= 0 && value < qtosDados)
+            if (value >= 0 && value < qtsPalavras)
                 posicaoAtual = value;
         }
     }
@@ -124,32 +136,32 @@ class VetorPalavra
 
     public void Inserir(Funcionario valorAInserir) // insere após o final do vetor e o expande se necessário
     {
-        if (qtosDados >= tamanhoMaximo)
+        if (qtsPalavras >= tamanhoMaximo)
             ExpandirVetor();
 
-        dados[qtosDados] = valorAInserir;
-        qtosDados++;
+        dados[qtsPalavras] = valorAInserir;
+        qtsPalavras++;
     }
 
     // insere o novo dado na posição indicada por ondeIncluir
     public void Inserir(Funcionario valorAInserir, int ondeIncluir)
     {
-        if (qtosDados >= tamanhoMaximo)
+        if (qtsPalavras >= tamanhoMaximo)
             ExpandirVetor();
 
         // desloca para frente os dados posteriores ao novo dado
-        for (int indice = qtosDados - 1; indice >= ondeIncluir; indice--)
+        for (int indice = qtsPalavras - 1; indice >= ondeIncluir; indice--)
             dados[indice + 1] = dados[indice];
 
         dados[ondeIncluir] = valorAInserir;
-        qtosDados++;
+        qtsPalavras++;
     }
 
     private void ExpandirVetor()
     {
         tamanhoMaximo += 10;
         Funcionario[] vetorMaior = new Funcionario[tamanhoMaximo];
-        for (int indice = 0; indice < qtosDados; indice++)
+        for (int indice = 0; indice < qtsPalavras; indice++)
             vetorMaior[indice] = dados[indice];
 
         dados = vetorMaior;
@@ -157,8 +169,8 @@ class VetorPalavra
 
     public void Excluir(int posicaoAExcluir)
     {
-        qtosDados--;
-        for (int indice = posicaoAExcluir; indice < qtosDados; indice++)
+        qtsPalavras--;
+        for (int indice = posicaoAExcluir; indice < qtsPalavras; indice++)
             dados[indice] = dados[indice + 1];
 
         // pensar em como diminuir o tamanho físico do vetor, para economizar
@@ -172,7 +184,7 @@ class VetorPalavra
         indice = 0;
 
         while (!achouIgual && !achouMaior && !fim)
-            if (indice >= qtosDados)
+            if (indice >= qtsPalavras)
                 fim = true; // indice passou do fim do vetor
             else
               if (dados[indice].CompareTo(funcProcurado) > 0)
@@ -190,7 +202,7 @@ class VetorPalavra
     {
         bool achou = false;
         int inicio = 0;
-        int fim = qtosDados - 1;
+        int fim = qtsPalavras - 1;
         while (!achou && inicio <= fim)
         {
             onde = (inicio + fim) / 2;
@@ -210,20 +222,20 @@ class VetorPalavra
     {
         lista.Items.Clear();
         lista.Items.Add(cabecalho);
-        for (int indice = 0; indice < qtosDados; indice++)
+        for (int indice = 0; indice < qtsPalavras; indice++)
             lista.Items.Add(dados[indice]);
     }
 
     public void Listar()
     {
-        for (int indice = 0; indice < qtosDados; indice++)
+        for (int indice = 0; indice < qtsPalavras; indice++)
             WriteLine($"{dados[indice],5} ");
     }
 
     public void Listar(ComboBox lista)
     {
         lista.Items.Clear();
-        for (int indice = 0; indice < qtosDados; indice++)
+        for (int indice = 0; indice < qtsPalavras; indice++)
             lista.Items.Add(dados[indice]);
     }
     public void Listar(TextBox lista)
@@ -231,22 +243,22 @@ class VetorPalavra
         lista.Multiline = true;
         lista.ScrollBars = ScrollBars.Both;
         lista.Clear();
-        for (int indice = 0; indice < qtosDados; indice++)
+        for (int indice = 0; indice < qtsPalavras; indice++)
             lista.AppendText(dados[indice] + Environment.NewLine);
     }
 
     public void GravarEmDisco(string nomeArq)
     {
         var arq = new StreamWriter(nomeArq);
-        for (int i = 0; i < qtosDados; i++)
+        for (int i = 0; i < qtsPalavras; i++)
             arq.WriteLine(dados[i].ParaArquivo());
         arq.Close();
     }
 
     public void OrdenarSimples()
     {
-        for (int lento = 0; lento < qtosDados; lento++)
-            for (int rapido = lento + 1; rapido < qtosDados; rapido++)
+        for (int lento = 0; lento < qtsPalavras; lento++)
+            for (int rapido = lento + 1; rapido < qtsPalavras; rapido++)
                 if (dados[rapido].CompareTo(dados[lento]) < 0)
                 {
                     Funcionario aux = dados[lento];
@@ -257,10 +269,10 @@ class VetorPalavra
 
     public void Ordenar()  // Straight-select sort
     {
-        for (int lento = 0; lento < qtosDados; lento++)
+        for (int lento = 0; lento < qtsPalavras; lento++)
         {
             int indiceDoMenor = lento;
-            for (int rapido = lento + 1; rapido < qtosDados; rapido++)
+            for (int rapido = lento + 1; rapido < qtsPalavras; rapido++)
                 if (dados[rapido].CompareTo(dados[indiceDoMenor]) < 0)
                     indiceDoMenor = rapido;
             if (indiceDoMenor != lento)
@@ -274,7 +286,7 @@ class VetorPalavra
 
     public Funcionario ValorDe(int qualPosicao)
     {
-        if (qualPosicao < 0 || qualPosicao >= qtosDados)  // inválido
+        if (qualPosicao < 0 || qualPosicao >= qtsPalavras)  // inválido
             throw new Exception("Índice inválido!");
 
         return dados[qualPosicao];
@@ -282,28 +294,10 @@ class VetorPalavra
 
     public void Alterar(int indice, Funcionario novoDado)
     {
-        if (indice >= 0 && indice < qtosDados)
+        if (indice >= 0 && indice < qtsPalavras)
             dados[indice] = novoDado;
         else
             throw new Exception("Índice fora dos limites do vetor!");
-    }
-
-    public VetorPalavra this[int i]
-    {
-        get
-        {
-            if (i < 0 || i >= qtosDados)  // inválido
-                throw new Exception("Índice inválido!");
-
-            return qtsPalavras[i];
-        }
-        set
-        {
-            if (i < 0 || i >= qtosDados)
-                throw new Exception("Índice fora dos limites do vetor!");
-
-            dados[i] = value;
-        }
     }
 
     public void PosicionarNoPrimeiro()
@@ -316,7 +310,7 @@ class VetorPalavra
     public void PosicionarNoUltimo()
     {
         if (!EstaVazio)
-            posicaoAtual = qtosDados - 1; // última posição usada do vetor
+            posicaoAtual = qtsPalavras - 1; // última posição usada do vetor
         else
             posicaoAtual = -1; // indica antes do vetor vazio
     }
@@ -336,6 +330,6 @@ class VetorPalavra
     }
     public bool EstaNoFim
     {
-        get => posicaoAtual >= qtosDados - 1; // último índice
+        get => posicaoAtual >= qtsPalavras - 1; // último índice
     }
 }
