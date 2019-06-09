@@ -254,11 +254,11 @@ class VetorPalavra
     {
         for (int lento = 0; lento < qtsPalavras; lento++)
             for (int rapido = lento + 1; rapido < qtsPalavras; rapido++)
-                if (dados[rapido].CompareTo(dados[lento]) < 0)
+                if (palavra[rapido].CompareTo(palavra[lento]) < 0)
                 {
-                    Funcionario aux = dados[lento];
-                    dados[lento] = dados[rapido];
-                    dados[rapido] = aux;
+                    Palavra aux = palavra[lento];
+                    palavra[lento] = palavra[rapido];
+                    palavra[rapido] = aux;
                 }
     }
 

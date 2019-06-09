@@ -1240,6 +1240,7 @@
             this.btnOrdenar.Name = "btnOrdenar";
             this.btnOrdenar.Size = new System.Drawing.Size(23, 22);
             this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.Click += new System.EventHandler(this.BtnOrdenar_Click);
             // 
             // dlgAbrir
             // 
