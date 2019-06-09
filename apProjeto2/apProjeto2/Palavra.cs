@@ -37,4 +37,29 @@ class Palavra
             palavra = value.PadRight(tamanhoPalavra, ' ');
         }
     }
+
+    public int CompareTo(Palavra outro)
+    {
+        int resultado = String.Compare(palavra, outro.palavra);
+        if (resultado < 0)
+            return -1;     // qualquer inteiro negativo
+
+        if (resultado > 0)
+            return 1;         // quando os valores comparados são iguais
+
+        return 0;  // qualquer inteiro positivo
+
+        // return matricula - outro.matricula;
+    }
+
+    public override String ToString()
+    {
+        return PalavraSelec+ "   " + Dica;
+    }
+
+    public String ParaArquivo()
+    {
+        return PalavraSelec.PadRight(15, ' ') + Dica;
+    }
+
 }

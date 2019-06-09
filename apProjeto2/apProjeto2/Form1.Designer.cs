@@ -131,7 +131,7 @@
             this.btnAlterar = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
-            this.btnJuntar = new System.Windows.Forms.ToolStripButton();
+            this.btnOrdenar = new System.Windows.Forms.ToolStripButton();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
             this.tmrTempo = new System.Windows.Forms.Timer(this.components);
@@ -1084,6 +1084,7 @@
             // edDica
             // 
             this.edDica.Location = new System.Drawing.Point(126, 76);
+            this.edDica.MaxLength = 100;
             this.edDica.Name = "edDica";
             this.edDica.Size = new System.Drawing.Size(100, 20);
             this.edDica.TabIndex = 5;
@@ -1091,9 +1092,11 @@
             // edPalavra
             // 
             this.edPalavra.Location = new System.Drawing.Point(126, 43);
+            this.edPalavra.MaxLength = 15;
             this.edPalavra.Name = "edPalavra";
             this.edPalavra.Size = new System.Drawing.Size(100, 20);
             this.edPalavra.TabIndex = 4;
+            this.edPalavra.Leave += new System.EventHandler(this.EdPalavra_Leave);
             // 
             // labelDica
             // 
@@ -1153,7 +1156,7 @@
             this.btnAlterar,
             this.btnSalvar,
             this.btnExcluir,
-            this.btnJuntar});
+            this.btnOrdenar});
             this.barraDeItens.Location = new System.Drawing.Point(3, 3);
             this.barraDeItens.Name = "barraDeItens";
             this.barraDeItens.Size = new System.Drawing.Size(1191, 25);
@@ -1218,6 +1221,7 @@
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(23, 22);
             this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
             // 
             // btnSalvar
             // 
@@ -1227,6 +1231,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(23, 22);
             this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -1236,15 +1241,17 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(23, 22);
             this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
-            // btnJuntar
+            // btnOrdenar
             // 
-            this.btnJuntar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnJuntar.Image = ((System.Drawing.Image)(resources.GetObject("btnJuntar.Image")));
-            this.btnJuntar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnJuntar.Name = "btnJuntar";
-            this.btnJuntar.Size = new System.Drawing.Size(23, 22);
-            this.btnJuntar.Text = "Juntar";
+            this.btnOrdenar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnOrdenar.Image = ((System.Drawing.Image)(resources.GetObject("btnOrdenar.Image")));
+            this.btnOrdenar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(23, 22);
+            this.btnOrdenar.Text = "Juntar";
+            this.btnOrdenar.Click += new System.EventHandler(this.BtnOrdenar_Click);
             // 
             // dlgAbrir
             // 
@@ -1277,6 +1284,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmForca";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmForca_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1411,7 +1419,7 @@
         private System.Windows.Forms.ToolStripButton btnAlterar;
         private System.Windows.Forms.ToolStripButton btnSalvar;
         private System.Windows.Forms.ToolStripButton btnExcluir;
-        private System.Windows.Forms.ToolStripButton btnJuntar;
+        private System.Windows.Forms.ToolStripButton btnOrdenar;
         private System.Windows.Forms.TextBox edDica;
         private System.Windows.Forms.TextBox edPalavra;
         private System.Windows.Forms.Label labelDica;

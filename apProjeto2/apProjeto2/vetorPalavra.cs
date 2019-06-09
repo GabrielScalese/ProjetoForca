@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 class VetorPalavra
 {
+    Situacao situacaoAtual;
     int tamMaxPalavras = 100;   // Quantidade de palavras que farão parte do vetor
     int qtsPalavras;   // Número de palavras
     Palavra[] palavra;
@@ -32,7 +33,7 @@ class VetorPalavra
 
             palavra[i] = value;
         }
-}
+    }
 
     public VetorPalavra(int tamanhoVetor)
     {
@@ -86,17 +87,9 @@ class VetorPalavra
             string palavraLida = linha.Substring(inicioPalavra, tamanhoPalavra).Trim();
             string dicaLida = linha.Substring(inicioDica).Trim();
             var palavraAtual = new Palavra(palavraLida, dicaLida);
-            InserirAposFim(palavraAtual); // Insere a palavra no vetor
-            
+            Incluir(palavraAtual); // Insere a palavra no veto
         }
     }
-
-
-
-
-
-
-
 
     public enum Situacao
     {
@@ -106,19 +99,15 @@ class VetorPalavra
 
     int tamanhoMaximo;     // tamanho físico
     Funcionario[] dados;   // vetor interno à classe, armazena os registros
-    Situacao situacaoAtual;
+
     int posicaoAtual;      // índice o registro exibido na tela
     public int Tamanho  // permite à aplicação consultar o número de registros armazenados
     {
         get => qtsPalavras;
         set => qtsPalavras = value;
-        
+
     }
-    public Situacao SituacaoAtual
-    {
-        get => situacaoAtual;
-        set => situacaoAtual = value;
-    }
+
 
     public bool EstaVazio // permite à aplicação saber se o vetor dados está vazio
     {
@@ -134,52 +123,51 @@ class VetorPalavra
         }
     }
 
-    
 
 
-    public void Inserir(Funcionario valorAInserir) // insere após o final do vetor e o expande se necessário
+
+    public void Incluir(Palavra valorAInserir) // insere após o final do vetor e o expande se necessário
     {
-        if (qtsPalavras >= tamanhoMaximo)
+        if (qtsPalavras >= palavra.Length)
             ExpandirVetor();
 
-        dados[qtsPalavras] = valorAInserir;
+        palavra[qtsPalavras] = valorAInserir;
         qtsPalavras++;
     }
 
     // insere o novo dado na posição indicada por ondeIncluir
-    public void Inserir(Funcionario valorAInserir, int ondeIncluir)
+    public void Inserir(Palavra valorAInserir, int ondeIncluir)
     {
         if (qtsPalavras >= tamanhoMaximo)
             ExpandirVetor();
 
         // desloca para frente os dados posteriores ao novo dado
         for (int indice = qtsPalavras - 1; indice >= ondeIncluir; indice--)
-            dados[indice + 1] = dados[indice];
+            palavra[indice + 1] = palavra[indice];
 
-        dados[ondeIncluir] = valorAInserir;
+        palavra[ondeIncluir] = valorAInserir;
         qtsPalavras++;
     }
 
     private void ExpandirVetor()
     {
-        tamanhoMaximo += 10;
-        Funcionario[] vetorMaior = new Funcionario[tamanhoMaximo];
+        Palavra[] vetorMaior = new Palavra[palavra.Length + 100];
         for (int indice = 0; indice < qtsPalavras; indice++)
-            vetorMaior[indice] = dados[indice];
+            vetorMaior[indice] = palavra[indice];
 
-        dados = vetorMaior;
+        palavra = vetorMaior;
     }
 
     public void Excluir(int posicaoAExcluir)
     {
         qtsPalavras--;
         for (int indice = posicaoAExcluir; indice < qtsPalavras; indice++)
-            dados[indice] = dados[indice + 1];
+            palavra[indice] = palavra[indice + 1];
 
         // pensar em como diminuir o tamanho físico do vetor, para economizar
     }
 
-    public bool ExisteSequencial(Funcionario funcProcurado, ref int indice)
+    public bool ExisteSequencial(Palavra palavraProcurada, ref int indice)
     {
         bool achouIgual = false;
         bool fim = false;
@@ -190,10 +178,10 @@ class VetorPalavra
             if (indice >= qtsPalavras)
                 fim = true; // indice passou do fim do vetor
             else
-              if (dados[indice].CompareTo(funcProcurado) > 0)
+              if (palavra[indice].CompareTo(palavraProcurada) > 0)
                 achouMaior = true;   // achamos matrícula maior que a procurado
             else
-                if (dados[indice].CompareTo(funcProcurado) == 0)
+                if (palavra[indice].CompareTo(palavraProcurada) == 0)
                 achouIgual = true;
             else
                 indice++;
@@ -201,7 +189,9 @@ class VetorPalavra
         return achouIgual;
     }
 
-    public bool Existe(Funcionario procurado, ref int onde) // Pesquisa binária
+
+
+    public bool Existe(Palavra procurado, ref int onde) // Pesquisa binária
     {
         bool achou = false;
         int inicio = 0;
@@ -209,10 +199,10 @@ class VetorPalavra
         while (!achou && inicio <= fim)
         {
             onde = (inicio + fim) / 2;
-            if (dados[onde].CompareTo(procurado) == 0)
+            if (palavra[onde].CompareTo(procurado) == 0)
                 achou = true;
             else
-              if (procurado.CompareTo(dados[onde]) < 0)
+              if (procurado.CompareTo(palavra[onde]) < 0)
                 fim = onde - 1;
             else
                 inicio = onde + 1;
@@ -254,9 +244,11 @@ class VetorPalavra
     {
         var arq = new StreamWriter(nomeArq);
         for (int i = 0; i < qtsPalavras; i++)
-            arq.WriteLine(dados[i].ParaArquivo());
+            arq.WriteLine(palavra[i].ParaArquivo());
         arq.Close();
     }
+
+    
 
     public void OrdenarSimples()
     {
@@ -334,5 +326,10 @@ class VetorPalavra
     public bool EstaNoFim
     {
         get => posicaoAtual >= qtsPalavras - 1; // último índice
+    }
+    internal Situacao SituacaoAtual
+    {
+        get => situacaoAtual;
+        set => situacaoAtual = value;
     }
 }

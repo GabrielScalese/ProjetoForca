@@ -7,7 +7,7 @@ public enum Situacao
 {
   navegando, pesquisando, incluindo, editando, excluindo
 }
-class VetorFuncionario
+class VetorFuncionario 
 {
   int tamanhoMaximo;     // tamanho físico
   Funcionario[] dados;   // vetor interno à classe, armazena os registros
