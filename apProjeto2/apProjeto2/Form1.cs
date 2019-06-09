@@ -437,10 +437,5 @@ namespace apProjeto2
             asPalavras.SituacaoAtual = VetorPalavra.Situacao.editando;
             edPalavra.Focus();
         }
-
-        private void BtnOrdenar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

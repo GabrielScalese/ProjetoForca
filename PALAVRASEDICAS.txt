@@ -1,100 +1,100 @@
-RAPOSA         Personagem de "O Pequeno Pr�ncipe" que ensina o significado da palavra "cativar"
-ROSA           Companheira do Pequeno Pr�ncipe no asteroide B612 na obra "O Pequeno Pr�ncipe"
-CHAPÉU         Imagem vista pelos adultos quando o narrador mostrava seu desenho na obra "O Pequeno Pr�ncipe"
-BAOBÁ          �rvores que dominaram o B612 na obra "O Pequeno Pr�ncipe"
-PILOTO         Profiss�o do narrador da obra "O Pequeno Pr�ncipe"
-ESPADA         Arma utilizada pelo Gato de Botas
-LARANJA        Cor dos pelos do Gato de Botas
-AMARELO        Cor da pena no chap�u do Gato de Botas
-HUMPTY DUMPTY  Nome do melhor amigo do Gato de Botas no filme "Gato de Botas"
-SHREK          Filme pelo qual o Gato de Botas ficou reconhecido
-BRAHMA         Nome do deus hindu criador do universo
 AFRODITE       Deusa grega da beleza e do amor
-LOKI           Deus n�rdico que � parte gigante e parte deus, conhecido como "Pai das Mentiras"
+ÁGUA           Considerado um dos 4 elementos da natureza, � l�quido e traz um sentimento de paz
+ÁLEX PINA      Nome do criador da famosa s�rie "La Casa de Papel"
+AMARELO        Cor da pena no chap�u do Gato de Botas
 ANÚBIS         Deus eg�pcio dos ritos funer�rios, protetor, guardi�o e guia dos mortos, tem cabe�a de chacal
-EPONA          Deusa celta da terra, aparece quase sempre junta a um cavalo
-TETRIS         Jogo sem fim baseado em encaixar pe�as com a inten��o de completar linhas para marcar pontos
-SPACE INVADERS Jogo cl�ssico onde uma nave deve atirar em aliens enquanto eles atiram em voc�
-PAC-MAN        Jogo onde uma esfera amarela foge de quatro fantasmas enquanto pega pontos
-DONKEY KONG    Jogo cl�ssico onde "M�rio" deve resgatar a princesa "Peach" que foi raptada por um gorila
-FROGGER        Jogo cl�ssico da SEGA onde um sapo tem que atravessar a rua enquanto carros passam por ela
-XADREZ         Jogo de tabuleiro com pe�as que tem diferentes fun��es e tem a miss�o de comer o rei oponente
-DAMAS          Jogo de tabuleiro com pe�as que tem a mesma fun��o e tem a miss�o de comer todas as pe�as do rival
-UNO            Jogo de cartas com n�meros e cartas com efeitos diferentes com o objetivo de esvaziar a m�o
-BLACK STORIES  Jogo de cartas com enigmas onde um mestre da dicas e os jogadores tentam acertar as respostas
-WAR            Jogo de tabuleiro que simula uma guerra entre diferentes na��es, baseado em estrat�gia
-GAME OF THRONESS�rie popular medieval com tr�s drag�es chamados Drogon, Viserion e Rhaegal
-FLASH          S�rie popular onde um acelerador de part�culas explode e concede super-velocidade a uma pessoa
-SUPERGIRLS     S�rie popular sobre uma alien�gena com super-poderes que cai na terra ap�s seu planeta explodir
-RICK AND MORTY S�rie popular onde um garoto que passa por situa��es estranhas com um cientista maluco
-STRANGER THINGSS�rie popular onde quatro garotos encontram uma garota que tem poderes sobrenaturais
-GUERREIRO      Classe de personagem de roleplay-games cl�ssicos que � marcada pela for�a e agressividade
+AR             Considerado um dos 4 elementos da natureza, est� presente em toda a nossa atmosfera
+ARMÁRIO        M�vel utilizado para armazenar vestimentas
 ARQUEIRO       Classe de personagem de roleplay-games cl�ssicos que � marcada pela presen�a de um arco e a precis�o
-MAGO           Classe de personagem de roleplay-games cl�ssicos que � marcada pelo uso de magias, feiti�os e po��es
-TANQUE         Classe de personagem de roleplay-games cl�ssicos que � marcada pela resist�ncia e da armaduras
 ASSASSINO      Classe de personagem de roleplay-games cl�ssicos que � marcada pela furtividade e pelos saques
-PAINT          Aplicativo b�sico do Windows para produ��o e edi��o de arquivos foto
-BLOCO DE NOTAS Aplicativo b�sico do Windows para produ��o e armazenamento de arquivos texto
-WINRAR         Aplicativo de compress�o de arquivos que pode ser utilizado mesmo ap�s o tempo de avalia��o
-PNG            Extens�o b�sica de arquivos foto com a capacidade de deter background transparente
-MOVIE MAKER    Aplicativo b�sico do Windows para produ��o e edi��o de videos
+ATTACK ON TITANAnime onde tit�s, criaturas gigantes, tentam invadir as na��es humanas para se alimentar de humanos
+AZUL           Cor fortemente relacionada � paz e a tranquilidade
 BANANA         Fruta macia de casca amarela com um formato comprido e curvo
+BAOBÁ          �rvores que dominaram o B612 na obra "O Pequeno Pr�ncipe"
+BLACK STORIES  Jogo de cartas com enigmas onde um mestre da dicas e os jogadores tentam acertar as respostas
+BLOCO DE NOTAS Aplicativo b�sico do Windows para produ��o e armazenamento de arquivos texto
+BORRACHA       Material escolar utilizado para apagar coisas escritas pelo l�pis
+BRAHMA         Nome do deus hindu criador do universo
+BRANCO         Cor formada pela jun��o de todos os espectros de cores
+CABIDEIRO      M�vel utilizado para segurar cabides e roupas
+CACHORRO       Animal dom�stico conhecido como "o melhor amigo do homem"
+CADEIRA        Assento mais comumente encontrado e utilizado
+CADERNO        Material escolar utilizado para anotar a mat�ria
+CALOPSITA      Passaro dom�stico mais adotado pelas pessoas
+CANETA         Material escolar utilizado para escrever, por�m sem a possibilidade de ser apagado
+CHAPÉU         Imagem vista pelos adultos quando o narrador mostrava seu desenho na obra "O Pequeno Pr�ncipe"
+CHROMIUM       Vers�o de desenvolvedor do Google Chrome que � aberta ao p�blico
+CIÊNCIAS       Mat�ria escolar que ensina as �reas de F�sica, Qu�mica e Biologia
+CÔMODA         M�vel utilizado para armazenar roupas e outros utenss�lios
+DAMAS          Jogo de tabuleiro com pe�as que tem a mesma fun��o e tem a miss�o de comer todas as pe�as do rival
+DANÇA          Forma de produ��o art�stica baseada em movimentos corporais que causem emo��es ao espectador
+DEATH NOTE     Anime onde um caderno que tem a capacidade de matar pessoas � usado para matar bandidos
+DESENHO        Forma de produ��o art�stica baseada em figuras que causem emo��es ao visualizador
+DONKEY KONG    Jogo cl�ssico onde "M�rio" deve resgatar a princesa "Peach" que foi raptada por um gorila
+DRAGON BALL    Anime sobre alienigenas com super-poderes com a capacidade de mudar de forma para "sayajins"
+ELETRICIDADE   H� pessoas que o consideram um dos 4 elementos da natureza, � energia e traz a ideia de velocidade
+ELVIS PRESLEY  Famoso cantor, � considerado o rei do rock
+EPONA          Deusa celta da terra, aparece quase sempre junta a um cavalo
+ESPADA         Arma utilizada pelo Gato de Botas
+FIREFOX        Browser facilmente personaliz�vel, tem como �cone e mascote uma raposa de fogo
+FLASH          S�rie popular onde um acelerador de part�culas explode e concede super-velocidade a uma pessoa
+FOGO           Considerado um dos 4 elementos da natureza, � quente e traz a ideia de destrui��o
+FROGGER        Jogo cl�ssico da SEGA onde um sapo tem que atravessar a rua enquanto carros passam por ela
+GAME OF THRONESS�rie popular medieval com tr�s drag�es chamados Drogon, Viserion e Rhaegal
+GATO           Animal dom�stico conhecido por sua vida noturna, t�o famoso quanto os c�es
+GEOGRAFIA      Mat�ria escolar que ensina sobre o planeta Terra e seus atributos, al�m de pol�ticas diversas
+GOOGLE CHROME  Um dos browsers mais utilizado atualmente, foi criado pela Google
+GUERREIRO      Classe de personagem de roleplay-games cl�ssicos que � marcada pela for�a e agressividade
+HAMSTER        Um dos roedores mais adotados como animal dom�stico
+HISTÓRIA       Mat�ria escolar que mostra os avan�os da humanidade ao longo do tempo
+HUMPTY DUMPTY  Nome do melhor amigo do Gato de Botas no filme "Gato de Botas"
+KIWI           Fruta que tem seu nome correspondente a uma esp�cie de p�ssaro, tem a casca marrom e o interior verde
+LÁPIS          Material escolar utilizado para escrever de forma que seja poss�vel arrumar erros
+LARANJA        Cor dos pelos do Gato de Botas
 LARANJA        Fruta que tem seu nome correspondente � cor de sua pr�pria casca
 LIMÂO          Fruta conhecida por ser azeda, � c�trica e tem casca verde
-PÊSSEGO        Fruta conhecida por ser doce e ter cores bonitas e � considerada uma das frutas mais bonitas do mundo
-KIWI           Fruta que tem seu nome correspondente a uma esp�cie de p�ssaro, tem a casca marrom e o interior verde
-FOGO           Considerado um dos 4 elementos da natureza, � quente e traz a ideia de destrui��o
-ÁGUA           Considerado um dos 4 elementos da natureza, � l�quido e traz um sentimento de paz
-TERRA          Considerado um dos 4 elementos da natureza, � s�lido e traz a ideia de resist�ncia
-AR             Considerado um dos 4 elementos da natureza, est� presente em toda a nossa atmosfera
-ELETRICIDADE   H� pessoas que o consideram um dos 4 elementos da natureza, � energia e traz a ideia de velocidade
-THOMAS EDISON  Inventor da l�mpada el�trica incandescente, o fon�grafo e o cinemat�grafo
-SANTOS DUMONT  Brasileiro a quem � creditada a inven��o do avi�o
-MICHAEL JACKSONFamoso cantor e compositor, � considerado rei do pop
-ELVIS PRESLEY  Famoso cantor, � considerado o rei do rock
-ÁLEX PINA      Nome do criador da famosa s�rie "La Casa de Papel"
-MOUSE          Aparelho utilizado para mover o cursor de um computador
-TECLADO        Aparelho utilizado para digitar caract�res e realizar outras fun��es com os mesmos em um computador
-MONITOR        Aparelho que reproduz a imagem gerada na CPU de um computador
-PLACA DE VIDEO Objeto que processa os gr�ficos dos aplicativos carregados em uma CPU
-PROCESSADOR    Objeto que faz o processamento dos arquivos, dados e aplicativos abertos em uma CPU
-NETSCAPE       O mais famoso dos primeiros browsers a serem inventados
-GOOGLE CHROME  Um dos browsers mais utilizado atualmente, foi criado pela Google
-FIREFOX        Browser facilmente personaliz�vel, tem como �cone e mascote uma raposa de fogo
-CHROMIUM       Vers�o de desenvolvedor do Google Chrome que � aberta ao p�blico
-MICROSOFT EDGE Vers�o melhorada do Internet Explorer para o Windows 10
-DESENHO        Forma de produ��o art�stica baseada em figuras que causem emo��es ao visualizador
-MÚSICA         Forma de produ��o art�stica baseada em sons que causem emo��es ao ouvinte
-DANÇA          Forma de produ��o art�stica baseada em movimentos corporais que causem emo��es ao espectador
 LITERATURA     Forma de produ��o art�stica baseada em palavras organizadas para elaborar um romance literal
-TEATRO         Forma de produ��o art�stica baseada em a��es e falas que causem emo��es a plat�ia
-CACHORRO       Animal dom�stico conhecido como "o melhor amigo do homem"
-GATO           Animal dom�stico conhecido por sua vida noturna, t�o famoso quanto os c�es
-CALOPSITA      Passaro dom�stico mais adotado pelas pessoas
-HAMSTER        Um dos roedores mais adotados como animal dom�stico
+LOKI           Deus n�rdico que � parte gigante e parte deus, conhecido como "Pai das Mentiras"
+MAGO           Classe de personagem de roleplay-games cl�ssicos que � marcada pelo uso de magias, feiti�os e po��es
+MATEMÁTICA     Mat�ria escolar que ensina os conceitos de c�lculos e imagens
+MESA           Objeto utilizado como apoio de objetos que est�o sendo utilizados
+MICHAEL JACKSONFamoso cantor e compositor, � considerado rei do pop
+MICROSOFT EDGE Vers�o melhorada do Internet Explorer para o Windows 10
+MONITOR        Aparelho que reproduz a imagem gerada na CPU de um computador
+MOUSE          Aparelho utilizado para mover o cursor de um computador
+MOVIE MAKER    Aplicativo b�sico do Windows para produ��o e edi��o de videos
+MÚSICA         Forma de produ��o art�stica baseada em sons que causem emo��es ao ouvinte
+NARUTO         Anime sobre ninjas de diferentes aldeias que podem soltar poderes atrav�s de artes chamadas "jutsus"
+NETSCAPE       O mais famoso dos primeiros browsers a serem inventados
+ONE PIECE      Anime onde piratas v�o atr�s de um famoso tesouro escondido pelo rei dos piratas
+PAC-MAN        Jogo onde uma esfera amarela foge de quatro fantasmas enquanto pega pontos
+PAINT          Aplicativo b�sico do Windows para produ��o e edi��o de arquivos foto
+PÊSSEGO        Fruta conhecida por ser doce e ter cores bonitas e � considerada uma das frutas mais bonitas do mundo
+PILOTO         Profiss�o do narrador da obra "O Pequeno Pr�ncipe"
+PLACA DE VIDEO Objeto que processa os gr�ficos dos aplicativos carregados em uma CPU
+PNG            Extens�o b�sica de arquivos foto com a capacidade de deter background transparente
+PORTUGUÊS      Mat�ria escolar que ensina regras e usos do idioma utilizado no Brasil
+PRETO          Cor formada pela aus�ncia de espectros de cores
+PROCESSADOR    Objeto que faz o processamento dos arquivos, dados e aplicativos abertos em uma CPU
+RAPOSA         Personagem de "O Pequeno Pr�ncipe" que ensina o significado da palavra "cativar"
 RATO           Embora muitas pessoas o temam, � um roedor muito adotado pelas pessoas
-CADERNO        Material escolar utilizado para anotar a mat�ria
-LÁPIS          Material escolar utilizado para escrever de forma que seja poss�vel arrumar erros
-BORRACHA       Material escolar utilizado para apagar coisas escritas pelo l�pis
-CANETA         Material escolar utilizado para escrever, por�m sem a possibilidade de ser apagado
 RÉGUA          Material de medida utilizado para fazer a medi��o de planos e objetos na metragem milim�trica
+RICK AND MORTY S�rie popular onde um garoto que passa por situa��es estranhas com um cientista maluco
+ROSA           Companheira do Pequeno Pr�ncipe no asteroide B612 na obra "O Pequeno Pr�ncipe"
+SANTOS DUMONT  Brasileiro a quem � creditada a inven��o do avi�o
+SHREK          Filme pelo qual o Gato de Botas ficou reconhecido
+SPACE INVADERS Jogo cl�ssico onde uma nave deve atirar em aliens enquanto eles atiram em voc�
+STRANGER THINGSS�rie popular onde quatro garotos encontram uma garota que tem poderes sobrenaturais
+SUPERGIRLS     S�rie popular sobre uma alien�gena com super-poderes que cai na terra ap�s seu planeta explodir
+TANQUE         Classe de personagem de roleplay-games cl�ssicos que � marcada pela resist�ncia e da armaduras
+TEATRO         Forma de produ��o art�stica baseada em a��es e falas que causem emo��es a plat�ia
+TECLADO        Aparelho utilizado para digitar caract�res e realizar outras fun��es com os mesmos em um computador
+TERRA          Considerado um dos 4 elementos da natureza, � s�lido e traz a ideia de resist�ncia
+TETRIS         Jogo sem fim baseado em encaixar pe�as com a inten��o de completar linhas para marcar pontos
+THOMAS EDISON  Inventor da l�mpada el�trica incandescente, o fon�grafo e o cinemat�grafo
+UNO            Jogo de cartas com n�meros e cartas com efeitos diferentes com o objetivo de esvaziar a m�o
 VERDE          Cor fortemente relacionada � natureza e a vida
 VERMELHO       Cor fortemente relacionada ao alerta e ao perigo
-AZUL           Cor fortemente relacionada � paz e a tranquilidade
-PRETO          Cor formada pela aus�ncia de espectros de cores
-BRANCO         Cor formada pela jun��o de todos os espectros de cores
-MESA           Objeto utilizado como apoio de objetos que est�o sendo utilizados
-CADEIRA        Assento mais comumente encontrado e utilizado
-ARMÁRIO        M�vel utilizado para armazenar vestimentas
-CÔMODA         M�vel utilizado para armazenar roupas e outros utenss�lios
-CABIDEIRO      M�vel utilizado para segurar cabides e roupas
-DEATH NOTE     Anime onde um caderno que tem a capacidade de matar pessoas � usado para matar bandidos
-DRAGON BALL    Anime sobre alienigenas com super-poderes com a capacidade de mudar de forma para "sayajins"
-NARUTO         Anime sobre ninjas de diferentes aldeias que podem soltar poderes atrav�s de artes chamadas "jutsus"
-ONE PIECE      Anime onde piratas v�o atr�s de um famoso tesouro escondido pelo rei dos piratas
-ATTACK ON TITANAnime onde tit�s, criaturas gigantes, tentam invadir as na��es humanas para se alimentar de humanos
-MATEMÁTICA     Mat�ria escolar que ensina os conceitos de c�lculos e imagens
-PORTUGUÊS      Mat�ria escolar que ensina regras e usos do idioma utilizado no Brasil
-HISTÓRIA       Mat�ria escolar que mostra os avan�os da humanidade ao longo do tempo
-GEOGRAFIA      Mat�ria escolar que ensina sobre o planeta Terra e seus atributos, al�m de pol�ticas diversas
-CIÊNCIAS       Mat�ria escolar que ensina as �reas de F�sica, Qu�mica e Biologia
+WAR            Jogo de tabuleiro que simula uma guerra entre diferentes na��es, baseado em estrat�gia
+WINRAR         Aplicativo de compress�o de arquivos que pode ser utilizado mesmo ap�s o tempo de avalia��o
+XADREZ         Jogo de tabuleiro com pe�as que tem diferentes fun��es e tem a miss�o de comer o rei oponente

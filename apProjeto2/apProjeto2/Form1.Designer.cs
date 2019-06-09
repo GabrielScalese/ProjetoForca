@@ -1239,8 +1239,7 @@
             this.btnOrdenar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnOrdenar.Name = "btnOrdenar";
             this.btnOrdenar.Size = new System.Drawing.Size(23, 22);
-            this.btnOrdenar.Text = "Juntar";
-            this.btnOrdenar.Click += new System.EventHandler(this.BtnOrdenar_Click);
+            this.btnOrdenar.Text = "Ordenar";
             // 
             // dlgAbrir
             // 
