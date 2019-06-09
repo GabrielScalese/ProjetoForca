@@ -119,9 +119,6 @@
             this.labelDica = new System.Windows.Forms.Label();
             this.labelPalavra = new System.Windows.Forms.Label();
             this.dgvManutencao = new System.Windows.Forms.DataGridView();
-            this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barraDeItens = new System.Windows.Forms.ToolStrip();
             this.btnInicio = new System.Windows.Forms.ToolStripButton();
             this.btnVoltar = new System.Windows.Forms.ToolStripButton();
@@ -136,6 +133,9 @@
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
             this.tmrTempo = new System.Windows.Forms.Timer(this.components);
             this.imlBotoes = new System.Windows.Forms.ImageList(this.components);
+            this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
@@ -1086,7 +1086,7 @@
             this.edDica.Location = new System.Drawing.Point(126, 76);
             this.edDica.MaxLength = 100;
             this.edDica.Name = "edDica";
-            this.edDica.Size = new System.Drawing.Size(100, 20);
+            this.edDica.Size = new System.Drawing.Size(620, 20);
             this.edDica.TabIndex = 5;
             // 
             // edPalavra
@@ -1094,7 +1094,7 @@
             this.edPalavra.Location = new System.Drawing.Point(126, 43);
             this.edPalavra.MaxLength = 15;
             this.edPalavra.Name = "edPalavra";
-            this.edPalavra.Size = new System.Drawing.Size(100, 20);
+            this.edPalavra.Size = new System.Drawing.Size(156, 20);
             this.edPalavra.TabIndex = 4;
             this.edPalavra.Leave += new System.EventHandler(this.EdPalavra_Leave);
             // 
@@ -1118,6 +1118,11 @@
             // 
             // dgvManutencao
             // 
+            this.dgvManutencao.AllowUserToAddRows = false;
+            this.dgvManutencao.AllowUserToDeleteRows = false;
+            this.dgvManutencao.AllowUserToResizeColumns = false;
+            this.dgvManutencao.AllowUserToResizeRows = false;
+            this.dgvManutencao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvManutencao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvManutencao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPosicao,
@@ -1128,22 +1133,6 @@
             this.dgvManutencao.Size = new System.Drawing.Size(1191, 481);
             this.dgvManutencao.TabIndex = 1;
             this.dgvManutencao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvManutencao_CellClick);
-            // 
-            // colPosicao
-            // 
-            this.colPosicao.HeaderText = "Posição";
-            this.colPosicao.Name = "colPosicao";
-            this.colPosicao.ReadOnly = true;
-            // 
-            // colPalavra
-            // 
-            this.colPalavra.HeaderText = "Palavra";
-            this.colPalavra.Name = "colPalavra";
-            // 
-            // colDica
-            // 
-            this.colDica.HeaderText = "Dica";
-            this.colDica.Name = "colDica";
             // 
             // barraDeItens
             // 
@@ -1276,6 +1265,24 @@
             this.imlBotoes.Images.SetKeyName(7, "Minus.bmp");
             this.imlBotoes.Images.SetKeyName(8, "COPY.BMP");
             // 
+            // colPosicao
+            // 
+            this.colPosicao.FillWeight = 30F;
+            this.colPosicao.HeaderText = "Posição";
+            this.colPosicao.Name = "colPosicao";
+            this.colPosicao.ReadOnly = true;
+            // 
+            // colPalavra
+            // 
+            this.colPalavra.HeaderText = "Palavra";
+            this.colPalavra.Name = "colPalavra";
+            // 
+            // colDica
+            // 
+            this.colDica.FillWeight = 500F;
+            this.colDica.HeaderText = "Dica";
+            this.colDica.Name = "colDica";
+            // 
             // FrmForca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1407,9 +1414,6 @@
         private System.Windows.Forms.PictureBox pbMorto;
         private System.Windows.Forms.Label lbDica;
         private System.Windows.Forms.DataGridView dgvManutencao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPosicao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPalavra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDica;
         private System.Windows.Forms.ToolStrip barraDeItens;
         private System.Windows.Forms.ToolStripButton btnInicio;
         private System.Windows.Forms.ToolStripButton btnVoltar;
@@ -1426,6 +1430,9 @@
         private System.Windows.Forms.Label labelPalavra;
         private System.Windows.Forms.Timer tmrTempo;
         private System.Windows.Forms.ImageList imlBotoes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPosicao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPalavra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDica;
     }
 }
 
