@@ -42,59 +42,59 @@ BANANA         Fruta macia de casca amarela com um formato comprido e curvo
 LARANJA        Fruta que tem seu nome correspondente à cor de sua própria casca
 LIMÂO          Fruta conhecida por ser azeda, é cítrica e tem casca verde
 PÊSSEGO        Fruta conhecida por ser doce e ter cores bonitas, é considerada uma das frutas mais bonitas do mundo
-KIWI           Fruta que tem seu nome correspondente a uma esp?cie de p?ssaro, tem a casca marrom e o interior verde
-FOGO           Considerado um dos 4 elementos da natureza, ? quente e traz a ideia de destrui??o
-ÁGUA           Considerado um dos 4 elementos da natureza, ? l?quido e traz um sentimento de paz
-TERRA          Considerado um dos 4 elementos da natureza, ? s?lido e traz a ideia de resist?ncia
-AR             Considerado um dos 4 elementos da natureza, est? presente em toda a nossa atmosfera
-ELETRICIDADE   H? pessoas que o consideram um dos 4 elementos da natureza, ? energia e traz a ideia de velocidade
-THOMAS EDISON  Inventor da l?mpada el?trica incandescente, o fon?grafo e o cinemat?grafo
-SANTOS DUMONT  Brasileiro a quem ? creditada a inven??o do avi?o
-MICHAEL JACKSONFamoso cantor e compositor, ? considerado rei do pop
-ELVIS PRESLEY  Famoso cantor, ? considerado o rei do rock
-ÁLEX PINA      Nome do criador da famosa s?rie "La Casa de Papel"
+KIWI           Fruta que tem seu nome correspondente a uma espécie de pássaro, tem a casca marrom e o interior verde
+FOGO           Considerado um dos 4 elementos da natureza, é quente e traz a ideia de destruição
+ÁGUA           Considerado um dos 4 elementos da natureza, é líquido e traz um sentimento de paz
+TERRA          Considerado um dos 4 elementos da natureza, é sólido e traz a ideia de resistência
+AR             Considerado um dos 4 elementos da natureza, está presente em toda a nossa atmosfera
+ELETRICIDADE   Há pessoas que o consideram um dos elementos da natureza, é energia e traz a ideia de velocidade
+THOMAS EDISON  Inventor da lâmpada elétrica incandescente, o fonógrafo e o cinematógrafo
+SANTOS DUMONT  Brasileiro a quem é creditada a invenção do avião
+MICHAEL JACKSONFamoso cantor e compositor, é considerado rei do pop
+ELVIS PRESLEY  Famoso cantor, é considerado o rei do rock
+ÁLEX PINA      Nome do criador da famosa série "La Casa de Papel"
 MOUSE          Aparelho utilizado para mover o cursor de um computador
-TECLADO        Aparelho utilizado para digitar caract?res e realizar outras fun??es com os mesmos em um computador
+TECLADO        Aparelho utilizado para digitar caractéres e realizar outras funções com os mesmos em um computador
 MONITOR        Aparelho que reproduz a imagem gerada na CPU de um computador
-PLACA DE VIDEO Objeto que processa os gr?ficos dos aplicativos carregados em uma CPU
+PLACA DE VIDEO Objeto que processa os gráficos dos aplicativos carregados em uma CPU
 PROCESSADOR    Objeto que faz o processamento dos arquivos, dados e aplicativos abertos em uma CPU
 NETSCAPE       O mais famoso dos primeiros browsers a serem inventados
 GOOGLE CHROME  Um dos browsers mais utilizado atualmente, foi criado pela Google
-FIREFOX        Browser facilmente personaliz?vel, tem como ?cone e mascote uma raposa de fogo
-CHROMIUM       Vers?o de desenvolvedor do Google Chrome que ? aberta ao p?blico
-MICROSOFT EDGE Vers?o melhorada do Internet Explorer para o Windows 10
-DESENHO        Forma de produ??o art?stica baseada em figuras que causem emo??es ao visualizador
-MÚSICA         Forma de produ??o art?stica baseada em sons que causem emo??es ao ouvinte
-DANÇA          Forma de produ??o art?stica baseada em movimentos corporais que causem emo??es ao espectador
-LITERATURA     Forma de produ??o art?stica baseada em palavras organizadas para elaborar um romance literal
-TEATRO         Forma de produ??o art?stica baseada em a??es e falas que causem emo??es a plat?ia
-CACHORRO       Animal dom?stico conhecido como "o melhor amigo do homem"
-GATO           Animal dom?stico conhecido por sua vida noturna, t?o famoso quanto os c?es
-CALOPSITA      Passaro dom?stico mais adotado pelas pessoas
+FIREFOX        Browser facilmente personalizável, tem como ícone e mascote uma raposa de fogo
+CHROMIUM       Versão de desenvolvedor do Google Chrome que é aberta ao público
+MICROSOFT EDGE Versão melhorada do Internet Explorer para o Windows 10
+DESENHO        Forma de produção artística baseada em figuras que causem emoções ao visualizador
+MÚSICA         Forma de produção artística baseada em sons que causem emoções ao ouvinte
+DANÇA          Forma de produção artística baseada em movimentos corporais que causem emoções ao espectador
+LITERATURA     Forma de produção artística baseada em palavras organizadas para elaborar um romance literal
+TEATRO         Forma de produção artística baseada em ações e falas que causem emoções a platéia
+CACHORRO       Animal doméstico conhecido como "o melhor amigo do homem"
+GATO           Animal doméstico conhecido por sua vida noturna, tão famoso quanto os cães
+CALOPSITA      Passaro doméstico mais adotado pelas pessoas
 HAMSTER        Um dos roedores mais adotados como animal dom?stico
-RATO           Embora muitas pessoas o temam, ? um roedor muito adotado pelas pessoas
-CADERNO        Material escolar utilizado para anotar a mat?ria
-LÁPIS          Material escolar utilizado para escrever de forma que seja poss?vel arrumar erros
-BORRACHA       Material escolar utilizado para apagar coisas escritas pelo l?pis
-CANETA         Material escolar utilizado para escrever, por?m sem a possibilidade de ser apagado
-RÉGUA          Material de medida utilizado para fazer a medi??o de planos e objetos na metragem milim?trica
-VERDE          Cor fortemente relacionada ? natureza e a vida
+RATO           Embora muitas pessoas o temam, é um roedor muito adotado pelas pessoas
+CADERNO        Material escolar utilizado para anotar a matéria
+LÁPIS          Material escolar utilizado para escrever de forma que seja possível arrumar erros
+BORRACHA       Material escolar utilizado para apagar coisas escritas pelo lápis
+CANETA         Material escolar utilizado para escrever, porém sem a possibilidade de ser apagado
+RÉGUA          Material de medida utilizado para fazer a medição de planos e objetos na metragem milimétrica
+VERDE          Cor fortemente relacionada à natureza e a vida
 VERMELHO       Cor fortemente relacionada ao alerta e ao perigo
-AZUL           Cor fortemente relacionada ? paz e a tranquilidade
-PRETO          Cor formada pela aus?ncia de espectros de cores
-BRANCO         Cor formada pela jun??o de todos os espectros de cores
-MESA           Objeto utilizado como apoio de objetos que est?o sendo utilizados
+AZUL           Cor fortemente relacionada à paz e a tranquilidade
+PRETO          Cor formada pela ausência de espectros de cores
+BRANCO         Cor formada pela junção de todos os espectros de cores
+MESA           Objeto utilizado como apoio de objetos que estão sendo utilizados
 CADEIRA        Assento mais comumente encontrado e utilizado
-ARMÁRIO        M?vel utilizado para armazenar vestimentas
-CÔMODA         M?vel utilizado para armazenar roupas e outros utenss?lios
-CABIDEIRO      M?vel utilizado para segurar cabides e roupas
-DEATH NOTE     Anime onde um caderno que tem a capacidade de matar pessoas ? usado para matar bandidos
+ARMÁRIO        Móvel utilizado para armazenar vestimentas
+CÔMODA         Móvel utilizado para armazenar roupas e outros utenssílios
+CABIDEIRO      Móvel utilizado para segurar cabides e roupas
+DEATH NOTE     Anime onde um caderno que tem a capacidade de matar pessoas é usado para matar bandidos
 DRAGON BALL    Anime sobre alienigenas com super-poderes com a capacidade de mudar de forma para "sayajins"
-NARUTO         Anime sobre ninjas de diferentes aldeias que podem soltar poderes atrav?s de artes chamadas "jutsus"
-ONE PIECE      Anime onde piratas v?o atr?s de um famoso tesouro escondido pelo rei dos piratas
-ATTACK ON TITANAnime onde tit?s, criaturas gigantes, tentam invadir as na??es humanas para se alimentar de humanos
-MATEMÁTICA     Mat?ria escolar que ensina os conceitos de c?lculos e imagens
-PORTUGUÊS      Mat?ria escolar que ensina regras e usos do idioma utilizado no Brasil
-HISTÓRIA       Mat?ria escolar que mostra os avan?os da humanidade ao longo do tempo
-GEOGRAFIA      Mat?ria escolar que ensina sobre o planeta Terra e seus atributos, al?m de pol?ticas diversas
-CIÊNCIAS       Mat?ria escolar que ensina as ?reas de F?sica, Qu?mica e Biologia
+NARUTO         Anime sobre ninjas de diferentes aldeias que podem soltar poderes através de artes chamadas "jutsus"
+ONE PIECE      Anime onde piratas vão atrás de um famoso tesouro escondido pelo rei dos piratas
+ATTACK ON TITANAnime onde titãs, criaturas gigantes, tentam invadir as nações humanas para se alimentar de humanos
+MATEMÁTICA     Matéria escolar que ensina os conceitos de cálculos e imagens
+PORTUGUÊS      Matéria escolar que ensina regras e usos do idioma utilizado no Brasil
+HISTÓRIA       Matéria escolar que mostra os avanços da humanidade ao longo do tempo
+GEOGRAFIA      Matéria escolar que ensina sobre o planeta Terra e seus atributos, além de políticas diversas
+CIÊNCIAS       Matéria escolar que ensina as áreas de Física, Química e Biologia
