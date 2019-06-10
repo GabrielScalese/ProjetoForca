@@ -3,6 +3,7 @@ using static System.Console;
 using System.IO;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+using System.Text;
 
 class VetorPalavra
 {
@@ -46,7 +47,7 @@ class VetorPalavra
     }
     public void LerDados(string nomeArquivo)
     {
-        var arq = new StreamReader(nomeArquivo);
+        var arq = new StreamReader(nomeArquivo, Encoding.Default);
         qtsPalavras = 0;
         while (!arq.EndOfStream)
         {
@@ -242,7 +243,7 @@ class VetorPalavra
 
     public void GravarEmDisco(string nomeArq)
     {
-        var arq = new StreamWriter(nomeArq);
+        var arq = new StreamWriter(nomeArq, false, Encoding.Default);
         for (int i = 0; i < qtsPalavras; i++)
             arq.WriteLine(palavra[i].ParaArquivo());
         arq.Close();
@@ -268,13 +269,13 @@ class VetorPalavra
         {
             int indiceDoMenor = lento;
             for (int rapido = lento + 1; rapido < qtsPalavras; rapido++)
-                if (dados[rapido].CompareTo(dados[indiceDoMenor]) < 0)
+                if (palavra[rapido].CompareTo(palavra[indiceDoMenor]) < 0)
                     indiceDoMenor = rapido;
             if (indiceDoMenor != lento)
             {
-                Funcionario aux = dados[lento];
-                dados[lento] = dados[indiceDoMenor];
-                dados[indiceDoMenor] = aux;
+                Palavra aux = palavra[lento];
+                palavra[lento] = palavra[indiceDoMenor];
+                palavra[indiceDoMenor] = aux;
             }
         }
     }

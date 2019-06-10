@@ -440,7 +440,7 @@ namespace apProjeto2
 
         private void BtnOrdenar_Click(object sender, EventArgs e)
         {
-            asPalavras.OrdenarSimples();
+            asPalavras.Ordenar();
             AtualizarTela();
         }
     }
