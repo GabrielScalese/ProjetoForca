@@ -119,6 +119,9 @@
             this.labelDica = new System.Windows.Forms.Label();
             this.labelPalavra = new System.Windows.Forms.Label();
             this.dgvManutencao = new System.Windows.Forms.DataGridView();
+            this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barraDeItens = new System.Windows.Forms.ToolStrip();
             this.btnInicio = new System.Windows.Forms.ToolStripButton();
             this.btnVoltar = new System.Windows.Forms.ToolStripButton();
@@ -133,9 +136,6 @@
             this.tmTemporizador = new System.Windows.Forms.Timer(this.components);
             this.tmrTempo = new System.Windows.Forms.Timer(this.components);
             this.imlBotoes = new System.Windows.Forms.ImageList(this.components);
-            this.colPosicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPalavra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMorto)).BeginInit();
@@ -1134,6 +1134,24 @@
             this.dgvManutencao.TabIndex = 1;
             this.dgvManutencao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvManutencao_CellClick);
             // 
+            // colPosicao
+            // 
+            this.colPosicao.FillWeight = 30F;
+            this.colPosicao.HeaderText = "Posição";
+            this.colPosicao.Name = "colPosicao";
+            this.colPosicao.ReadOnly = true;
+            // 
+            // colPalavra
+            // 
+            this.colPalavra.HeaderText = "Palavra";
+            this.colPalavra.Name = "colPalavra";
+            // 
+            // colDica
+            // 
+            this.colDica.FillWeight = 500F;
+            this.colDica.HeaderText = "Dica";
+            this.colDica.Name = "colDica";
+            // 
             // barraDeItens
             // 
             this.barraDeItens.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1264,24 +1282,6 @@
             this.imlBotoes.Images.SetKeyName(6, "Save.bmp");
             this.imlBotoes.Images.SetKeyName(7, "Minus.bmp");
             this.imlBotoes.Images.SetKeyName(8, "COPY.BMP");
-            // 
-            // colPosicao
-            // 
-            this.colPosicao.FillWeight = 30F;
-            this.colPosicao.HeaderText = "Posição";
-            this.colPosicao.Name = "colPosicao";
-            this.colPosicao.ReadOnly = true;
-            // 
-            // colPalavra
-            // 
-            this.colPalavra.HeaderText = "Palavra";
-            this.colPalavra.Name = "colPalavra";
-            // 
-            // colDica
-            // 
-            this.colDica.FillWeight = 500F;
-            this.colDica.HeaderText = "Dica";
-            this.colDica.Name = "colDica";
             // 
             // FrmForca
             // 
