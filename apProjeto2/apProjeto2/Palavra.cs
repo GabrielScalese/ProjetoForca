@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 class Palavra
 {
-    string palavra;
-    string dica;
+    string palavra; // Variável palavra
+    string dica; // Variável dica
 
-    const int tamanhoPalavra = 15;
-    const int tamanhoDica = 100;
+    const int tamanhoPalavra = 15; // Tamanho constante da palavra
+    const int tamanhoDica = 100; // Tamanho constante da dica
 
-    const int inicioPalavra = 0;
-    const int inicioDica = inicioPalavra + tamanhoPalavra;
+    const int inicioPalavra = 0; // Início da palavra(posição)
+    const int inicioDica = inicioPalavra + tamanhoPalavra; // Início da dica(posição)
 
-    
-    public string Dica
+
+    public string Dica // Propriedade da dica
     {
         get => dica;  // Retorna string da dica
     }
 
-    public Palavra(string umaPalavra, string umaDica)
+    public Palavra(string umaPalavra, string umaDica) // Construtor da classe "Palavra"
     {
         this.palavra = umaPalavra;
         this.dica = umaDica;
     }
 
-    public string PalavraSelec // Retorna e alteração do valor da string palavra (componente do vetor)
+    public string PalavraSelec // Retorna e alteração do valor da string palavra(componente do vetor)
     {
         get => palavra;
         set
@@ -38,7 +37,7 @@ class Palavra
         }
     }
 
-    public int CompareTo(Palavra outro)
+    public int CompareTo(Palavra outro) // Método responsável por comparar "strings"
     {
         int resultado = String.Compare(palavra, outro.palavra);
         if (resultado < 0)
@@ -52,14 +51,13 @@ class Palavra
         // return matricula - outro.matricula;
     }
 
-    public override String ToString()
+    public override String ToString() // Retorna a linha de dados(palavra e dica)
     {
         return PalavraSelec+ "   " + Dica;
     }
 
-    public String ParaArquivo()
+    public String ParaArquivo() // Formatação do arquivo texto
     {
         return PalavraSelec.PadRight(15, ' ') + Dica;
     }
-
 }

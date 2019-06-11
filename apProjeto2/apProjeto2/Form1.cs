@@ -17,16 +17,14 @@ namespace apProjeto2
 {
     public partial class FrmForca : Form
     {
-        int ondeAchar = 0;
+        int ondeAchar = 0; // Posição a ser usado no modo de inclusão e modo de edição, além de ser usado no método de verificar 
+                           // a existência de uma palavra
         int posicaoAIncluir = 0; // Índice do vetor da classe Jogador
         Jogador[] vet = new Jogador[1000]; // instância de um vetor da classe Jogador
-        string nomeUsuario = "";
-        int primeiraMatch = 0;
-        const int tempoTotal = 60;
+        const int tempoTotal = 60; // Tempo total previsto
         int pontos = 0; // Armazena quantidade de pontos do usuário
-        int erro = 0;
+        int erro = 0; // Armazenará a quantidade de erros
         VetorPalavra asPalavras; // Variável que chamará métodos da classe
-        string[] nick;
         int tempoPassado;  // Tempo passado em segundos
         Palavra palavraAtual;  // Palavra lido do vetor
 
@@ -98,36 +96,37 @@ namespace apProjeto2
             {
                 cell.Value = "";
             }
-            pontos = erro = 0;
+            pontos = erro = 0; // Zerar os pontos adquiridos pelo usuário
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text != "")
+            if (txtUsuario.Text != "") // Caso algum usuário tenha inserido seu nome
             {
                 ResetarJogo(); // Atualização da interface
                 HabilitarBotoes(true);
-                int aleatorio = new Random().Next(25);
-                palavraAtual = asPalavras[aleatorio];
-                if (chkDica.Checked)
+                int aleatorio = new Random().Next(25); // Onjeto responsável por sortear as palavras do arquivo texto lido
+                palavraAtual = asPalavras[aleatorio]; // Sorteio de uma palavra
+                if (chkDica.Checked) // Verifica se o usuário teve a escolha do uso da dica
                 {
-                    lbDica.Text = $"Dica: {palavraAtual.Dica}";
+                    lbDica.Text = $"Dica: {palavraAtual.Dica}"; // Exibição da dica
                 }
-                tmTemporizador.Start();
-                dgvPalavra.ColumnCount = palavraAtual.PalavraSelec.Length;
+                tmTemporizador.Start(); // Inicia o "crônometro"
+                dgvPalavra.ColumnCount = palavraAtual.PalavraSelec.Length; // Formatação do "dgvPalavra", comportando o tamanho necessário
+                                                                           // à palavra
             }
             else
-                MessageBox.Show("Por favor, insira seu nome");
+                MessageBox.Show("Por favor, insira seu nome"); // Usuário não inseriu seu nome
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            asPalavras = new VetorPalavra(100);
+            asPalavras = new VetorPalavra(100); // Novo vetor que contém os dados lidos
             dlgAbrir.Title = "Selecione o arquivo desejado";
             if (dlgAbrir.ShowDialog() == DialogResult.OK)
             {
-                asPalavras.LeituraDoVetor(dlgAbrir.FileName);
+                asPalavras.LeituraDoVetor(dlgAbrir.FileName); // Leitura do arquivo texto
             }
 
             // Componente da parte 2 do projeto
@@ -136,22 +135,22 @@ namespace apProjeto2
             barraDeItens.ImageList = imlBotoes;
             foreach (ToolStripItem item in barraDeItens.Items)
                 if (item is ToolStripButton) // "Condição de existência"
-                    (item as ToolStripButton).ImageIndex = indice++;
+                    (item as ToolStripButton).ImageIndex = indice++; // Cada posição do botão, para que possa ser exibido
         }
 
         private void TmTemporizador_Tick(object sender, EventArgs e)
         {
             tempoPassado++;
 
-            lbTemporizador.Text = $"Tempo restante: {tempoTotal - tempoPassado}s";
-            lbPontos.Text = $"Pontos:{pontos}";
-            lbErros.Text = $"Erros: {erro}";
-            if (tempoPassado == 60)
+            lbTemporizador.Text = $"Tempo restante: {tempoTotal - tempoPassado}s"; // Exibição do tempo restante
+            lbPontos.Text = $"Pontos:{pontos}"; // Constante atualização dos pontos
+            lbErros.Text = $"Erros: {erro}"; // Constante atualizãção dos erros
+            if (tempoPassado == 60) // Caso ultrapasse o tempo previsto
             {
-                tmTemporizador.Stop();
+                tmTemporizador.Stop(); // Parada do "cronômetro"
                 if (MessageBox.Show("Infelizmente o tempo esgotou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    ResetarJogo();
+                    ResetarJogo(); // Atualização do formulário
                 }
             }
         }
@@ -177,7 +176,7 @@ namespace apProjeto2
                 if (erro > 8)
                 {
                     pbAnjo.Visible = true;
-                    CadastraJogador("Ranking.txt");
+                    CadastraJogador("Ranking.txt"); // Grava o usuário ou soma pontos feitos pelo usuário
                     if (MessageBox.Show("Infelizmente você perdeu!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         ResetarJogo();
@@ -208,17 +207,17 @@ namespace apProjeto2
                         terminou = false;
                     }
                 }
-                if (terminou)
+                if (terminou) // Caso o usuário tenha vencido o jogo e consequentemente encerrado
                 {
-                    CadastraJogador("Ranking.txt");
+                    CadastraJogador("Ranking.txt"); // Grava o usuário ou soma pontos feitos pelo usuário
                     if (MessageBox.Show("Parabéns, você ganhou!\nDeseja jogar novamente?", "Fim de jogo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        ResetarJogo();
+                        ResetarJogo(); // Atualização do formulário
                     }
                     else
                         Close();
                 }
-                pontos++;
+                pontos++; // Soma dos pontos feitos pelo usuário
             }
         }
 
@@ -231,21 +230,21 @@ namespace apProjeto2
             var arqLido = new StreamReader(nomeArq);
             bool achouNome = false;
 
-            while (!arqLido.EndOfStream)
+            while (!arqLido.EndOfStream) 
             {
                 string linha = arqLido.ReadLine();
-                vet[posicaoAIncluir] = new Jogador(linha);
+                vet[posicaoAIncluir] = new Jogador(linha); // Novo usuário cadastrado
                 if (vet[posicaoAIncluir].Nome.Trim() == txtUsuario.Text)
                 {
-                    vet[posicaoAIncluir].Somar(pontos);
+                    vet[posicaoAIncluir].Somar(pontos); // Soma dos pontos do usuário já cadastrado
                     achouNome = true;
                 }
-                posicaoAIncluir++;
+                posicaoAIncluir++; // Avança posição
             }
             arqLido.Close();
-            var escritor = new StreamWriter(nomeArq);
+            var escritor = new StreamWriter(nomeArq); // Escritor do arquivo
             for (int i = 0; i < posicaoAIncluir; i++)
-                escritor.WriteLine(vet[i].Nome.PadRight(30, ' ') + vet[i].Pontuacao);
+                escritor.WriteLine(vet[i].Nome.PadRight(30, ' ') + vet[i].Pontuacao); // Inclusão de um novo usuário
             if (!achouNome)
             {
                 escritor.WriteLine($"{txtUsuario.Text.PadRight(30, ' ')}{pontos}"); // Gravação dos dados
@@ -262,43 +261,43 @@ namespace apProjeto2
             return achou; // Retorna se o jogador foi achado ou não
         }
 
-        private void LimparTela()
+        private void LimparTela() // Método responsável por atualizar o "TextBox" de cada tipo de dado, limpando tal campo
         {
             edPalavra.Clear();
             edDica.Clear();
         }
 
-        private void AtualizarTela()
+        private void AtualizarTela() // Exibir constantemente no formulário os dados atuais(palavra e dica)
         {
-            if (!asPalavras.EstaVazio)
+            if (!asPalavras.EstaVazio) // Caso haja conteúdo no vetor
             {
                 int indice = asPalavras.PosicaoAtual;
-                edPalavra.Text = asPalavras[indice].PalavraSelec;
-                edDica.Text = asPalavras[indice].Dica;
+                edPalavra.Text = asPalavras[indice].PalavraSelec; // Escreve a palavra no "TextBox"
+                edDica.Text = asPalavras[indice].Dica; // Escreve a dica no "TextBox"
                 TestarBotoes();
                 dgvManutencao.RowCount = asPalavras.Tamanho;
-                for (int indiceA = 0; indiceA < asPalavras.Tamanho; indiceA++)
+                for (int indiceA = 0; indiceA < asPalavras.Tamanho; indiceA++) // Escreverá todos os dados do vetor(palavra e dica)
                 {
                     Palavra palavra = asPalavras[indiceA];
                     dgvManutencao.Rows[indiceA].Cells[0].Value = indiceA;
-                    dgvManutencao.Rows[indiceA].Cells[1].Value = palavra.PalavraSelec; // Exibe no "dgvPalavra" a palavra que foi escolhida corretamente
+                    dgvManutencao.Rows[indiceA].Cells[1].Value = palavra.PalavraSelec; 
                     dgvManutencao.Rows[indiceA].Cells[2].Value = palavra.Dica;
                 }
             }
         }
 
-        private void TestarBotoes()
+        private void TestarBotoes() // Hablitar botões durante o carregar do formulário
         {
             btnInicio.Enabled = true;
             btnVoltar.Enabled = true;
             btnAvancar.Enabled = true;
             btnUltimo.Enabled = true;
-            if (asPalavras.EstaNoInicio)
+            if (asPalavras.EstaNoInicio) // Caso esteja no início do vetor
             {
                 btnInicio.Enabled = false;
                 btnVoltar.Enabled = false;
             }
-            if (asPalavras.EstaNoFim)
+            if (asPalavras.EstaNoFim) // Caso esteja no fim do vetor
             {
                 btnAvancar.Enabled = false;
                 btnUltimo.Enabled = false;
@@ -308,80 +307,88 @@ namespace apProjeto2
 
         private void BtnInicio_Click(object sender, EventArgs e)
         {
+            // Atualizar "dgvManutencao" para que os dados(palavra e dica)selecionados anteriormente
+            // não estejam marcados
             if (asPalavras.PosicaoAtual != 100)
                 dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
             asPalavras.PosicionarNoPrimeiro();
-            AtualizarTela();
+            AtualizarTela(); // Atualização constante do formulário
             dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
         }
 
         private void BtnVoltar_Click(object sender, EventArgs e)
         {
+            // Atualizar "dgvManutencao" para que os dados(palavra e dica)selecionados anteriormente
+            // não estejam marcados
             if (asPalavras.PosicaoAtual != 100)
                 dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
             asPalavras.RetrocederPosicao();
-            AtualizarTela();
+            AtualizarTela(); // Atualização constante do formulário
             dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
         }
 
         private void BtnAvancar_Click(object sender, EventArgs e)
         {
+            // Atualizar "dgvManutencao" para que os dados(palavra e dica)selecionados anteriormente
+            // não estejam marcados
             if (asPalavras.PosicaoAtual != -1)
                 dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
             asPalavras.AvancarPosicao();
-            AtualizarTela();
+            AtualizarTela(); // Atualização constante do formulário
             dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
         }
 
         private void BtnUltimo_Click(object sender, EventArgs e)
         {
-            if (asPalavras.PosicaoAtual != -1)
-                dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;
+            // Atualizar "dgvManutencao" para que os dados(palavra e dica)selecionados anteriormente
+            // não estejam marcados
+            if (asPalavras.PosicaoAtual != -1) 
+              dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = false;   
             asPalavras.PosicionarNoUltimo();
-            AtualizarTela();
+            AtualizarTela(); // Atualização constante do formulário
             dgvManutencao.Rows[asPalavras.PosicaoAtual].Selected = true;
         }
 
         private void DgvManutencao_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            asPalavras.PosicaoAtual = e.RowIndex;
-            AtualizarTela();
+            asPalavras.PosicaoAtual = e.RowIndex; // Posição pressionado pelo usuário
+            AtualizarTela(); // Atualização constante do formulário 
         }
 
         private void BtnIncluir_Click(object sender, EventArgs e)
         {
-            asPalavras.SituacaoAtual = VetorPalavra.Situacao.incluindo;
-            LimparTela();
+            asPalavras.SituacaoAtual = VetorPalavra.Situacao.incluindo; // Está no modo de inclusão
+            LimparTela(); // Atualização constante do formulário
             edPalavra.Focus();
         }
 
         private void EdPalavra_Leave(object sender, EventArgs e)
         {
-            if (edPalavra.Text == "")
+            if (edPalavra.Text == "") // Caso algo não fosse digitado pelo usuário, um alerta seria disparado
                 MessageBox.Show("Por favor, digite uma palavra");
             else
             {
                 var palavraProc = new Palavra(edPalavra.Text, "");
-                switch (asPalavras.SituacaoAtual)
+                switch (asPalavras.SituacaoAtual) // Escolhas possíveis ao usuário
                 {
-                    case VetorPalavra.Situacao.incluindo:
-                        if (asPalavras.Existe(palavraProc, ref ondeAchar))
+                    case VetorPalavra.Situacao.incluindo: // Modo de inclusão
+                        if (asPalavras.Existe(palavraProc, ref ondeAchar)) // Verifica se a palavra já existe no vetor
                         {
                             MessageBox.Show("Palavra repetida, por favor insira outra palavra.");
-                            asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando;
-                            AtualizarTela();
+                            asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando; // Está no modo de navegação
+                            AtualizarTela(); // Atualização constante do formulário
                         }
                         else
                         {
                             edDica.Focus();
                         }
                         break;
-                    case VetorPalavra.Situacao.editando:
-                        if (asPalavras.Existe(palavraProc, ref ondeAchar))
+                    case VetorPalavra.Situacao.editando: // Está no mode de edição
+                        if (asPalavras.Existe(palavraProc, ref ondeAchar)) // Verifica se a palavra já existe no vetor
                         {
-                            asPalavras.PosicaoAtual = ondeAchar;
-                            AtualizarTela();
-                            asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando;
+                            asPalavras.PosicaoAtual = ondeAchar; // Atualizar a posição do dado para a posição a ser alterada
+                            AtualizarTela(); // Atualização constante do formulário
+                            asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando; // Está no modo de navegação
                         }
                         break;
                 }
@@ -390,32 +397,32 @@ namespace apProjeto2
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            if (asPalavras.SituacaoAtual == VetorPalavra.Situacao.incluindo) // está no modo de inclusão
+            if (asPalavras.SituacaoAtual == VetorPalavra.Situacao.incluindo) // Verifica se está no modo de inclusão
             {
                 var novaPalavra = new Palavra(edPalavra.Text, edDica.Text);
 
 
-                asPalavras.Incluir(novaPalavra);
-
-                // para mudar o registro com o qual trabalhamos no momento
-                asPalavras.PosicaoAtual = ondeAchar;
-                AtualizarTela();
-                asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando; // termina o modo de inclusão
+                asPalavras.Incluir(novaPalavra); // Inclusão da nova palavra digitada pelo usuário
+                
+                
+                asPalavras.PosicaoAtual = ondeAchar; // Atualizar a posição onde está a linha atual(dica e palavra)
+                AtualizarTela(); // Atualização constante do formulário
+                asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando; // Encerra o modo de inclusão
             }
             else
-        if (asPalavras.SituacaoAtual == VetorPalavra.Situacao.editando)
+        if (asPalavras.SituacaoAtual == VetorPalavra.Situacao.editando) // Verifica se está no modo de edição
             {
                 asPalavras[asPalavras.PosicaoAtual] = new Palavra(edPalavra.Text, edDica.Text);
 
-                asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando;
+                asPalavras.SituacaoAtual = VetorPalavra.Situacao.navegando; // Está no modo de navegação
                 edPalavra.ReadOnly = false;
-                AtualizarTela();
+                AtualizarTela(); // Atualização constante do formulário
             }
         }
 
         private void FrmForca_FormClosing(object sender, FormClosingEventArgs e)
         {
-            asPalavras.GravarEmDisco(dlgAbrir.FileName);
+            asPalavras.GravarEmDisco(dlgAbrir.FileName); // Gravação de palavra e dica caso o usuário tenha feito a inclusão
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
@@ -427,21 +434,21 @@ namespace apProjeto2
             {
                 asPalavras.Excluir(asPalavras.PosicaoAtual);
                 if (asPalavras.PosicaoAtual >= asPalavras.Tamanho)
-                    asPalavras.PosicionarNoUltimo();
-                AtualizarTela();
+                    asPalavras.PosicionarNoUltimo(); // Posicionar na última posição do vetor
+                AtualizarTela(); // Atualização constante do formulário
             }
         }
 
         private void BtnAlterar_Click(object sender, EventArgs e)
         {
-            asPalavras.SituacaoAtual = VetorPalavra.Situacao.editando;
+            asPalavras.SituacaoAtual = VetorPalavra.Situacao.editando; // Está no modo de edição
             edPalavra.Focus();
         }
 
         private void BtnOrdenar_Click(object sender, EventArgs e)
         {
-            asPalavras.OrdenarSimples();
-            AtualizarTela();
+            asPalavras.OrdenarSimples(); // Ordenação alfabética do vetor
+            AtualizarTela(); // Atualização constante do formulário
         }
     }
 }

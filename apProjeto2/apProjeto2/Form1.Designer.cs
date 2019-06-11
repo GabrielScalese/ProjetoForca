@@ -1290,7 +1290,7 @@
             this.ClientSize = new System.Drawing.Size(1202, 656);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmForca";
-            this.Text = "Form1";
+            this.Text = "Forca";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmForca_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
