@@ -3,6 +3,8 @@ using static System.Console;
 using System.IO;
 using System.Windows.Forms;
 using System.Threading.Tasks;
+
+using System.Text;
 class VetorPalavra
 {
     Situacao situacaoAtual; // Variável responsável por definir o modo atual
@@ -43,7 +45,24 @@ class VetorPalavra
         posicaoAtual = -1;  // Não está posicionado ainda
         situacaoAtual = Situacao.navegando;
     }
+<<<<<<< HEAD
     public void InserirAposFim(Palavra palavraASerUsada) // Inserir na última posição do vetor
+=======
+    public void LerDados(string nomeArquivo)
+    {
+        var arq = new StreamReader(nomeArquivo, Encoding.Default);
+        qtsPalavras = 0;
+        while (!arq.EndOfStream)
+        {
+            string linha = arq.ReadLine();
+            string palavraLida = linha.Substring(inicioPalavra, tamanhoPalavra);
+            string dicaLida = linha.Substring(inicioDica, tamanhoDica);
+            InserirAposFim(new Palavra(palavraLida, dicaLida));
+        }
+        arq.Close();
+    }
+    public void InserirAposFim(Palavra palavraASerUsada)
+>>>>>>> bad5e2b71074abba78ed2bafe09d35cbebb843ac
     {
         palavra[qtsPalavras++] = palavraASerUsada;
 
@@ -161,7 +180,7 @@ class VetorPalavra
     
     public void GravarEmDisco(string nomeArq) // Usado para gravar o nome do usuário; palavras e dicas novas
     {
-        var arq = new StreamWriter(nomeArq);
+        var arq = new StreamWriter(nomeArq, false, Encoding.Default);
         for (int i = 0; i < qtsPalavras; i++)
             arq.WriteLine(palavra[i].ParaArquivo());
         arq.Close();
@@ -178,7 +197,45 @@ class VetorPalavra
                     palavra[rapido] = aux;
                 }
     }
+<<<<<<< HEAD
     public void PosicionarNoPrimeiro() // Posicionar na primeira posição do vetor
+=======
+
+    public void Ordenar()  // Straight-select sort
+    {
+        for (int lento = 0; lento < qtsPalavras; lento++)
+        {
+            int indiceDoMenor = lento;
+            for (int rapido = lento + 1; rapido < qtsPalavras; rapido++)
+                if (palavra[rapido].CompareTo(palavra[indiceDoMenor]) < 0)
+                    indiceDoMenor = rapido;
+            if (indiceDoMenor != lento)
+            {
+                Palavra aux = palavra[lento];
+                palavra[lento] = palavra[indiceDoMenor];
+                palavra[indiceDoMenor] = aux;
+            }
+        }
+    }
+
+    public Funcionario ValorDe(int qualPosicao)
+    {
+        if (qualPosicao < 0 || qualPosicao >= qtsPalavras)  // inválido
+            throw new Exception("Índice inválido!");
+
+        return dados[qualPosicao];
+    }
+
+    public void Alterar(int indice, Funcionario novoDado)
+    {
+        if (indice >= 0 && indice < qtsPalavras)
+            dados[indice] = novoDado;
+        else
+            throw new Exception("Índice fora dos limites do vetor!");
+    }
+
+    public void PosicionarNoPrimeiro()
+>>>>>>> bad5e2b71074abba78ed2bafe09d35cbebb843ac
     {
         if (!EstaVazio)
             posicaoAtual = 0; // primeiro elemento do vetor

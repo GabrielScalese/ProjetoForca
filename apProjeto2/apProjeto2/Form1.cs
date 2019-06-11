@@ -12,7 +12,6 @@ using System.IO;
 // Illy Bordini da Silva   RA: 19180    
 // Gabriel Villar Scalese  RA: 19171
 
-
 namespace apProjeto2
 {
     public partial class FrmForca : Form
@@ -447,8 +446,12 @@ namespace apProjeto2
 
         private void BtnOrdenar_Click(object sender, EventArgs e)
         {
+
             asPalavras.OrdenarSimples(); // Ordenação alfabética do vetor
             AtualizarTela(); // Atualização constante do formulário
+
+            asPalavras.Ordenar();
+            AtualizarTela();
         }
     }
 }
